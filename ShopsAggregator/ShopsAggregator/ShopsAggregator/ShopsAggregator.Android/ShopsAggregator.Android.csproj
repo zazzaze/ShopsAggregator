@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{4282FE26-7D0C-4E87-BD67-B9043A3F82FE}</ProjectGuid>
+        <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <OutputType>Library</OutputType>
+        <RootNamespace>ShopsAggregator.Android</RootNamespace>
+        <AssemblyName>ShopsAggregator.Android</AssemblyName>
+        <AndroidApplication>True</AndroidApplication>
+        <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+        <AndroidResgenClass>Resource</AndroidResgenClass>
+        <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+        <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+        <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+        <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+        <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug</OutputPath>
+        <DefineConstants>DEBUG;</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AndroidLinkMode>None</AndroidLinkMode>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AndroidManagedSymbols>true</AndroidManagedSymbols>
+        <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Mono.Android" />
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
+        <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
+        <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
+        <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2.1" />
+        <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="27.0.2.1" />
+        <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="MainActivity.cs" />
+        <Compile Include="Resources\Resource.Designer.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\AboutResources.txt" />
+        <None Include="Assets\AboutAssets.txt" />
+        <None Include="Properties\AndroidManifest.xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\layout\Tabbar.axml" />
+        <AndroidResource Include="Resources\layout\Toolbar.axml" />
+        <AndroidResource Include="Resources\values\styles.xml" />
+        <AndroidResource Include="Resources\values\colors.xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\ShopsAggregator\ShopsAggregator.csproj">
+            <Project>{7F5CD7A0-FBEC-4937-87C0-4D050F54EC79}</Project>
+            <Name>ShopsAggregator</Name>
+        </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <AndroidAsset Include="Assets\OswaldFont.ttf" />
+      <AndroidAsset Include="Assets\SchlangeBold.otf" />
+      <AndroidAsset Include="Assets\SchlangeNormal.otf" />
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

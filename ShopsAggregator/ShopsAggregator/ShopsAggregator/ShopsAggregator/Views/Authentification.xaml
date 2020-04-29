@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ShopsAggregator"
+             xmlns:customControls="clr-namespace:ShopsAggregator.CustomControls;assembly=ShopsAggregator"
+             x:Class="ShopsAggregator.Authentification">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="20,0">
+            <FlexLayout Direction="Column" JustifyContent="SpaceAround">
+                <StackLayout>
+                    <Label Text="ShopYou" TextColor="{StaticResource purple}" HorizontalTextAlignment="Center" FontSize="44"
+                            Margin="0,0,0,100" FontFamily="SchlangeBold"/>
+                        
+                    <customControls:CustomEditor x:Name="username" Placeholder="Enter your username or email" Margin="0,0,0,3"/>
+                    <Entry x:Name="password" IsPassword="true" Placeholder="Enter your password" Margin="0,0,0,7"/>
+                    <Button Text="Войти" x:Name="signInButton" Clicked="OnLoginButtonClicked" Style="{StaticResource buttonStyle}"/>
+                    <Label Text="или" Margin="0,10" HorizontalTextAlignment="Center" TextColor="{StaticResource purple}"/>
+                </StackLayout>
+                <Button Text="Зарегистрироваться" Clicked="OnRegistrationButtonClick"/>
+                <Label x:Name="StatusOfSignIn" FontSize="Small" TextColor="Red" HorizontalTextAlignment="Center" Text="заглушка" IsVisible="False"/>
+            </FlexLayout>
+            <StackLayout Margin="0,50,0,0">
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource grey}"/>
+                <Button Text="Условия и пользовательское соглашение" Margin="0,5"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

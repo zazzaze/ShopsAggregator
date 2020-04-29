@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopsAggregator.Views.UserSettingsPage"
+             Title="Аккаунт">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Выйти" Clicked="OnExitToolbarItemTapped" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Margin="0,10,0,0" Padding="50,0">
+            <Frame CornerRadius="100" IsClippedToBounds="True" HorizontalOptions="Center" BackgroundColor="Gray" 
+                   WidthRequest="200" HeightRequest="200" VerticalOptions="Start" Padding="0" HasShadow="True" Margin="0,20">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GetPhoto"/>
+                </Frame.GestureRecognizers>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image x:Name="Icon" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                    <Label x:Name="ImagePickerText" Text="Нажмите чтобы выбрать фотографию" TextColor="{StaticResource cloudWhite}" 
+                           FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout x:Name="UserInfoStack">
+                <Label Text="{Binding Username}" FontSize="Large" HorizontalTextAlignment="Center" />
+                <Label Text="{Binding Email}" TextColor="{StaticResource grey}" FontSize="Small" HorizontalTextAlignment="Center"/>
+                <Editor x:Name="UserInfoEditor" Text="{Binding Info}" FontSize="Medium" Placeholder="Расскажите о себе"/>
+                <Button x:Name="UpdateUserInfoButton" Text="Обновить информацию" Clicked="SaveUserInfo"/>
+                <Button x:Name="SubscribeButton" Text="Подписаться" Clicked="Subscribe" IsVisible="False"/>
+                <Button x:Name="UnsubscribeButton" Text="Отписаться" Clicked="Unsubscribe" IsVisible="False"/>
+            </StackLayout>
+            <FlexLayout JustifyContent="SpaceBetween">
+                <StackLayout>
+                    <Label x:Name="PostsCounter" Text="0" FontSize="Large" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="PostsLabel" Text="Товары" FontSize="Medium" TextColor="{StaticResource grey}" 
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+                <BoxView WidthRequest="1" HeightRequest="40" BackgroundColor="{StaticResource grey}" VerticalOptions="Center"/>
+                <StackLayout>
+                    <Label x:Name="SubscribersCounter" Text="0" FontSize="Large" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="SubscribersLabel" Text="Подписчики" FontSize="Medium" TextColor="{StaticResource grey}"
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+                <BoxView WidthRequest="1" HeightRequest="40" BackgroundColor="{StaticResource grey}" />
+                <StackLayout>
+                    <Label x:Name="SubsribedCounter" Text="0" FontSize="Large" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="SubscribedLabel" Text="Подписан" FontSize="Medium" TextColor="{StaticResource grey}" 
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </FlexLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

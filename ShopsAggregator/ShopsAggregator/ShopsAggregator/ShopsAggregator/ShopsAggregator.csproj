@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DebugType>pdbonly</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MongoDB.Driver" Version="2.10.1" />
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+        <PackageReference Include="RestSharp" Version="106.10.2-alpha.0.8" />
+        <PackageReference Include="sqlite-net-pcl" Version="1.7.302-beta" />
+        <PackageReference Include="Xam.Plugin.Media" Version="4.4.10-beta" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
+        <PackageReference Include="Xamarin.Forms" Version="4.5.0.282-pre4" />
+        <PackageReference Include="Xamarin.HotReload" Version="1.6.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Models" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="ShopsAggregatorLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\ShopsAggregatorServer\ShopsAggregatorLib\bin\Debug\netcoreapp3.0\ShopsAggregatorLib.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="images\accounticon.png" />
+      <None Remove="images\searchicon.png" />
+      <EmbeddedResource Include="images\searchicon.png" />
+      <None Remove="images\gallery.png" />
+      <EmbeddedResource Include="images\gallery.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="MainTabbedPAge.xaml.cs">
+        <DependentUpon>MainTabbedPage.xaml</DependentUpon>
+      </Compile>
+      <Compile Update="Views\AllPostsPage.xaml.cs">
+        <DependentUpon>AllPostsPage.xaml</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Resources\Fonts\SchlangeBold.ttf" />
+    </ItemGroup>
+</Project>

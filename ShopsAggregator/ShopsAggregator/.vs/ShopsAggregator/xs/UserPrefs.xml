@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{D26D4402-92C2-4B86-8FA1-C80B6AC41F35}|Default">
+  <MonoDevelop.Ide.ItemProperties.ShopsAggregator.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.781CC9C0-8F61-49E7-AFCC-00AD733D902B" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ShopsAggregator/ShopsAggregator.iOS/Info.plist">
+    <Files>
+      <File FileName="ShopsAggregator/ShopsAggregator.iOS/Info.plist" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ShopsAggregator" expanded="True">
+            <Node name="ShopsAggregator.iOS" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="OswaldFont.ttf" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ShopsAggregator.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

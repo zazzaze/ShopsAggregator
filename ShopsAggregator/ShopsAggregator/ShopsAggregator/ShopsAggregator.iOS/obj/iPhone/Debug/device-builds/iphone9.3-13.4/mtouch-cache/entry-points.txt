@@ -1,0 +1,61 @@
+Function=SystemNative_ConvertErrorPlatformToPal
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_ConvertErrorPalToPlatform
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_StrErrorR
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetNonCryptographicallySecureRandomBytes
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_OpenDir
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetReadDirRBufferSize
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_ReadDirR
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_CloseDir
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_ReadLink
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Stat2
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_LStat2
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Symlink
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_CopyFile
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetEGid
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetEUid
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Link
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_MkDir
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Rename
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Unlink
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_timezone_get_local_name
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_timezone_get_data
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_GetFolderPath
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_log
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_start_wwan
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/System.dll
+Function=xamarin_find_protocol_wrapper_type
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_release_block_on_main_thread
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_get_block_descriptor
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSend_IntPtr
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSendSuper_IntPtr
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=UIApplicationMain
+	/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhone/Debug/device-builds/iphone9.3-13.4/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=mono_pmip
