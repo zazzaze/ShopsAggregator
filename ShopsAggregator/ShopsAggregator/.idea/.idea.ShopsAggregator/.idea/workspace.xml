@@ -2,139 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="077dbdc9-b4d0-4e44-82c9-54df5de66d58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Models/Buyer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Models/CreatePostForm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Models/IconPostForm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Models/Post.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Models/RegistrationForm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Models/Seller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Models/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/CreatePostPage.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/PostPage.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/SellerMainPage.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Models/Comment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Models/CreatePostForm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Models/IconPostForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ShopsAggregator/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShopsAggregator/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ShopsAggregator/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShopsAggregator/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShopsAggregator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShopsAggregator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/ShopsAggregator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/ShopsAggregator.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/ShopsAggregator.iOS.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/ShopsAggregator.iOS.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/ShopsAggregator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/ShopsAggregator.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/ShopsAggregatorLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/ShopsAggregatorLib.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/ShopsAggregator.iOS.app/ShopsAggregator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/ShopsAggregator.iOS.app/ShopsAggregator.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/ShopsAggregator.iOS.app/ShopsAggregator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/ShopsAggregator.iOS.app/ShopsAggregator.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/ShopsAggregator.iOS.app/ShopsAggregatorLib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/ShopsAggregator.iOS.app/ShopsAggregatorLib.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/ShopsAggregator.iOS.app/ShopsAggregatorLib.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/ShopsAggregator.iOS.app/ShopsAggregatorLib.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/obj/iPhoneSimulator/Debug/ShopsAggregator.iOS.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/obj/iPhoneSimulator/Debug/ShopsAggregator.iOS.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/obj/iPhoneSimulator/Debug/ShopsAggregator.iOS.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/obj/iPhoneSimulator/Debug/ShopsAggregator.iOS.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/obj/iPhoneSimulator/Debug/ShopsAggregator.iOS.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/obj/iPhoneSimulator/Debug/ShopsAggregator.iOS.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/mtouch-cache/assembly-references.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/mtouch-cache/assembly-references.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/response-file.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/response-file.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/MainTabbedPAge.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/MainTabbedPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/ShopsAggregator.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/ShopsAggregator.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/Authentification.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/Authentification.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/Authentification.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/Authentification.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/RegistrationPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/RegistrationPage.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/RegistrationPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/RegistrationPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/SearchPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/SearchPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/UserSettingsPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/BuyerMainPage.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/UserSettingsPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/BuyerMainPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/bin/Debug/netstandard2.0/ShopsAggregator.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/bin/Debug/netstandard2.0/ShopsAggregator.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/bin/Debug/netstandard2.0/ShopsAggregator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/bin/Debug/netstandard2.0/ShopsAggregator.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/bin/Debug/netstandard2.0/ShopsAggregator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/bin/Debug/netstandard2.0/ShopsAggregator.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/bin/Debug/netstandard2.0/ShopsAggregatorLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/bin/Debug/netstandard2.0/ShopsAggregatorLib.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/ShopsAggregator.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/ShopsAggregator.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/ShopsAggregator.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/ShopsAggregator.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/ShopsAggregator.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/ShopsAggregator.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/ShopsAggregator.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/ShopsAggregator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/ShopsAggregator.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/ShopsAggregator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/ShopsAggregator.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/Authentification.xaml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/Authentification.xaml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/UserSettingsPage.xaml.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/Buyer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/Post.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/Seller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/ShopsAggregatorLib.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/User.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Debug/netcoreapp3.0/ShopsAggregatorLib.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Debug/netcoreapp3.0/ShopsAggregatorLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Debug/netcoreapp3.0/ShopsAggregatorLib.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Release/netcoreapp3.0/ShopsAggregatorLib.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Release/netcoreapp3.0/ShopsAggregatorLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Release/netcoreapp3.0/ShopsAggregatorLib.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Release/netcoreapp3.0/publish/DnsClient.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Release/netcoreapp3.0/publish/MongoDB.Bson.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Release/netcoreapp3.0/publish/MongoDB.Driver.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Release/netcoreapp3.0/publish/MongoDB.Driver.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Release/netcoreapp3.0/publish/MongoDB.Libmongocrypt.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Release/netcoreapp3.0/publish/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Release/netcoreapp3.0/publish/SharpCompress.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Release/netcoreapp3.0/publish/ShopsAggregatorLib.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Release/netcoreapp3.0/publish/ShopsAggregatorLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/bin/Release/netcoreapp3.0/publish/ShopsAggregatorLib.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/Debug/netcoreapp3.0/ShopsAggregatorLib.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/Debug/netcoreapp3.0/ShopsAggregatorLib.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/Debug/netcoreapp3.0/ShopsAggregatorLib.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/Debug/netcoreapp3.0/ShopsAggregatorLib.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/Debug/netcoreapp3.0/ShopsAggregatorLib.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/Debug/netcoreapp3.0/ShopsAggregatorLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/Debug/netcoreapp3.0/ShopsAggregatorLib.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/Release/netcoreapp3.0/ShopsAggregatorLib.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/Release/netcoreapp3.0/ShopsAggregatorLib.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/Release/netcoreapp3.0/ShopsAggregatorLib.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/Release/netcoreapp3.0/ShopsAggregatorLib.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/Release/netcoreapp3.0/ShopsAggregatorLib.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/Release/netcoreapp3.0/ShopsAggregatorLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/Release/netcoreapp3.0/ShopsAggregatorLib.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/ShopsAggregatorLib.csproj.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/ShopsAggregatorLib.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/ShopsAggregatorLib.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/ShopsAggregatorLib.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorLib/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorServer.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorServer.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/AuthorizationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/AuthorizationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/SearchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/SearchController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/SubscribeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/SubscribeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Services/ShopsAggregatorService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Services/ShopsAggregatorService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/ShopsAggregatorWebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/ShopsAggregatorWebApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Debug/netcoreapp3.0/ShopsAggregatorLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Debug/netcoreapp3.0/ShopsAggregatorLib.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Debug/netcoreapp3.0/ShopsAggregatorWebApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Debug/netcoreapp3.0/ShopsAggregatorWebApi.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Debug/netcoreapp3.0/ShopsAggregatorWebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Debug/netcoreapp3.0/ShopsAggregatorWebApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Debug/netcoreapp3.0/ShopsAggregatorWebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Debug/netcoreapp3.0/ShopsAggregatorWebApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Debug/netcoreapp3.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Debug/netcoreapp3.0/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/ShopsAggregatorLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/ShopsAggregatorLib.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/ShopsAggregatorWebApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/ShopsAggregatorWebApi.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/ShopsAggregatorWebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/ShopsAggregatorWebApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/ShopsAggregatorWebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/ShopsAggregatorWebApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/publish/ShopsAggregatorWebApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/publish/ShopsAggregatorWebApi.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/publish/ShopsAggregatorWebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/publish/ShopsAggregatorWebApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/publish/ShopsAggregatorWebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/publish/ShopsAggregatorWebApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/publish/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/bin/Release/netcoreapp3.0/publish/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Debug/netcoreapp3.0/ShopsAggregatorWebApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Debug/netcoreapp3.0/ShopsAggregatorWebApi.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Debug/netcoreapp3.0/ShopsAggregatorWebApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Debug/netcoreapp3.0/ShopsAggregatorWebApi.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Debug/netcoreapp3.0/ShopsAggregatorWebApi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Debug/netcoreapp3.0/ShopsAggregatorWebApi.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Debug/netcoreapp3.0/ShopsAggregatorWebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Debug/netcoreapp3.0/ShopsAggregatorWebApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Debug/netcoreapp3.0/ShopsAggregatorWebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Debug/netcoreapp3.0/ShopsAggregatorWebApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Release/netcoreapp3.0/ShopsAggregatorWebApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Release/netcoreapp3.0/ShopsAggregatorWebApi.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Release/netcoreapp3.0/ShopsAggregatorWebApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Release/netcoreapp3.0/ShopsAggregatorWebApi.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Release/netcoreapp3.0/ShopsAggregatorWebApi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Release/netcoreapp3.0/ShopsAggregatorWebApi.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Release/netcoreapp3.0/ShopsAggregatorWebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Release/netcoreapp3.0/ShopsAggregatorWebApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Release/netcoreapp3.0/ShopsAggregatorWebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/Release/netcoreapp3.0/ShopsAggregatorWebApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/ShopsAggregatorWebApi.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/ShopsAggregatorWebApi.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/ShopsAggregatorWebApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/ShopsAggregatorWebApi.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -526,7 +394,7 @@
       <workItem from="1588166015259" duration="614000" />
       <workItem from="1588422227185" duration="3121000" />
       <workItem from="1588512350967" duration="10531000" />
-      <workItem from="1588706890719" duration="5023000" />
+      <workItem from="1588706890719" duration="5152000" />
     </task>
     <servers />
   </component>
@@ -568,13 +436,13 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="465" y="324" key="#com.intellij.ws.actions.HttpClientConvertFromCurlDialog/0.0.1440.900@0.0.1440.900" timestamp="1581190756910" />
-    <state width="1396" height="226" key="GridCell.Tab.0.bottom" timestamp="1588711465844">
+    <state width="1396" height="226" key="GridCell.Tab.0.bottom" timestamp="1588759425758">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042295" />
     <state width="1396" height="179" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588707310049" />
     <state width="1396" height="226" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465844" />
-    <state width="1396" height="226" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1588598150562" />
+    <state width="1396" height="226" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1588759425758" />
     <state width="1043" height="90" key="GridCell.Tab.0.bottom/0.23.1440.803@0.23.1440.803" timestamp="1585896423898" />
     <state width="1043" height="151" key="GridCell.Tab.0.bottom/0.23.1440.805@0.23.1440.805" timestamp="1587042417062" />
     <state width="1396" height="179" key="GridCell.Tab.0.bottom/0.23.1440.807@0.23.1440.807" timestamp="1588596746429" />
@@ -585,13 +453,13 @@
     <state width="1043" height="153" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1586070951692" />
     <state width="1043" height="153" key="GridCell.Tab.0.bottom/0.23.1440.813@0.23.1440.813" timestamp="1586173169438" />
     <state width="1396" height="179" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588710471293" />
-    <state width="1396" height="226" key="GridCell.Tab.0.center" timestamp="1588711465841">
+    <state width="1396" height="226" key="GridCell.Tab.0.center" timestamp="1588759425757">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.0.center/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042293" />
     <state width="1396" height="179" key="GridCell.Tab.0.center/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588707310047" />
     <state width="1396" height="226" key="GridCell.Tab.0.center/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465841" />
-    <state width="1396" height="226" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1588598150561" />
+    <state width="1396" height="226" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1588759425757" />
     <state width="1043" height="90" key="GridCell.Tab.0.center/0.23.1440.803@0.23.1440.803" timestamp="1585896423896" />
     <state width="1043" height="151" key="GridCell.Tab.0.center/0.23.1440.805@0.23.1440.805" timestamp="1587042417060" />
     <state width="1396" height="179" key="GridCell.Tab.0.center/0.23.1440.807@0.23.1440.807" timestamp="1588596746428" />
@@ -602,13 +470,13 @@
     <state width="1043" height="153" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1586070951691" />
     <state width="1043" height="153" key="GridCell.Tab.0.center/0.23.1440.813@0.23.1440.813" timestamp="1586173169437" />
     <state width="1396" height="179" key="GridCell.Tab.0.center/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588710471289" />
-    <state width="1396" height="226" key="GridCell.Tab.0.left" timestamp="1588711465840">
+    <state width="1396" height="226" key="GridCell.Tab.0.left" timestamp="1588759425754">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.0.left/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042291" />
     <state width="1396" height="179" key="GridCell.Tab.0.left/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588707310045" />
     <state width="1396" height="226" key="GridCell.Tab.0.left/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465840" />
-    <state width="1396" height="226" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1588598150559" />
+    <state width="1396" height="226" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1588759425754" />
     <state width="1043" height="90" key="GridCell.Tab.0.left/0.23.1440.803@0.23.1440.803" timestamp="1585896423895" />
     <state width="1043" height="151" key="GridCell.Tab.0.left/0.23.1440.805@0.23.1440.805" timestamp="1587042417060" />
     <state width="1396" height="179" key="GridCell.Tab.0.left/0.23.1440.807@0.23.1440.807" timestamp="1588596746427" />
@@ -619,13 +487,13 @@
     <state width="1043" height="153" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1586070951690" />
     <state width="1043" height="153" key="GridCell.Tab.0.left/0.23.1440.813@0.23.1440.813" timestamp="1586173169436" />
     <state width="1396" height="179" key="GridCell.Tab.0.left/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588710471287" />
-    <state width="1396" height="226" key="GridCell.Tab.0.right" timestamp="1588711465842">
+    <state width="1396" height="226" key="GridCell.Tab.0.right" timestamp="1588759425757">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.0.right/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042294" />
     <state width="1396" height="179" key="GridCell.Tab.0.right/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588707310048" />
     <state width="1396" height="226" key="GridCell.Tab.0.right/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465842" />
-    <state width="1396" height="226" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1588598150561" />
+    <state width="1396" height="226" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1588759425757" />
     <state width="1043" height="90" key="GridCell.Tab.0.right/0.23.1440.803@0.23.1440.803" timestamp="1585896423897" />
     <state width="1043" height="151" key="GridCell.Tab.0.right/0.23.1440.805@0.23.1440.805" timestamp="1587042417061" />
     <state width="1396" height="179" key="GridCell.Tab.0.right/0.23.1440.807@0.23.1440.807" timestamp="1588596746428" />
@@ -636,13 +504,13 @@
     <state width="1043" height="153" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1586070951691" />
     <state width="1043" height="153" key="GridCell.Tab.0.right/0.23.1440.813@0.23.1440.813" timestamp="1586173169437" />
     <state width="1396" height="179" key="GridCell.Tab.0.right/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588710471291" />
-    <state width="1396" height="226" key="GridCell.Tab.1.bottom" timestamp="1588711484792">
+    <state width="1396" height="226" key="GridCell.Tab.1.bottom" timestamp="1588759425760">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.1.bottom/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042129" />
     <state width="1396" height="226" key="GridCell.Tab.1.bottom/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588711484792" />
     <state width="1396" height="226" key="GridCell.Tab.1.bottom/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465600" />
-    <state width="1396" height="226" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1588598150565" />
+    <state width="1396" height="226" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1588759425760" />
     <state width="1043" height="109" key="GridCell.Tab.1.bottom/0.23.1440.803@0.23.1440.803" timestamp="1585896417575" />
     <state width="1440" height="263" key="GridCell.Tab.1.bottom/0.23.1440.805@0.23.1440.805" timestamp="1581364724266" />
     <state width="1396" height="226" key="GridCell.Tab.1.bottom/0.23.1440.807@0.23.1440.807" timestamp="1588595467507" />
@@ -652,13 +520,13 @@
     <state width="1043" height="192" key="GridCell.Tab.1.bottom/0.23.1440.812@0.23.1440.812" timestamp="1586070656524" />
     <state width="1043" height="292" key="GridCell.Tab.1.bottom/0.23.1440.813@0.23.1440.813" timestamp="1585913187614" />
     <state width="1396" height="226" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588711438013" />
-    <state width="1396" height="226" key="GridCell.Tab.1.center" timestamp="1588711484790">
+    <state width="1396" height="226" key="GridCell.Tab.1.center" timestamp="1588759425759">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.1.center/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042127" />
     <state width="1396" height="226" key="GridCell.Tab.1.center/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588711484790" />
     <state width="1396" height="226" key="GridCell.Tab.1.center/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465597" />
-    <state width="1396" height="226" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1588598150564" />
+    <state width="1396" height="226" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1588759425759" />
     <state width="1043" height="109" key="GridCell.Tab.1.center/0.23.1440.803@0.23.1440.803" timestamp="1585896417573" />
     <state width="1440" height="263" key="GridCell.Tab.1.center/0.23.1440.805@0.23.1440.805" timestamp="1581364724264" />
     <state width="1396" height="226" key="GridCell.Tab.1.center/0.23.1440.807@0.23.1440.807" timestamp="1588595467506" />
@@ -668,13 +536,13 @@
     <state width="1043" height="192" key="GridCell.Tab.1.center/0.23.1440.812@0.23.1440.812" timestamp="1586070656522" />
     <state width="1043" height="292" key="GridCell.Tab.1.center/0.23.1440.813@0.23.1440.813" timestamp="1585913187613" />
     <state width="1396" height="226" key="GridCell.Tab.1.center/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588711438009" />
-    <state width="1396" height="226" key="GridCell.Tab.1.left" timestamp="1588711484789">
+    <state width="1396" height="226" key="GridCell.Tab.1.left" timestamp="1588759425758">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.1.left/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042125" />
     <state width="1396" height="226" key="GridCell.Tab.1.left/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588711484789" />
     <state width="1396" height="226" key="GridCell.Tab.1.left/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465596" />
-    <state width="1396" height="226" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1588598150563" />
+    <state width="1396" height="226" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1588759425758" />
     <state width="1043" height="109" key="GridCell.Tab.1.left/0.23.1440.803@0.23.1440.803" timestamp="1585896417573" />
     <state width="1440" height="263" key="GridCell.Tab.1.left/0.23.1440.805@0.23.1440.805" timestamp="1581364724262" />
     <state width="1396" height="226" key="GridCell.Tab.1.left/0.23.1440.807@0.23.1440.807" timestamp="1588595467505" />
@@ -684,13 +552,13 @@
     <state width="1043" height="192" key="GridCell.Tab.1.left/0.23.1440.812@0.23.1440.812" timestamp="1586070656522" />
     <state width="1043" height="292" key="GridCell.Tab.1.left/0.23.1440.813@0.23.1440.813" timestamp="1585913187612" />
     <state width="1396" height="226" key="GridCell.Tab.1.left/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588711438006" />
-    <state width="1396" height="226" key="GridCell.Tab.1.right" timestamp="1588711484791">
+    <state width="1396" height="226" key="GridCell.Tab.1.right" timestamp="1588759425759">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.1.right/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042128" />
     <state width="1396" height="226" key="GridCell.Tab.1.right/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588711484791" />
     <state width="1396" height="226" key="GridCell.Tab.1.right/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465599" />
-    <state width="1396" height="226" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1588598150564" />
+    <state width="1396" height="226" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1588759425759" />
     <state width="1043" height="109" key="GridCell.Tab.1.right/0.23.1440.803@0.23.1440.803" timestamp="1585896417574" />
     <state width="1440" height="263" key="GridCell.Tab.1.right/0.23.1440.805@0.23.1440.805" timestamp="1581364724265" />
     <state width="1396" height="226" key="GridCell.Tab.1.right/0.23.1440.807@0.23.1440.807" timestamp="1588595467507" />
@@ -700,13 +568,13 @@
     <state width="1043" height="192" key="GridCell.Tab.1.right/0.23.1440.812@0.23.1440.812" timestamp="1586070656523" />
     <state width="1043" height="292" key="GridCell.Tab.1.right/0.23.1440.813@0.23.1440.813" timestamp="1585913187613" />
     <state width="1396" height="226" key="GridCell.Tab.1.right/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588711438011" />
-    <state width="1396" height="226" key="GridCell.Tab.2.bottom" timestamp="1588711465604">
+    <state width="1396" height="226" key="GridCell.Tab.2.bottom" timestamp="1588759425762">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.2.bottom/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042134" />
     <state width="1396" height="226" key="GridCell.Tab.2.bottom/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588703242837" />
     <state width="1396" height="226" key="GridCell.Tab.2.bottom/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465604" />
-    <state width="1396" height="226" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1588598150568" />
+    <state width="1396" height="226" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1588759425762" />
     <state width="1043" height="109" key="GridCell.Tab.2.bottom/0.23.1440.803@0.23.1440.803" timestamp="1585896417577" />
     <state width="1440" height="263" key="GridCell.Tab.2.bottom/0.23.1440.805@0.23.1440.805" timestamp="1581363269718" />
     <state width="1396" height="226" key="GridCell.Tab.2.bottom/0.23.1440.807@0.23.1440.807" timestamp="1588595444522" />
@@ -715,13 +583,13 @@
     <state width="1043" height="192" key="GridCell.Tab.2.bottom/0.23.1440.812@0.23.1440.812" timestamp="1586070656526" />
     <state width="1043" height="292" key="GridCell.Tab.2.bottom/0.23.1440.813@0.23.1440.813" timestamp="1585913128659" />
     <state width="1396" height="226" key="GridCell.Tab.2.bottom/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588705863909" />
-    <state width="1396" height="226" key="GridCell.Tab.2.center" timestamp="1588711465601">
+    <state width="1396" height="226" key="GridCell.Tab.2.center" timestamp="1588759425761">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.2.center/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042132" />
     <state width="1396" height="226" key="GridCell.Tab.2.center/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588703242834" />
     <state width="1396" height="226" key="GridCell.Tab.2.center/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465601" />
-    <state width="1396" height="226" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1588598150567" />
+    <state width="1396" height="226" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1588759425761" />
     <state width="1043" height="109" key="GridCell.Tab.2.center/0.23.1440.803@0.23.1440.803" timestamp="1585896417576" />
     <state width="1440" height="263" key="GridCell.Tab.2.center/0.23.1440.805@0.23.1440.805" timestamp="1581363269717" />
     <state width="1396" height="226" key="GridCell.Tab.2.center/0.23.1440.807@0.23.1440.807" timestamp="1588595444521" />
@@ -730,13 +598,13 @@
     <state width="1043" height="192" key="GridCell.Tab.2.center/0.23.1440.812@0.23.1440.812" timestamp="1586070656525" />
     <state width="1043" height="292" key="GridCell.Tab.2.center/0.23.1440.813@0.23.1440.813" timestamp="1585913128657" />
     <state width="1396" height="226" key="GridCell.Tab.2.center/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588705863906" />
-    <state width="1396" height="226" key="GridCell.Tab.2.left" timestamp="1588711465600">
+    <state width="1396" height="226" key="GridCell.Tab.2.left" timestamp="1588759425760">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.2.left/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042131" />
     <state width="1396" height="226" key="GridCell.Tab.2.left/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588703242833" />
     <state width="1396" height="226" key="GridCell.Tab.2.left/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465600" />
-    <state width="1396" height="226" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1588598150566" />
+    <state width="1396" height="226" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1588759425760" />
     <state width="1043" height="109" key="GridCell.Tab.2.left/0.23.1440.803@0.23.1440.803" timestamp="1585896417575" />
     <state width="1440" height="263" key="GridCell.Tab.2.left/0.23.1440.805@0.23.1440.805" timestamp="1581363269716" />
     <state width="1396" height="226" key="GridCell.Tab.2.left/0.23.1440.807@0.23.1440.807" timestamp="1588595444520" />
@@ -745,13 +613,13 @@
     <state width="1043" height="192" key="GridCell.Tab.2.left/0.23.1440.812@0.23.1440.812" timestamp="1586070656525" />
     <state width="1043" height="292" key="GridCell.Tab.2.left/0.23.1440.813@0.23.1440.813" timestamp="1585913128657" />
     <state width="1396" height="226" key="GridCell.Tab.2.left/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588705863904" />
-    <state width="1396" height="226" key="GridCell.Tab.2.right" timestamp="1588711465603">
+    <state width="1396" height="226" key="GridCell.Tab.2.right" timestamp="1588759425761">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.2.right/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042133" />
     <state width="1396" height="226" key="GridCell.Tab.2.right/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588703242835" />
     <state width="1396" height="226" key="GridCell.Tab.2.right/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465603" />
-    <state width="1396" height="226" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1588598150567" />
+    <state width="1396" height="226" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1588759425761" />
     <state width="1043" height="109" key="GridCell.Tab.2.right/0.23.1440.803@0.23.1440.803" timestamp="1585896417576" />
     <state width="1440" height="263" key="GridCell.Tab.2.right/0.23.1440.805@0.23.1440.805" timestamp="1581363269717" />
     <state width="1396" height="226" key="GridCell.Tab.2.right/0.23.1440.807@0.23.1440.807" timestamp="1588595444522" />
@@ -760,13 +628,13 @@
     <state width="1043" height="192" key="GridCell.Tab.2.right/0.23.1440.812@0.23.1440.812" timestamp="1586070656526" />
     <state width="1043" height="292" key="GridCell.Tab.2.right/0.23.1440.813@0.23.1440.813" timestamp="1585913128658" />
     <state width="1396" height="226" key="GridCell.Tab.2.right/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588705863907" />
-    <state width="1396" height="226" key="GridCell.Tab.3.bottom" timestamp="1588711465608">
+    <state width="1396" height="226" key="GridCell.Tab.3.bottom" timestamp="1588759425764">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.3.bottom/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042139" />
     <state width="1396" height="226" key="GridCell.Tab.3.bottom/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588703242840" />
     <state width="1396" height="226" key="GridCell.Tab.3.bottom/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465608" />
-    <state width="1396" height="226" key="GridCell.Tab.3.bottom/0.0.1440.900@0.0.1440.900" timestamp="1588598150572" />
+    <state width="1396" height="226" key="GridCell.Tab.3.bottom/0.0.1440.900@0.0.1440.900" timestamp="1588759425764" />
     <state width="1043" height="109" key="GridCell.Tab.3.bottom/0.23.1440.803@0.23.1440.803" timestamp="1585896417581" />
     <state width="1440" height="263" key="GridCell.Tab.3.bottom/0.23.1440.805@0.23.1440.805" timestamp="1581363269721" />
     <state width="1396" height="226" key="GridCell.Tab.3.bottom/0.23.1440.807@0.23.1440.807" timestamp="1588595444527" />
@@ -775,13 +643,13 @@
     <state width="1043" height="192" key="GridCell.Tab.3.bottom/0.23.1440.812@0.23.1440.812" timestamp="1586070656528" />
     <state width="1043" height="292" key="GridCell.Tab.3.bottom/0.23.1440.813@0.23.1440.813" timestamp="1585913128662" />
     <state width="1396" height="226" key="GridCell.Tab.3.bottom/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588705863920" />
-    <state width="1396" height="226" key="GridCell.Tab.3.center" timestamp="1588711465606">
+    <state width="1396" height="226" key="GridCell.Tab.3.center" timestamp="1588759425763">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.3.center/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042137" />
     <state width="1396" height="226" key="GridCell.Tab.3.center/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588703242838" />
     <state width="1396" height="226" key="GridCell.Tab.3.center/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465606" />
-    <state width="1396" height="226" key="GridCell.Tab.3.center/0.0.1440.900@0.0.1440.900" timestamp="1588598150571" />
+    <state width="1396" height="226" key="GridCell.Tab.3.center/0.0.1440.900@0.0.1440.900" timestamp="1588759425763" />
     <state width="1043" height="109" key="GridCell.Tab.3.center/0.23.1440.803@0.23.1440.803" timestamp="1585896417580" />
     <state width="1440" height="263" key="GridCell.Tab.3.center/0.23.1440.805@0.23.1440.805" timestamp="1581363269719" />
     <state width="1396" height="226" key="GridCell.Tab.3.center/0.23.1440.807@0.23.1440.807" timestamp="1588595444525" />
@@ -790,13 +658,13 @@
     <state width="1043" height="192" key="GridCell.Tab.3.center/0.23.1440.812@0.23.1440.812" timestamp="1586070656527" />
     <state width="1043" height="292" key="GridCell.Tab.3.center/0.23.1440.813@0.23.1440.813" timestamp="1585913128660" />
     <state width="1396" height="226" key="GridCell.Tab.3.center/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588705863912" />
-    <state width="1396" height="226" key="GridCell.Tab.3.left" timestamp="1588711465605">
+    <state width="1396" height="226" key="GridCell.Tab.3.left" timestamp="1588759425763">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.3.left/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042135" />
     <state width="1396" height="226" key="GridCell.Tab.3.left/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588703242838" />
     <state width="1396" height="226" key="GridCell.Tab.3.left/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465605" />
-    <state width="1396" height="226" key="GridCell.Tab.3.left/0.0.1440.900@0.0.1440.900" timestamp="1588598150570" />
+    <state width="1396" height="226" key="GridCell.Tab.3.left/0.0.1440.900@0.0.1440.900" timestamp="1588759425763" />
     <state width="1043" height="109" key="GridCell.Tab.3.left/0.23.1440.803@0.23.1440.803" timestamp="1585896417579" />
     <state width="1440" height="263" key="GridCell.Tab.3.left/0.23.1440.805@0.23.1440.805" timestamp="1581363269719" />
     <state width="1396" height="226" key="GridCell.Tab.3.left/0.23.1440.807@0.23.1440.807" timestamp="1588595444523" />
@@ -805,13 +673,13 @@
     <state width="1043" height="192" key="GridCell.Tab.3.left/0.23.1440.812@0.23.1440.812" timestamp="1586070656527" />
     <state width="1043" height="292" key="GridCell.Tab.3.left/0.23.1440.813@0.23.1440.813" timestamp="1585913128659" />
     <state width="1396" height="226" key="GridCell.Tab.3.left/0.23.1440.877/1440.-100.1920.980@0.23.1440.877" timestamp="1588705863911" />
-    <state width="1396" height="226" key="GridCell.Tab.3.right" timestamp="1588711465606">
+    <state width="1396" height="226" key="GridCell.Tab.3.right" timestamp="1588759425764">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1396" height="226" key="GridCell.Tab.3.right/0.0.1440.900/1440.-100.1920.1057@0.0.1440.900" timestamp="1588706042138" />
     <state width="1396" height="226" key="GridCell.Tab.3.right/0.0.1440.900/1440.-100.1920.980@0.0.1440.900" timestamp="1588703242839" />
     <state width="1396" height="226" key="GridCell.Tab.3.right/0.0.1440.900/1440.-123.1920.1080@0.0.1440.900" timestamp="1588711465606" />
-    <state width="1396" height="226" key="GridCell.Tab.3.right/0.0.1440.900@0.0.1440.900" timestamp="1588598150572" />
+    <state width="1396" height="226" key="GridCell.Tab.3.right/0.0.1440.900@0.0.1440.900" timestamp="1588759425764" />
     <state width="1043" height="109" key="GridCell.Tab.3.right/0.23.1440.803@0.23.1440.803" timestamp="1585896417580" />
     <state width="1440" height="263" key="GridCell.Tab.3.right/0.23.1440.805@0.23.1440.805" timestamp="1581363269720" />
     <state width="1396" height="226" key="GridCell.Tab.3.right/0.23.1440.807@0.23.1440.807" timestamp="1588595444527" />
