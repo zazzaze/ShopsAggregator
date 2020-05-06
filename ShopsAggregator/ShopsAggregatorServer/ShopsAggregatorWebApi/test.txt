@@ -1,1 +1,0 @@
-ShopsAggregatorWebApi.Models.User
