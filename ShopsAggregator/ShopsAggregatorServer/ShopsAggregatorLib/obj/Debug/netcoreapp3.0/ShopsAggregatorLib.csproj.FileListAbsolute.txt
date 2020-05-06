@@ -1,8 +1,0 @@
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregatorServer/ShopsAggregatorLib/bin/Debug/netcoreapp3.0/ShopsAggregatorLib.deps.json
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregatorServer/ShopsAggregatorLib/bin/Debug/netcoreapp3.0/ShopsAggregatorLib.dll
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregatorServer/ShopsAggregatorLib/bin/Debug/netcoreapp3.0/ShopsAggregatorLib.pdb
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregatorServer/ShopsAggregatorLib/obj/Debug/netcoreapp3.0/ShopsAggregatorLib.csprojAssemblyReference.cache
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregatorServer/ShopsAggregatorLib/obj/Debug/netcoreapp3.0/ShopsAggregatorLib.AssemblyInfoInputs.cache
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregatorServer/ShopsAggregatorLib/obj/Debug/netcoreapp3.0/ShopsAggregatorLib.AssemblyInfo.cs
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregatorServer/ShopsAggregatorLib/obj/Debug/netcoreapp3.0/ShopsAggregatorLib.dll
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregatorServer/ShopsAggregatorLib/obj/Debug/netcoreapp3.0/ShopsAggregatorLib.pdb

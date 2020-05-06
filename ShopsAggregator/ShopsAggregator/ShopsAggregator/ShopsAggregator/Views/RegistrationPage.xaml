@@ -20,7 +20,7 @@
                 <Label FontSize="Medium" Margin="0,10,0,0">Введите пароль повторно</Label>
                 <Entry x:Name="PasswordAgainEntry" IsPassword="True" Placeholder="########" Text=""/>
                 <Label FontSize="Medium" Margin="0,10,0,0">Хотите быть продавцом?</Label>
-                <Switch x:Name="IsSeller"/>
+                <Switch x:Name="IsSeller" IsToggled="{Binding IsSeller}"/>
                 <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Margin="0,10">
                     <CheckBox x:Name="CheckBox" HorizontalOptions="Start" CheckedChanged="CheckBoxChanged" Color="{StaticResource purple}"/>
                     <Label x:Name="CheckBoxText" HorizontalOptions="FillAndExpand" Text="Согласен с политикой конфиденциальности и условиями пользования" FontSize="Medium"/>

@@ -75,8 +75,6 @@
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/RestSharp.dll
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.dll
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.pdb
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/ShopsAggregatorLib.dll
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/ShopsAggregatorLib.pdb
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/ibtool/_BundleResourceWithLogicalName.items
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/actool/_PartialAppManifest.items
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone12.5-13.3/actool/_BundleResourceWithLogicalName.items

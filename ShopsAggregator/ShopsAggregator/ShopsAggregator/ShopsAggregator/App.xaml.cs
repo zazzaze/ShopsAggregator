@@ -3,9 +3,9 @@ using System.Globalization;
 using System.IO;
 using System.Threading;
 using Newtonsoft.Json;
+using ShopsAggregator.Models;
 using ShopsAggregator.Services;
 using ShopsAggregator.Views;
-using ShopsAggregatorLib;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
@@ -62,12 +62,9 @@ namespace ShopsAggregator
             return current != NetworkAccess.None;
         }
         
-        public static User DeserializeUser(String json)
+        public static T Deserialize<T>(String json)
         {
-            json = json.Remove(json.Length - 1, 1).Replace("\\", "")
-                .Remove(0, 1);
-
-                return JsonConvert.DeserializeObject<User>(json);
+            return JsonConvert.DeserializeObject<T>(json);
         }
     }
 }

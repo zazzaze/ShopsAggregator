@@ -21,10 +21,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Models" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Reference Include="ShopsAggregatorLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
         <HintPath>..\..\..\ShopsAggregatorServer\ShopsAggregatorLib\bin\Debug\netcoreapp3.0\ShopsAggregatorLib.dll</HintPath>
       </Reference>
@@ -39,11 +35,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="MainTabbedPAge.xaml.cs">
+      <Compile Update="MainTabbedPage.xaml.cs">
         <DependentUpon>MainTabbedPage.xaml</DependentUpon>
       </Compile>
       <Compile Update="Views\AllPostsPage.xaml.cs">
         <DependentUpon>AllPostsPage.xaml</DependentUpon>
+      </Compile>
+      <Compile Update="Views\BuyerMainPage.xaml.cs">
+        <DependentUpon>BuyerMainPage.xaml</DependentUpon>
       </Compile>
     </ItemGroup>
 

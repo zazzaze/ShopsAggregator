@@ -33,7 +33,15 @@
         </e>
         <e p="MainTabbedPage.xaml" t="Include" />
         <e p="MainTabbedPage.xaml.cs" t="Include" />
-        <e p="Models" t="Include" />
+        <e p="Models" t="Include">
+          <e p="Buyer.cs" t="Include" />
+          <e p="CreatePostForm.cs" t="Include" />
+          <e p="IconPostForm.cs" t="Include" />
+          <e p="Post.cs" t="Include" />
+          <e p="RegistrationForm.cs" t="Include" />
+          <e p="Seller.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
@@ -43,9 +51,10 @@
               <e p="Views" t="Include">
                 <e p="AllPostsPage.xaml.g.cs" t="Include" />
                 <e p="Authentification.xaml.g.cs" t="Include" />
+                <e p="BuyerMainPage.xaml.g.cs" t="Include" />
+                <e p="PostPage.xaml.g.cs" t="Include" />
                 <e p="RegistrationPage.xaml.g.cs" t="Include" />
                 <e p="SearchPage.xaml.g.cs" t="Include" />
-                <e p="UserSettingsPage.xaml.g.cs" t="Include" />
               </e>
             </e>
           </e>
@@ -64,12 +73,18 @@
           <e p="AllPostsPage.xaml.cs" t="Include" />
           <e p="Authentification.xaml" t="Include" />
           <e p="Authentification.xaml.cs" t="Include" />
+          <e p="BuyerMainPage.xaml" t="Include" />
+          <e p="BuyerMainPage.xaml.cs" t="Include" />
+          <e p="CreatePostPage.xaml" t="Include" />
+          <e p="CreatePostPage.xaml.cs" t="Include" />
+          <e p="PostPage.xaml" t="Include" />
+          <e p="PostPage.xaml.cs" t="Include" />
           <e p="RegistrationPage.xaml" t="Include" />
           <e p="RegistrationPage.xaml.cs" t="Include" />
           <e p="SearchPage.xaml" t="Include" />
           <e p="SearchPage.xaml.cs" t="Include" />
-          <e p="UserSettingsPage.xaml" t="Include" />
-          <e p="UserSettingsPage.xaml.cs" t="Include" />
+          <e p="SellerMainPage.xaml" t="Include" />
+          <e p="SellerMainPage.xaml.cs" t="Include" />
         </e>
       </e>
       <e p="ShopsAggregator/ShopsAggregator.Android" t="IncludeRecursive">

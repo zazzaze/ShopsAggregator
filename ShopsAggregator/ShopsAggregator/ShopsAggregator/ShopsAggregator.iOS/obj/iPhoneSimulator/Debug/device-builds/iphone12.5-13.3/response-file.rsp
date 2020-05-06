@@ -223,7 +223,6 @@
 -r=/Users/egor/.nuget/packages/xamarin.forms/4.5.0.282-pre4/lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
 -r=/Users/egor/.nuget/packages/xamarin.hotreload/1.6.1/lib/netstandard2.0/Xamarin.Forms.HotReload.Reloader.dll
 -r=/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/bin/Debug/netstandard2.0/ShopsAggregator.dll
--r=/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/bin/Debug/netstandard2.0/ShopsAggregatorLib.dll
  --target-framework=Xamarin.iOS,v1.0
 --root-assembly=/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.iOS/bin/iPhoneSimulator/Debug/ShopsAggregator.iOS.exe
  

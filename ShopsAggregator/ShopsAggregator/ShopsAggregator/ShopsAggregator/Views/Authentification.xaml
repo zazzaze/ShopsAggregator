@@ -11,9 +11,12 @@
                     <Label Text="ShopYou" TextColor="{StaticResource purple}" HorizontalTextAlignment="Center" FontSize="44"
                             Margin="0,0,0,100" FontFamily="SchlangeBold"/>
                         
-                    <customControls:CustomEditor x:Name="username" Placeholder="Enter your username or email" Margin="0,0,0,3"/>
+                    <customControls:CustomEditor x:Name="username" Placeholder="Enter your buyername or email" Margin="0,0,0,3"/>
                     <Entry x:Name="password" IsPassword="true" Placeholder="Enter your password" Margin="0,0,0,7"/>
-                    <Button Text="Войти" x:Name="signInButton" Clicked="OnLoginButtonClicked" Style="{StaticResource buttonStyle}"/>
+                    <Button Text="Войти как покупатель" x:Name="buyerSignInButton" Clicked="OnBuyerSignInButtonClicked" 
+                            Style="{StaticResource buttonStyle}" CornerRadius="5"/>
+                    <Button Text="Войти как магазин" x:Name="sellerSignInButton" Clicked="OnSellerSignInButtonClicked" 
+                            Style="{StaticResource buttonStyle}" CornerRadius="5"/>
                     <Label Text="или" Margin="0,10" HorizontalTextAlignment="Center" TextColor="{StaticResource purple}"/>
                 </StackLayout>
                 <Button Text="Зарегистрироваться" Clicked="OnRegistrationButtonClick"/>

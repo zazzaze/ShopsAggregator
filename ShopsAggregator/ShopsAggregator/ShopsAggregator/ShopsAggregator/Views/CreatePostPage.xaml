@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopsAggregator.Views.CreatePostPage"
+             Title="Добавить товар">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="Center">
+                <Label FontSize="Large" Text="Добавить новый товар" />
+                <Button x:Name="GetPostPhoto" Text="Выбрать фотографию" Clicked="OnGetPostPhotoClicked" />
+                <Image x:Name="PostImage" />
+                <Entry Placeholder="Введите информацию о товаре" />
+                <Button Text="Добавить" Style="{StaticResource buttonStyle}" Clicked="CreatePostButtonClicked" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

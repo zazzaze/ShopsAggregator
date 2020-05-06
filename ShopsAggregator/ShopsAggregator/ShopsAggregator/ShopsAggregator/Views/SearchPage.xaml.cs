@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RestSharp;
-using ShopsAggregatorLib;
+using ShopsAggregator.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,7 +19,7 @@ namespace ShopsAggregator.Views
         private const String alertCancel = "Попробовать снова";
         private const String getResponseAlertTitle = "Ошибка запроса";
         private const String getResponseAlertContent = "Не удалось получить данныу";
-        private List<User> searchedUsers;
+        private List<Seller> searchedSellers;
         public SearchPage()
         {
             InitializeComponent();
@@ -53,10 +53,10 @@ namespace ShopsAggregator.Views
                 return;
             }
 
-            List<User> users;
+            List<Seller> sellers;
             try
             {
-                users = JsonConvert.DeserializeObject<List<User>>(responseContent);
+                sellers = JsonConvert.DeserializeObject<List<Seller>>(responseContent);
             }
             catch (Exception)
             {
@@ -64,8 +64,8 @@ namespace ShopsAggregator.Views
                 return;
             }
 
-            searchedUsers = users;
-            UsersListView.ItemsSource = users;
+            searchedSellers = sellers;
+            UsersListView.ItemsSource = sellers;
         }
 
         private async Task<String> TryGetSearchResult(String searchLine)
@@ -81,12 +81,11 @@ namespace ShopsAggregator.Views
         {
             if (sender is ListView list)
             {
-                if (searchedUsers == null)
+                if (searchedSellers == null)
                     return;
                 Int32 index = e.SelectedItemIndex;
-                if (index < 0 || index >= searchedUsers.Count)
+                if (index < 0 || index >= searchedSellers.Count)
                     return;
-                Navigation.PushAsync(new UserSettingsPage(searchedUsers[e.SelectedItemIndex]));
                 list.SelectedItem = null;
             }
         }

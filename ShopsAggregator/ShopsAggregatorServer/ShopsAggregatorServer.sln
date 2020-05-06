@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopsAggregatorWebApi", "ShopsAggregatorWebApi\ShopsAggregatorWebApi.csproj", "{B9A64E01-6A43-4D9C-83E8-409F68327FD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopsAggregatorLib", "ShopsAggregatorLib\ShopsAggregatorLib.csproj", "{A170F725-8DEF-447B-ADA3-7B81EE9EC51F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,9 +12,5 @@ Global
 		{B9A64E01-6A43-4D9C-83E8-409F68327FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9A64E01-6A43-4D9C-83E8-409F68327FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9A64E01-6A43-4D9C-83E8-409F68327FD6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A170F725-8DEF-447B-ADA3-7B81EE9EC51F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A170F725-8DEF-447B-ADA3-7B81EE9EC51F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A170F725-8DEF-447B-ADA3-7B81EE9EC51F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A170F725-8DEF-447B-ADA3-7B81EE9EC51F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

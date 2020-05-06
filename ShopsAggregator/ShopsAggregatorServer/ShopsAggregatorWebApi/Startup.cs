@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -33,12 +34,8 @@ namespace ShopsAggregatorWebApi
         public void ConfigureServices(IServiceCollection services)
         {
             Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            var settingsName = nameof(ShopsAggregatorDatabaseSettings);
-            services.Configure<ShopsAggregatorDatabaseSettings>(Configuration.GetSection(
-                settingsName));
-            services.AddSingleton<IShopsAggregatorDatabaseSettings>(sp =>
-                sp.GetRequiredService<IOptions<ShopsAggregatorDatabaseSettings>>().Value);
-            services.AddSingleton<ShopsAggregatorService>();
+            services.AddEntityFrameworkNpgsql().AddDbContext<DatabaseContext>(options =>
+                options.UseNpgsql(Configuration.GetConnectionString("DatabaseContext")));
             services.AddControllers();
             services.Configure<ForwardedHeadersOptions>(options =>
             {

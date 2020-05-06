@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using ShopsAggregatorLib;
+using ShopsAggregatorWebApi.Models;
 using ShopsAggregatorWebApi.Services;
 
 namespace ShopsAggregatorWebApi.Controllers
@@ -11,16 +11,16 @@ namespace ShopsAggregatorWebApi.Controllers
     public class SearchController : Controller
     {
 
-        private ShopsAggregatorService _service;
-        public SearchController(ShopsAggregatorService service)
+        private DatabaseContext _service;
+        public SearchController(DatabaseContext service)
         {
             _service = service;
         }
 
         [HttpGet]
-        public ActionResult<List<User>> SearchUser(String q)
+        public ActionResult<List<Seller>> SearchSellers(String q)
         {
-            var users = _service.SearchUsers(q).Value;
+            var users = _service.SearchSellers(q);
             if (users != null)
             {
                 foreach (var user in users)
@@ -32,10 +32,10 @@ namespace ShopsAggregatorWebApi.Controllers
             return users;
         }
 
-        [HttpGet("getUser")]
-        public ActionResult<User> GetUserById(String id)
+        [HttpGet("getSeller")]
+        public ActionResult<User> GetSellerById(Int32 id)
         {
-            User user = _service.GetUserById(id);
+            User user = _service.GetSeller(id);
             if (user != null)
                 user.Password = null;
             return user;

@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using ShopsAggregatorWebApi.Models;
-using ShopsAggregatorLib;
 
 namespace ShopsAggregatorWebApi.Services
 {
@@ -17,7 +17,8 @@ namespace ShopsAggregatorWebApi.Services
             var dataBase = client.GetDatabase(options.DatabaseName);
             _posts = dataBase.GetCollection<Post>(options.PostsCollectionName);
             _users = dataBase.GetCollection<User>(options.UsersCollectionName);
-            
+            BsonClassMap.RegisterClassMap<Buyer>();
+            BsonClassMap.RegisterClassMap<Seller>();
         }
 
         public List<User> GetAllUsers() => _users.Find(_ => true).ToList();
@@ -49,16 +50,16 @@ namespace ShopsAggregatorWebApi.Services
             return isCreatedUser != null;
         }
 
-        public Boolean IsSameUserCreated(String id)
-        {
-            User isUserCreated = _users.Find(checkingUser => checkingUser.Id == id).FirstOrDefault();
-            return isUserCreated != null;
-        }
-
-        public User GetUserById(String id)
-        {
-            return _users.Find(user => user.Id == id).FirstOrDefault();
-        }
+        // public Boolean IsSameUserCreated(String id)
+        // {
+        //     User isUserCreated = _users.Find(checkingUser => checkingUser.Id == id).FirstOrDefault();
+        //     return isUserCreated != null;
+        // }
+        //
+        // public User GetUserById(String id)
+        // {
+        //     return _users.Find(user => user.Id == id).FirstOrDefault();
+        // }
         
         public ActionResult<List<User>> SearchUsers(String line)
         {

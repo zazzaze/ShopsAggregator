@@ -4,7 +4,7 @@ using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using ShopsAggregatorWebApi.Services;
 using Newtonsoft.Json;
-using ShopsAggregatorLib;
+using ShopsAggregatorWebApi.Models;
 
 namespace ShopsAggregatorWebApi.Controllers
 {
@@ -12,9 +12,8 @@ namespace ShopsAggregatorWebApi.Controllers
     [ApiController]
     public class AuthorizationContoller : ControllerBase
     {
-        private const String UsersIconsDirPath = "../usersicons";
-        private readonly ShopsAggregatorService _service;
-        public AuthorizationContoller(ShopsAggregatorService service)
+        private readonly DatabaseContext _service;
+        public AuthorizationContoller(DatabaseContext service)
         {
             _service = service;
         }
@@ -23,71 +22,53 @@ namespace ShopsAggregatorWebApi.Controllers
         public ActionResult<List<User>> GetAllUsers() => _service.GetAllUsers();
         
         [HttpPost("reg")]
-        public ActionResult RegistrateNewUser(Seller user)
+        public ActionResult RegistrateNewUser([FromBody]RegistrationForm user)
         {
-            User registredUser = _service.CreateUser(user);
+            User registredUser = null;
+            if (user.IsSeller)
+                registredUser = _service.CreateUser(new Seller(user));
+            else
+               registredUser = _service.CreateUser(new Buyer(user));
             if (registredUser != null)
             {
                 return Ok("Аккаунт успешно создан");
             }
-
+        
             return BadRequest("Такой аккаунт уже существует!");
         }
         
-        [HttpPost("reg")]
-        public ActionResult RegistrateNewUser(Buyer user)
+        [HttpGet("authBuyer")]
+        public ActionResult<User>TryAuthBuyer(String login, String password)
         {
-            User registredUser = _service.CreateUser(user);
-            if (registredUser != null)
-            {
-                return Ok("Аккаунт успешно создан");
-            }
-
-            return BadRequest("Такой аккаунт уже существует!");
+            return _service.GetBuyer(login, password);
         }
         
-
-        private void AddUserIconInDir(User user)
+        [HttpGet("authSeller")]
+        public ActionResult<User> TryAuthSeller(String login, String password)
         {
-            if (user.IconBytesArr == null)
-            {
-                user.IconPath = "standarticon.jpeg";
-                return;
-            }
-            if (!Directory.Exists(UsersIconsDirPath))
-                Directory.CreateDirectory(UsersIconsDirPath);
-            String iconName = user.Username + "icon.jpeg";
-            using (FileStream fs = new FileStream(UsersIconsDirPath + $"/{iconName}", FileMode.OpenOrCreate))
-            {
-                foreach (Int32 oneByte in user.IconBytesArr)
-                {
-                    fs.WriteByte((Byte)oneByte);
-                }
-            }
-
-            user.IconBytesArr = null;
-            user.IconPath = iconName;
+            return _service.GetSeller(login, password);
+        }
+        
+        [HttpPut("addSellerIcon")]
+        public IActionResult UpdateSellerIcon(IconPostForm icon)
+        {
+            if (_service.AddIconToSeller(icon, icon.ToId))
+                return Ok();
+            return BadRequest();
         }
 
-        [HttpGet("auth")]
-        public ActionResult<String> TryAuth(String login, String password)
+        [HttpPut("addBuyerIcon")]
+        public IActionResult UpdateBuyerIcon([FromBody]IconPostForm icon)
         {
-            return JsonConvert.SerializeObject(_service.GetUser(login, password));
+            if (_service.AddIconToBuyer(icon, icon.ToId))
+                return Ok();
+            return BadRequest();
         }
-
-        [HttpPut("update")]
-        public ActionResult<String> UpdateUser([FromBody]User user)
-        {
-            AddUserIconInDir(user);
-            _service.UpdateUser(user);
-            user = _service.GetUser(user.Email, user.Password);
-            return JsonConvert.SerializeObject(user);
-        }
-
-
+        
+        
         [HttpPost]
         public String Test(String name)
-        {
+        { 
             return name;
         }
     }

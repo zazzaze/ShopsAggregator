@@ -23,7 +23,10 @@ namespace ShopsAggregator {
         private global::Xamarin.Forms.Entry password;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button signInButton;
+        private global::Xamarin.Forms.Button buyerSignInButton;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Button sellerSignInButton;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Label StatusOfSignIn;
@@ -33,7 +36,8 @@ namespace ShopsAggregator {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Authentification));
             username = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::ShopsAggregator.CustomControls.CustomEditor>(this, "username");
             password = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "password");
-            signInButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "signInButton");
+            buyerSignInButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "buyerSignInButton");
+            sellerSignInButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "sellerSignInButton");
             StatusOfSignIn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "StatusOfSignIn");
         }
     }

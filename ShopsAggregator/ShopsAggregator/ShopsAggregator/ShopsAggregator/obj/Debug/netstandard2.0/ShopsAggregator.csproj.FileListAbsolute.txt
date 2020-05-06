@@ -10,10 +10,10 @@
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/ShopsAggregator.pdb
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/Authentification.xaml.g.cs
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/RegistrationPage.xaml.g.cs
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/UserSettingsPage.xaml.g.cs
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/bin/Debug/netstandard2.0/ShopsAggregatorLib.dll
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/bin/Debug/netstandard2.0/ShopsAggregatorLib.pdb
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/ShopsAggregator.csproj.CopyComplete
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/MainTabbedPage.xaml.g.cs
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/SearchPage.xaml.g.cs
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/AllPostsPage.xaml.g.cs
+/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/BuyerMainPage.xaml.g.cs
+/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/PostPage.xaml.g.cs
+/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/SellerMainPage.xaml.g.cs
+/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/CreatePostPage.xaml.g.cs

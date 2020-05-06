@@ -17,8 +17,7 @@
           "Xamarin.Essentials": "1.5.2",
           "Xamarin.Forms": "4.5.0.282-pre4",
           "Xamarin.HotReload": "1.6.1",
-          "sqlite-net-pcl": "1.7.302-beta",
-          "ShopsAggregatorLib": "1.0.0.0"
+          "sqlite-net-pcl": "1.7.302-beta"
         },
         "runtime": {
           "ShopsAggregator.dll": {}
@@ -1152,14 +1151,6 @@
             "fileVersion": "1.0.0.0"
           }
         }
-      },
-      "ShopsAggregatorLib/1.0.0.0": {
-        "runtime": {
-          "ShopsAggregatorLib.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
       }
     }
   },
@@ -1882,11 +1873,6 @@
       "sha512": "sha512-/tQt2hBdDRUwuZr29fHRKQPXSZrc90EpuNRkTg6zO3/D4r2WAnl1BZyMGKCyBXsP8vp10HilKU7R0leWwjtUfg==",
       "path": "xamarin.hotreload/1.6.1",
       "hashPath": "xamarin.hotreload.1.6.1.nupkg.sha512"
-    },
-    "ShopsAggregatorLib/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

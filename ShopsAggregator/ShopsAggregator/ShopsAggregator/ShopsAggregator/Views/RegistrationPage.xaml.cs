@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using MongoDB.Libmongocrypt;
 using Newtonsoft.Json;
 using RestSharp;
-using ShopsAggregatorLib;
+using ShopsAggregator.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -28,12 +28,16 @@ namespace ShopsAggregator.Views
         private const String IncorrectPasswordAgainMessage = "Введеные пароли не совпадают";
         private const String BadAccountCreateAlertTitle = "Не удалось создать акканут";
         private const String BadAccountCreateAlertCancelText = "Попробовать снова";
-        private User newUser = new User();
+        private const String BadRequestAlertMessage = "Ошибка подключения к серверу";
+        private const String SuccessAccountCreateTitle = "Поздравляю!!";
+        private const String SuccessAccountCreateMessage = "Аккаунт успешно создан";
+        private const String SuccessAccountCreateCancel = "Ура"; 
+        private RegistrationForm form = new RegistrationForm();
         public RegistrationPage()
         {
             InitializeComponent();
             CheckBox.CheckedChanged += (sender, args) => CheckBox.Color = (Color)App.Current.Resources["purple"];
-            this.BindingContext = newUser;
+            this.BindingContext = form;
         }
 
         private void OnRegistrationButtonCLicked(object sender, EventArgs e)
@@ -48,20 +52,22 @@ namespace ShopsAggregator.Views
                 return;
             }
 
-            if (IsSeller.IsToggled)
-                newUser = new Seller(newUser);
-            else
-                newUser = new Buyer(newUser);
-            User registredUser = SendRegistrationPost(newUser);
-            if (registredUser == null)
+            Boolean result = false;
+            try
+            {
+                result = SendRegistrationPost(form);
+            }
+            catch (Exception)
+            {
+                DisplayAlert(BadAccountCreateAlertTitle,BadRequestAlertMessage, BadAccountCreateAlertCancelText);
+            }
+            if (!result)
                 return;
-            var mainTabbedPage = new MainTabbedPage(newUser);
-            NavigationPage.SetHasNavigationBar(mainTabbedPage, true);
-            NavigationPage.SetHasBackButton(mainTabbedPage, false);
-            Navigation.PushAsync(mainTabbedPage);
+            DisplayAlert(SuccessAccountCreateTitle, SuccessAccountCreateMessage, SuccessAccountCreateCancel);
+            Navigation.PopAsync();
         }
 
-        private User SendRegistrationPost(User user)
+        private Boolean SendRegistrationPost(RegistrationForm user)
         {
             String json = JsonConvert.SerializeObject(user);
             var client = new RestClient($"{App.ServerUrl}reg");
@@ -73,11 +79,10 @@ namespace ShopsAggregator.Views
             if (response.StatusCode == HttpStatusCode.BadRequest)
             {
                 DisplayAlert(BadAccountCreateAlertTitle, response.Content, BadAccountCreateAlertCancelText);
-                return null;
+                return false;
             }
 
-
-            return HelpMethods<User>.GetFullCopy(user);
+            return true;
         }
 
         private void CheckBoxChanged(object sender, EventArgs e)

@@ -17,11 +17,7 @@
     },
     "frameworks": {
       "netcoreapp3.0": {
-        "projectReferences": {
-          "/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregatorServer/ShopsAggregatorLib/ShopsAggregatorLib.csproj": {
-            "projectPath": "/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregatorServer/ShopsAggregatorLib/ShopsAggregatorLib.csproj"
-          }
-        }
+        "projectReferences": {}
       }
     },
     "warningProperties": {
@@ -40,6 +36,10 @@
         "Newtonsoft.Json": {
           "target": "Package",
           "version": "[12.0.3, )"
+        },
+        "Npgsql.EntityFrameworkCore.PostgreSQL": {
+          "target": "Package",
+          "version": "[5.0.0-preview3, )"
         }
       },
       "imports": [
