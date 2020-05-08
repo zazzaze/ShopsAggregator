@@ -28,17 +28,17 @@ namespace ShopsAggregatorWebApi.Controllers
 
 
         [HttpPut("addSub")]
-        public IActionResult AddSubscriberToSeller(Int32 buyerId, Int32 sellerId)
+        public IActionResult AddSubscriberToSeller(Int32 buyerId, String sellerName)
         {
-            if (_service.AddSubscriber(buyerId, sellerId))
+            if (_service.AddSubscriber(buyerId, sellerName))
                 return Ok();
             return BadRequest();
         }
 
         [HttpPut("rmSub")]
-        public IActionResult RemoveSellerSubscriber(Int32 buyerId, Int32 sellerId)
+        public IActionResult RemoveSellerSubscriber(Int32 buyerId, String sellerName)
         {
-            if (_service.RemoveSubscriber(buyerId, sellerId))
+            if (_service.RemoveSubscriber(buyerId, sellerName))
                 return Ok();
             return BadRequest();
         }

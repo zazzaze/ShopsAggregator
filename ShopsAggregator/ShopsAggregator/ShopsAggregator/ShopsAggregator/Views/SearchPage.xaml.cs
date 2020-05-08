@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -19,10 +20,12 @@ namespace ShopsAggregator.Views
         private const String alertCancel = "Попробовать снова";
         private const String getResponseAlertTitle = "Ошибка запроса";
         private const String getResponseAlertContent = "Не удалось получить данныу";
-        private List<Seller> searchedSellers;
-        public SearchPage()
+        private List<String> searchedSellers;
+        private Buyer _buyer;
+        public SearchPage(Buyer buyer)
         {
             InitializeComponent();
+            _buyer = buyer;
         }
 
         private void OnSearchButtonPressed(object sender, EventArgs e)
@@ -53,10 +56,10 @@ namespace ShopsAggregator.Views
                 return;
             }
 
-            List<Seller> sellers;
+            List<String> sellers;
             try
             {
-                sellers = JsonConvert.DeserializeObject<List<Seller>>(responseContent);
+                sellers = JsonConvert.DeserializeObject<List<String>>(responseContent);
             }
             catch (Exception)
             {
@@ -77,7 +80,7 @@ namespace ShopsAggregator.Views
             return response.Content;
         }
 
-        private void OnSearchItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void OnSearchItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (sender is ListView list)
             {
@@ -87,6 +90,7 @@ namespace ShopsAggregator.Views
                 if (index < 0 || index >= searchedSellers.Count)
                     return;
                 list.SelectedItem = null;
+                await Navigation.PushAsync(new WatchSellerPage(searchedSellers[index], _buyer));
             }
         }
     }

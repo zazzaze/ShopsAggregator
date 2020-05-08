@@ -7,10 +7,10 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout HorizontalOptions="Center">
-                <Label FontSize="Large" Text="Добавить новый товар" />
-                <Button x:Name="GetPostPhoto" Text="Выбрать фотографию" Clicked="OnGetPostPhotoClicked" />
+                <Label FontSize="Large" Text="Добавить новый товар" HorizontalTextAlignment="Center" />
                 <Image x:Name="PostImage" />
-                <Entry Placeholder="Введите информацию о товаре" />
+                <Button x:Name="GetPostPhoto" Text="Выбрать фотографию" Clicked="OnGetPostPhotoClicked" />
+                <Entry Placeholder="Введите информацию о товаре" Text="{Binding Info}"/>
                 <Button Text="Добавить" Style="{StaticResource buttonStyle}" Clicked="CreatePostButtonClicked" />
             </StackLayout>
         </ScrollView>

@@ -26,15 +26,19 @@
           <e p="CustomEditor.cs" t="Include" />
         </e>
         <e p="HelpMethods.cs" t="Include" />
+        <e p="ImageResourceExtension.cs" t="Include" />
         <e p="images" t="Include">
           <e p="accounticon.png" t="Include" />
+          <e p="dislike.png" t="Include" />
           <e p="gallery.png" t="Include" />
+          <e p="heart.png" t="Include" />
           <e p="searchicon.png" t="Include" />
         </e>
         <e p="MainTabbedPage.xaml" t="Include" />
         <e p="MainTabbedPage.xaml.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Buyer.cs" t="Include" />
+          <e p="BuyerPostView.cs" t="Include" />
           <e p="CreatePostForm.cs" t="Include" />
           <e p="IconPostForm.cs" t="Include" />
           <e p="Post.cs" t="Include" />
@@ -85,6 +89,8 @@
           <e p="SearchPage.xaml.cs" t="Include" />
           <e p="SellerMainPage.xaml" t="Include" />
           <e p="SellerMainPage.xaml.cs" t="Include" />
+          <e p="WatchSellerPage.xaml" t="Include" />
+          <e p="WatchSellerPage.xaml.cs" t="Include" />
         </e>
       </e>
       <e p="ShopsAggregator/ShopsAggregator.Android" t="IncludeRecursive">

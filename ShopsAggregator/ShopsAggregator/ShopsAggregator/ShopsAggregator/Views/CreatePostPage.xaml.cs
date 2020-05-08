@@ -32,17 +32,21 @@ namespace ShopsAggregator.Views
             Stream stream = await DependencyService.Get<IPhotoPickerService>().GetImageStreamAsync();
             if (stream != null)
             {
+                await Task.Run(() => GetImageBytesFromStream(stream));
                 PostImage.Source = ImageSource.FromStream(() => stream);
-                GetImageBytesFromStream(stream);
+                GetPostPhoto.Text = "Изменить фотографию";
             }
         }
 
         private void GetImageBytesFromStream(Stream stream)
         {
+            form.ImageBytes = new List<Int32>();
             while (stream.Position != stream.Length)
             {
                 form.ImageBytes.Add(stream.ReadByte());
             }
+
+            stream.Seek(0, SeekOrigin.Begin);
         }
         
         

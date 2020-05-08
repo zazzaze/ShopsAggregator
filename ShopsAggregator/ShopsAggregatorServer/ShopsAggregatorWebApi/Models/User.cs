@@ -22,6 +22,7 @@ namespace ShopsAggregatorWebApi.Models
 
         [Column("iconpath")] 
         public String IconPath { get; set; } = "standarticon.jpeg";
+        
 
 
         public User()

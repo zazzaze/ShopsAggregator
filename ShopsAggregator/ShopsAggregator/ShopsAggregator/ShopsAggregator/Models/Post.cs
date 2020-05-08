@@ -14,5 +14,7 @@ namespace ShopsAggregator.Models
         
         
         public List<Int32> Comments { get; set; } = new List<Int32>();
+        
+        public List<Int32> Likers { get; set; } = new List<Int32>();
     }
 }

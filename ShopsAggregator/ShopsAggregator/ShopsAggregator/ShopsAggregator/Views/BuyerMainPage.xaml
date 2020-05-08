@@ -2,12 +2,14 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shopsAggregator="clr-namespace:ShopsAggregator;assembly=ShopsAggregator"
              x:Class="ShopsAggregator.Views.BuyerMainPage"
              Title="Аккаунт">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Выйти" Clicked="OnExitToolbarItemTapped" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
+        <RefreshView Refreshing="RefreshView_OnRefreshing" x:Name="RefreshView">
         <ScrollView>
         <StackLayout Margin="0,10,0,0" Padding="50,0">
             <Frame CornerRadius="100" IsClippedToBounds="True" HorizontalOptions="Center" BackgroundColor="Gray" 
@@ -16,7 +18,8 @@
                     <TapGestureRecognizer Tapped="GetPhoto"/>
                 </Frame.GestureRecognizers>
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                    <Image x:Name="Icon" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                    <Image x:Name="Icon" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                           Source="{Binding IconPath}"/>
                     <Label x:Name="ImagePickerText" Text="Нажмите чтобы выбрать фотографию" TextColor="{StaticResource cloudWhite}" 
                            FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                 </StackLayout>
@@ -31,20 +34,46 @@
                        HorizontalTextAlignment="Center"/>
             </StackLayout>
             <Label FontSize="Title" HorizontalTextAlignment="Start">Понравившиеся товары</Label>
-            <ListView x:Name="Posts" CachingStrategy="RecycleElementAndDataTemplate">
+            <ListView x:Name="Posts" CachingStrategy="RecycleElementAndDataTemplate" HasUnevenRows="True" 
+                      SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout x:Name="StackLayout" >
-                                <Image x:Name="PostImage" Source="{Binding ImagePath}"/>
-                                <AbsoluteLayout x:Name="IconsLayout" HeightRequest=".1">
-                                </AbsoluteLayout>
-                            </StackLayout>
+                            <StackLayout Padding="0,5" Margin="0,0,0,10">
+                                <Label Text="{Binding PostId}" IsVisible="False" />
+                                <FlexLayout JustifyContent="Start" Padding="5" AlignItems="Center">
+                                    <FlexLayout.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                            Tapped="OnPostHeaderTapped"/>
+                                    </FlexLayout.GestureRecognizers>
+                                    <Frame CornerRadius="15" IsClippedToBounds="True" HorizontalOptions="Center" BackgroundColor="Gray" 
+                                           WidthRequest="30" HeightRequest="30" VerticalOptions="Start" Padding="0" HasShadow="False">
+                                        <Image x:Name="SellerIcon" Source="{Binding SellerIconPath}" VerticalOptions="FillAndExpand"
+                                               HorizontalOptions="FillAndExpand" />
+                                    </Frame>
+                                    <Label Text="{Binding Username}" Padding="10,0"/>
+                                </FlexLayout>
+                                <StackLayout >
+                                    <Image x:Name="PostImage" Source="{Binding IconPath}"/>
+                                    <FlexLayout JustifyContent="Start" HeightRequest="50" AlignItems="Center">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image Source="{shopsAggregator:ImageResource ShopsAggregator.images.dislike.png}" >
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="SendDislikeImageTapped"/>
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                            <Label HorizontalTextAlignment="Center" Text="{Binding LikesCount}" FontSize="Small"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="{Binding Info}" Padding="0,3"/>
+                                </StackLayout>
+                            </StackLayout>    
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
         </ScrollView>
+        </RefreshView>
     </ContentPage.Content>
 </ContentPage>
