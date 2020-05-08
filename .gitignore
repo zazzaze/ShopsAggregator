@@ -1,4 +1,5 @@
-/ShopsAggregator/ShopsAggregatorServer/ShopsAggregatorWebApi/bin/
-/ShopsAggregator/ShopsAggregatorServer/ShopsAggregatorWebApi/debug/
+**/bin
+**/debug
 /ShopsAggregator/ShopsAggregatorServer/ShopsAggregatorWebApi/appsettings.json/
 /ShopsAggregator/ShopsAggregatorServer/ShopsAggregatorWebApi/appsettings.Development.json/
+/ShopsAggregator/ShopsAggregatorServer/images
