@@ -21,10 +21,14 @@ namespace ShopsAggregatorWebApi.Models
         [Column("info")]
         public String Info { get; set; }
 
+        
         public String ImagePath => Id + "photo.jpeg";
         
-        
+        [Column("comments")]
         public List<Int32> Comments { get; set; } = new List<Int32>();
+
+        [Column("likers")]
+        public List<Int32> Likers { get; set; } = new List<Int32>();
         
         public void CreatePostFromForm(CreatePostForm form)
         {

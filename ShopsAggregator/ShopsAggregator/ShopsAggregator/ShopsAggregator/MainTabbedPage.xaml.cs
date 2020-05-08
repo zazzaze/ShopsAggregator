@@ -21,9 +21,9 @@ namespace ShopsAggregator
         {
             var userSettingsPage = new BuyerMainPage(buyer);
             userSettingsPage.IconImageSource = ImageSource.FromResource("ShopsAggregator.images.accounticon.png");
-            var searchPage = new SearchPage();
+            var searchPage = new SearchPage(buyer);
             searchPage.IconImageSource = ImageSource.FromResource("ShopsAggregator.images.searchicon.png");
-            var postsPage = new AllPostsPage();
+            var postsPage = new AllPostsPage(buyer);
             postsPage.IconImageSource = ImageSource.FromResource("ShopsAggregator.images.gallery.png");
             Children.Add(postsPage);
             Children.Add(searchPage);

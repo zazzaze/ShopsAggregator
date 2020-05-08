@@ -89,9 +89,20 @@ namespace ShopsAggregatorWebApi.Models
                 select seller).FirstOrDefault();
         }
 
-        public Seller GetSeller(Int32 id)
+        private Seller GetSeller(Int32 id)
         {
             return (from seller in Sellers.ToList() where seller.Id == id select seller).FirstOrDefault();
+        }
+
+        public Seller GetSeller(String sellerName)
+        {
+            Seller currentSeller = (from seller in Sellers.ToList() where seller.Username == sellerName select seller)
+                .FirstOrDefault();
+            if (currentSeller == null)
+                return null;
+            currentSeller.Id = 0;
+            currentSeller.Password = "";
+            return currentSeller;
         }
 
         public Boolean AddIconToSeller(IconPostForm icon, Int32 sellerId)
@@ -147,12 +158,21 @@ namespace ShopsAggregatorWebApi.Models
             }
         }
 
-        public List<Seller> SearchSellers(string s)
+        public List<String> SearchSellers(String s)
         {
-            return (from seller in Sellers.ToList() where seller.Username.Contains(s) select seller).ToList();
+            return (from seller in Sellers.ToList() where seller.Username.Contains(s) select seller.Username).ToList();
         }
 
-        public Boolean AddSubscriber(Int32 buyerId, Int32 sellerId)
+        public Boolean AddSubscriber(Int32 buyerId, String sellerName)
+        {
+            Seller currentSeller = (from seller in Sellers.ToList() where seller.Username == sellerName select seller)
+                .FirstOrDefault();
+            if (currentSeller == null)
+                return false;
+            return AddSubscriber(buyerId, currentSeller.Id);
+        }
+        
+        private Boolean AddSubscriber(Int32 buyerId, Int32 sellerId)
         {
             Buyer buyer = GetBuyer(buyerId);
             Seller seller = GetSeller(sellerId);
@@ -168,7 +188,16 @@ namespace ShopsAggregatorWebApi.Models
             return true;
         }
 
-        public Boolean RemoveSubscriber(Int32 buyerId, Int32 sellerId)
+        public Boolean RemoveSubscriber(Int32 buyerId, String sellerName)
+        {
+            Seller currentSeller = (from seller in Sellers.ToList() where seller.Username == sellerName select seller)
+                .FirstOrDefault();
+            if (currentSeller == null)
+                return false;
+            return RemoveSubscriber(buyerId, currentSeller.Id);
+        }
+
+        private Boolean RemoveSubscriber(Int32 buyerId, Int32 sellerId)
         {
             Buyer buyer = GetBuyer(buyerId);
             Seller seller = GetSeller(sellerId);
@@ -198,8 +227,108 @@ namespace ShopsAggregatorWebApi.Models
                 Posts.Remove(newPost);
                 return false;
             }
+
+            Seller creator = GetSeller(postForm.CreatorId);
+            if (creator == null)
+                return false;
+            if(creator.Items == null)
+                creator.Items = new List<Int32>();
+            creator.Items.Insert(0,newPost.Id);
+            AddPostForSubscribers(creator, newPost.Id);
             SaveChangesAsync();
             return true;
+        }
+
+        private void AddPostForSubscribers(Seller creator, Int32 postId)
+        {
+            if(creator.Subscribers == null)
+                creator.Subscribers = new List<Int32>();
+            foreach (Int32 buyerId in creator.Subscribers)
+            {
+                Buyer subscriber = (from buyer in Buyers.ToList() where buyer.Id == buyerId select buyer).FirstOrDefault();
+                if(subscriber == null)
+                    continue;
+                if(subscriber.NewPosts == null)
+                    subscriber.NewPosts = new List<Int32>();
+                subscriber.NewPosts.Insert(0,postId);
+            }
+        }
+
+        public Post GetPostById(Int32 id)
+        {
+            return (from post in Posts.ToList() where post.Id == id select post).FirstOrDefault();
+        }
+        
+        public List<Post> GetPostsByCreatorId(String sellerName)
+        {
+            Int32 creatorId = (from seller in Sellers.ToList() where seller.Username == sellerName select seller.Id)
+                .FirstOrDefault();
+            return (from post in Posts.ToList() where post.CreatorId == creatorId select post).ToList();
+        }
+
+        public List<BuyerPostView> GetBuyerNewPosts(Int32 buyerId)
+        {
+            Buyer buyer = GetBuyer(buyerId);
+            if(buyer.NewPosts == null)
+                buyer.NewPosts = new List<Int32>();
+            List<BuyerPostView> newPosts = new List<BuyerPostView>();
+            foreach (Int32 postId in buyer.NewPosts)
+            {
+                Post post = GetPostById(postId);
+                Seller seller = GetSeller(post.CreatorId);
+                newPosts.Insert(0, new BuyerPostView(post, seller));
+            }
+            return newPosts;
+        }
+
+        public void AddLikeToPost(Int32 likerId, Int32 postId)
+        {
+            Post post = GetPostById(postId);
+            Buyer liker = GetBuyer(likerId);
+            if (liker == null)
+                return;
+            if(post.Likers == null)
+                post.Likers = new List<Int32>();
+            if(liker.LikedPosts == null)
+                liker.LikedPosts = new List<Int32>();
+            if(!liker.LikedPosts.Contains(postId))
+                liker.LikedPosts.Add(postId);
+            if(!post.Likers.Contains(likerId))
+                post.Likers.Add(likerId);
+            SaveChangesAsync();
+        }
+
+        public void RemoveLikeFromPost(Int32 likerId, Int32 postId)
+        {
+            Post post = GetPostById(postId);
+            Buyer liker = GetBuyer(likerId);
+            if (liker == null)
+                return;
+            if(post.Likers == null)
+                post.Likers = new List<Int32>();
+            if(liker.LikedPosts == null)
+                liker.LikedPosts = new List<Int32>();
+            liker.LikedPosts.Remove(postId);
+            post.Likers.Remove(likerId);
+            SaveChangesAsync();
+        }
+
+        public List<BuyerPostView> GetBuyerLikedPosts(Int32 buyerId)
+        {
+            Buyer buyer = GetBuyer(buyerId);
+            if (buyer == null)
+                return null;
+            if(buyer.LikedPosts == null)
+                buyer.LikedPosts = new List<Int32>();
+            List<BuyerPostView> posts = new List<BuyerPostView>();
+            foreach (Int32 postId in buyer.LikedPosts)
+            {
+                Post post = GetPostById(postId);
+                Seller seller = GetSeller(post.CreatorId);
+                posts.Add(new BuyerPostView(post, seller));
+            }
+
+            return posts;
         }
     }
 }

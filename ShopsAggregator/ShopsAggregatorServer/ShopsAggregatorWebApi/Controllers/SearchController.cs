@@ -18,26 +18,16 @@ namespace ShopsAggregatorWebApi.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Seller>> SearchSellers(String q)
+        public ActionResult<List<String>> SearchSellers(String q)
         {
             var users = _service.SearchSellers(q);
-            if (users != null)
-            {
-                foreach (var user in users)
-                {
-                    user.Password = null;
-                }
-            }
-
             return users;
         }
 
         [HttpGet("getSeller")]
-        public ActionResult<User> GetSellerById(Int32 id)
+        public ActionResult<User> GetSellerByName(String sellerName)
         {
-            User user = _service.GetSeller(id);
-            if (user != null)
-                user.Password = null;
+            User user = _service.GetSeller(sellerName);
             return user;
         }
     }

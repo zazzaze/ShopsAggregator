@@ -64,8 +64,8 @@ namespace ShopsAggregatorWebApi.Controllers
                 return Ok();
             return BadRequest();
         }
-        
-        
+
+
         [HttpPost]
         public String Test(String name)
         { 

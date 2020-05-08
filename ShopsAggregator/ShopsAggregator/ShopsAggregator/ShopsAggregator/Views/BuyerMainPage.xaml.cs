@@ -20,25 +20,53 @@ namespace ShopsAggregator.Views
     public partial class BuyerMainPage : ContentPage
     {
         private String iconPath;
-        private Buyer buyer;
+        private Buyer _buyer;
         private const String FailedConnectionToServerAlertTitle = "Ошибка подключения к серверу";
+        private List<BuyerPostView> likedPosts = new List<BuyerPostView>();
         public BuyerMainPage(Buyer buyer)
         {
             InitializeComponent();
-            this.buyer = buyer;
-            this.BindingContext = this.buyer;
+            _buyer = buyer;
+            this.BindingContext = _buyer;
         }
 
         protected override void OnAppearing()
         {
-            Icon.Source = App.BaseUrl + buyer.IconPath;
-            Posts.RowHeight = (Int32)(App.Current.MainPage.Height / 2);
             Posts.WidthRequest = App.Current.MainPage.Width;
-            Posts.ItemsSource = new []{new Post{Id = 1}};
-            SubscribedCounter.Text = buyer.Subscribed.Count.ToString();
+            SubscribedCounter.Text = _buyer.Subscribed.Count.ToString();
+            GetBuyerLikedPosts();
             base.OnAppearing();
         }
 
+        private async void GetBuyerLikedPosts()
+        {
+            RefreshView.IsRefreshing = true;
+            var client = new RestClient($"{App.BaseUrl}api/posts/getBuyerLikedPosts?buyerId={_buyer.Id}");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.GET);
+            request.AddHeader("Content-Type", "application/text");
+            IRestResponse response = await client.ExecuteAsync(request);
+            if (response.StatusCode == HttpStatusCode.BadRequest)
+            {
+                // TODO: написать сообщение о том что не получилось получить записи
+                return;
+            }
+
+            try
+            {
+                likedPosts = JsonConvert.DeserializeObject<List<BuyerPostView>>(response.Content);
+            }
+            catch (Exception e)
+            {
+                // TODO: написать сообщение о том что не получилось получить записи
+                return;
+            }
+
+            Posts.ItemsSource = likedPosts;
+            RefreshView.IsRefreshing = false;
+
+        }
+        
         private async void SendUpdateUserPut(IconPostForm form)
         {
             String json = JsonConvert.SerializeObject(form);
@@ -59,9 +87,6 @@ namespace ShopsAggregator.Views
                 DisplayAlert(FailedConnectionToServerAlertTitle, response.Content, "Попробовать снова");
                 return;
             }
-
-            buyer.IconPath = buyer.Username + "icon.jpeg";
-            Icon.Source = App.BaseUrl + buyer.IconPath;
         }
         
         private async void GetPhoto(object sender, EventArgs e)
@@ -71,7 +96,7 @@ namespace ShopsAggregator.Views
                 MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
                 iconPath = photo.Path;
                 Icon.Source = ImageSource.FromFile(iconPath);
-                IconPostForm form = new IconPostForm(buyer.Id);
+                IconPostForm form = new IconPostForm(_buyer.Id);
                 GetPhotoBytes(iconPath, form);
                 if (!App.IsConnected())
                 {
@@ -97,11 +122,39 @@ namespace ShopsAggregator.Views
         {
             Navigation.PopToRootAsync();
         }
-
-        private void Unsubscribe(object sender, EventArgs e)
+        private void RefreshView_OnRefreshing(object sender, EventArgs e)
         {
-            //TODO: Написать запрос отписки
-            throw new NotImplementedException();
+            this.BindingContext = _buyer;
+            GetBuyerLikedPosts();
+        }
+        
+        private async void OnPostHeaderTapped(object sender, EventArgs e)
+        {
+            if (sender is FlexLayout flexLayout)
+            {
+                await Navigation.PushAsync(new WatchSellerPage((flexLayout.Children[1] as Label).Text,_buyer));
+            }
+        }
+
+        private async void SendDislikeImageTapped(object sender, EventArgs e)
+        {
+            if (sender is Image image)
+            {
+                BuyerPostView bindingPost = (BuyerPostView) (image.ParentView.BindingContext);
+                BuyerPostView post =
+                    (from selectionPost in likedPosts
+                        where selectionPost.PostId == bindingPost.PostId
+                        select selectionPost).FirstOrDefault();
+                if (post == null)
+                    return;
+                likedPosts.Remove(post);
+                RestClient client = new RestClient($"{App.BaseUrl}api/posts/removeLike?likerId={_buyer.Id}&postId={post.PostId}");
+                var request = new RestRequest(Method.PUT);
+                request.AddHeader("Content-Type", "application/text");
+                var response = await client.ExecuteAsync(request);
+                Posts.ItemsSource = null;
+                Posts.ItemsSource = likedPosts;
+            }
         }
     }
 }

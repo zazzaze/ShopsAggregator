@@ -20,17 +20,50 @@ namespace ShopsAggregator.Views
     {
         private const String FailedConnectionToServerAlertTitle = "Ошибка подключения к серверу";
         private Seller seller;
+        private List<Post> sellerPosts = new List<Post>();
+
         public SellerMainPage(Seller seller)
         {
             InitializeComponent();
             this.seller = seller;
             this.BindingContext = seller;
+            RefreshView.Refreshing += PostsOnRefreshing;
+            Posts.WidthRequest = App.Current.MainPage.Width;
+        }
+
+        private void PostsOnRefreshing(object sender, EventArgs e)
+        {
+            GetSellerPosts(seller.Username);
         }
 
         protected override void OnAppearing()
         {
             SubscribersCounter.Text = seller.Subscribers.Count.ToString();
+            GetSellerPosts(seller.Username);
             base.OnAppearing();
+        }
+        
+        
+        private async void GetSellerPosts(String sellerName)
+        {
+            RefreshView.IsRefreshing = true;
+            var client = new RestClient($"{App.BaseUrl}api/posts/getSellerPosts?sellerName={sellerName}");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.GET);
+            request.AddHeader("Content-Type", "application/text");
+            IRestResponse response = await client.ExecuteAsync(request);
+            if (response.StatusCode == HttpStatusCode.BadRequest)
+            {
+                return;
+            }
+
+            try
+            {
+                sellerPosts = JsonConvert.DeserializeObject<List<Post>>(response.Content);
+            }
+            catch(Exception e){}
+            Posts.ItemsSource = sellerPosts;
+            RefreshView.IsRefreshing = false;
         }
 
         private void OnExitToolbarItemTapped(object sender, EventArgs e)
@@ -91,6 +124,14 @@ namespace ShopsAggregator.Views
             }
 
             form.IconBytesArr = bytes.ToList();
+        }
+
+        private void Posts_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (sender is ListView listView)
+            {
+                listView.SelectedItem = null;
+            }
         }
     }
 }
