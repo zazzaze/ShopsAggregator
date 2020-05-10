@@ -27,7 +27,7 @@
                                 </FlexLayout>
                                 <StackLayout >
                                     <Image x:Name="PostImage" Source="{Binding IconPath}"/>
-                                    <FlexLayout JustifyContent="Start" Padding="20,0" HeightRequest="50" AlignItems="Center">
+                                    <FlexLayout JustifyContent="SpaceBetween" Padding="20,0" HeightRequest="50" AlignItems="Center">
                                         <StackLayout Orientation="Horizontal">
                                             <Image Source="{local:ImageResource ShopsAggregator.images.heart.png}" 
                                                    IsVisible="{Binding IsUserDontLikePost}">
@@ -37,16 +37,21 @@
                                                         NumberOfTapsRequired="1" />
                                                 </Image.GestureRecognizers>
                                             </Image>
-                                            <Label HorizontalTextAlignment="Center" Text="{Binding LikesCount}" FontSize="Small"/>
+                                            <Image Source="{local:ImageResource ShopsAggregator.images.dislike.png}" 
+                                                   IsVisible="{Binding IsUserLikePost}">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                        Tapped="OnDislikeImageTapped"
+                                                        NumberOfTapsRequired="1" />
+                                                </Image.GestureRecognizers>
+                                            </Image>
                                         </StackLayout>
-                                        <Image Source="{local:ImageResource ShopsAggregator.images.dislike.png}" 
-                                               IsVisible="{Binding IsUserLikePost}">
-                                            <Image.GestureRecognizers>
-                                                <TapGestureRecognizer
-                                                    Tapped="OnDislikeImageTapped"
-                                                    NumberOfTapsRequired="1" />
-                                            </Image.GestureRecognizers>
-                                        </Image>
+                                        <StackLayout>
+                                            <Button x:Name="DeliverButton" Text="+" Margin="0" Padding="0" FontSize="30" 
+                                                    HeightRequest="30" Clicked="DeliverButton_OnClicked"/>
+                                            <Button Text="Заказать" FontSize="13" Padding="0" Margin="0" HeightRequest="13" 
+                                                    Clicked="DeliverButton_OnClicked"/>
+                                        </StackLayout>
                                     </FlexLayout>
                                     <Label Text="{Binding Info}" Padding="20,3"/>
                                 </StackLayout>

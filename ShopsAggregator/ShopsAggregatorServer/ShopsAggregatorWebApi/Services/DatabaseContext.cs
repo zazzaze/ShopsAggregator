@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
+using ShopsAggregatorWebApi.Models;
 
-namespace ShopsAggregatorWebApi.Models
+namespace ShopsAggregatorWebApi.Services
 {
     public class DatabaseContext : DbContext
     {
@@ -16,9 +17,11 @@ namespace ShopsAggregatorWebApi.Models
         private DbSet<Buyer> Buyers { get; set; }
         
         private DbSet<Post> Posts { get; set; }
-        
+
         private DbSet<Comment> Comments { get; set; }
 
+        private DbSet<Order> Orders { get; set; }
+        
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
             
@@ -329,6 +332,112 @@ namespace ShopsAggregatorWebApi.Models
             }
 
             return posts;
+        }
+
+        public void AddOrder(Int32 buyerId, Int32 postId)
+        {
+            Buyer buyer = GetBuyer(buyerId);
+            Post post = GetPostById(postId);
+            if (buyer == null || post == null)
+                return;
+            Seller seller = GetSeller(post.CreatorId);
+            if (seller == null)
+                return;
+            Order newOrder = new Order
+            {
+                PostId = post.Id,
+                BuyerId = buyer.Id
+            };
+            Orders.Add(newOrder);
+            SaveChanges();
+            if(buyer.Orders == null)
+                buyer.Orders = new List<Int32>();
+            buyer.Orders.Add(newOrder.Id);
+            if(seller.Orders == null)
+                seller.Orders = new List<Int32>();
+            seller.Orders.Add(newOrder.Id);
+            SaveChangesAsync();
+        }
+
+        public List<BuyerOrderView> GetBuyerOrders(Int32 buyerId)
+        {
+            List<Order> orders = (from order in Orders.ToList() where order.BuyerId == buyerId select order).ToList();
+            List<BuyerOrderView> views = new List<BuyerOrderView>();
+            foreach (Order order in orders)
+            {
+                Post post = GetPostById(order.PostId);
+                Seller seller = GetSeller(post.CreatorId);
+                views.Add(new BuyerOrderView(order, post, seller));
+            }
+
+            return views;
+        }
+
+        public List<SellerOrderView> GetSellerOrders(Int32 sellerId)
+        {
+            Seller seller = GetSeller(sellerId);
+            List<Order> orders = (from order in Orders.ToList() where seller.Orders.Contains(order.Id) select order)
+                .ToList();
+            List<SellerOrderView> views = new List<SellerOrderView>();
+            foreach (Order order in orders)
+            {
+                Buyer buyer = GetBuyer(order.BuyerId);
+                Post post = GetPostById(order.PostId);
+                views.Add(new SellerOrderView(order, post, buyer));
+            }
+
+            return views;
+        }
+
+        private Order GetOrder(Int32 orderId)
+        {
+            return (from order in Orders.ToList() where order.Id == orderId select order).FirstOrDefault();
+        }
+        
+        public void SetOrderSuccess(Int32 orderId)
+        {
+            Order current = GetOrder(orderId);
+            if (current == null)
+                return;
+            current.IsSucceded = true;
+            current.IsCanceled = false;
+            SaveChangesAsync();
+        }
+
+        public void SetOrderCanceled(Int32 orderId)
+        {
+            Order current = GetOrder(orderId);
+            if (current == null)
+                return;
+            current.IsSucceded = false;
+            current.IsCanceled = true;
+            SaveChangesAsync();
+        }
+
+        public void DeleteOrder(Int32 orderId)
+        {
+            Order current = GetOrder(orderId);
+            if (current == null)
+                return;
+            Orders.Remove(current);
+        }
+
+        public void SetBuyerInfo(Int32 buyerId, String info)
+        {
+            Buyer buyer = GetBuyer(buyerId);
+            if (buyer == null)
+                return;
+            buyer.Info = info;
+            SaveChangesAsync();
+        }
+
+        public void SetSellerInfo(Int32 sellerId, String info)
+        {
+            Seller seller = GetSeller(sellerId);
+            if (seller == null)
+                return;
+            seller.Info = info;
+            SaveChangesAsync();
         }
     }
 }

@@ -9,6 +9,7 @@
             <Color x:Key="cloudWhite">#ecf0f1</Color>
             <Color x:Key="buttonTextColor">#ecf0f1</Color>
             <Color x:Key="errorColor">#e74c3c</Color>
+            <Color x:Key="successColor">#2ecc71</Color>
             <x:String x:Key="appName">ShopYou</x:String>
             <!-- <OnPlatform x:TypeArguments="x:String" x:Key="OswaldFont"> -->
             <!--     <On Platform="iOS" Value="OswaldFont"/> -->

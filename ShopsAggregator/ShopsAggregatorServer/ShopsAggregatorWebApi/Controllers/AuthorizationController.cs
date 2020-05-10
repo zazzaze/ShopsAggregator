@@ -65,11 +65,18 @@ namespace ShopsAggregatorWebApi.Controllers
             return BadRequest();
         }
 
-
-        [HttpPost]
-        public String Test(String name)
-        { 
-            return name;
+        [HttpPut("setBuyerInfo")]
+        public IActionResult SetBuyerInfo(Int32 buyerId, String info)
+        {
+            _service.SetBuyerInfo(buyerId, info);
+            return Ok();
+        }
+        
+        [HttpPut("setSellerInfo")]
+        public IActionResult SetSellerInfo(Int32 sellerId, String info)
+        {
+            _service.SetSellerInfo(sellerId, info);
+            return Ok();
         }
     }
 }

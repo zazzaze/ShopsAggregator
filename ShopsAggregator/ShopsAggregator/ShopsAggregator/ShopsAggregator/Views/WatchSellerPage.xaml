@@ -18,6 +18,7 @@
                         <StackLayout x:Name="UserInfoStack" HorizontalOptions="FillAndExpand">
                             <Label Text="{Binding Username}" FontSize="Large" HorizontalTextAlignment="Center" />
                             <Label Text="{Binding Email}" TextColor="{StaticResource grey}" FontSize="Small" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding Info}" />
                             <Button x:Name="SubscribeSatusButton" HorizontalOptions="Center" Style="{StaticResource buttonStyle}"
                                     Padding="30,5"/>
                         </StackLayout>
@@ -27,7 +28,8 @@
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
-                                        <StackLayout >
+                                        <StackLayout Margin="0,0,0,10">
+                                            <Label Text="{Binding PostId}" IsVisible="False" />
                                             <Image x:Name="PostImage" Source="{Binding IconPath}"/>
                                             <FlexLayout JustifyContent="Start" Padding="20,0" HeightRequest="50" AlignItems="Center">
                                                 <StackLayout Orientation="Horizontal">
@@ -45,7 +47,7 @@
                                                        IsVisible="{Binding IsUserLikePost}">
                                                     <Image.GestureRecognizers>
                                                         <TapGestureRecognizer
-                                                            Tapped="OnLikeImageTapped"
+                                                            Tapped="OnDislikeImageTapped"
                                                             NumberOfTapsRequired="1" />
                                                     </Image.GestureRecognizers>
                                                 </Image>

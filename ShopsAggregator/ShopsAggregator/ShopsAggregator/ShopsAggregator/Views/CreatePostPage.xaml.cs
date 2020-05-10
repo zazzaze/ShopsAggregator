@@ -9,16 +9,30 @@ using Newtonsoft.Json;
 using RestSharp;
 using ShopsAggregator.Models;
 using ShopsAggregator.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace ShopsAggregator.Views
 {
+    /// <summary>
+    /// Код страницы создания записи.
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CreatePostPage : ContentPage
     {
+        /// <summary>
+        /// Экземпляр типа пользователя-покупателя.
+        /// </summary>
         private Seller seller;
+        /// <summary>
+        /// Формы создания записи.
+        /// </summary>
         private CreatePostForm form;
+        /// <summary>
+        /// Конструктор страницы.
+        /// </summary>
+        /// <param name="seller">Экземпляр типа пользователя-покупателя.</param>
         public CreatePostPage(Seller seller)
         {
             InitializeComponent();
@@ -27,17 +41,27 @@ namespace ShopsAggregator.Views
             this.BindingContext = form;
         }
 
+        /// <summary>
+        /// Позволяет пользователю выбрать фотографию после нажатия на кнопку.
+        /// </summary>
+        /// <param name="sender">Издатель события - Button.</param>
+        /// <param name="e">Аргументы события.</param>
         private async void OnGetPostPhotoClicked(object sender, EventArgs e)
         {
             Stream stream = await DependencyService.Get<IPhotoPickerService>().GetImageStreamAsync();
             if (stream != null)
             {
-                await Task.Run(() => GetImageBytesFromStream(stream));
+                await DisplayAlert("Подождите", "Фотография обрабатывается", "Жду");
+                GetImageBytesFromStream(stream);
                 PostImage.Source = ImageSource.FromStream(() => stream);
                 GetPostPhoto.Text = "Изменить фотографию";
             }
         }
 
+        /// <summary>
+        /// Получает байты изображения, выбранного пользователем. 
+        /// </summary>
+        /// <param name="stream">Поток выбранной фотографии.</param>
         private void GetImageBytesFromStream(Stream stream)
         {
             form.ImageBytes = new List<Int32>();
@@ -49,18 +73,28 @@ namespace ShopsAggregator.Views
             stream.Seek(0, SeekOrigin.Begin);
         }
         
-        
+        /// <summary>
+        /// Обработчик события нажатия на кнопку создания записи.
+        /// </summary>
+        /// <param name="sender">Издатель события - Button.</param>
+        /// <param name="e">Аргументы события.</param>
         private async void CreatePostButtonClicked(object sender, EventArgs e)
         {
             if (form.ImageBytes.Count == 0)
             {
-                //TODO: Написать сообщение о том что фотография не выбрана
+                await DisplayAlert("Ошибка", "Выберите фотографию", "Выбрать");
                 return;
             }
 
+            if (!App.IsConnected())
+            {
+                await DisplayAlert("Нет подключения к интернету", "Проверьте подключение к интернету", "Попробовать снова");
+                return;
+            }
+            
             if (form.CreatorId == 0)
             {
-                //TODO: Написать сообщение об ошибке
+                await DisplayAlert("Ошибка в данных пользователя", "Зайдите снова, чтобы ее устранить", "Ок");
                 return;
             }
             var client = new RestClient(App.BaseUrl+"api/posts/create");
@@ -72,10 +106,11 @@ namespace ShopsAggregator.Views
             IRestResponse response = await client.ExecuteAsync(request);
             if (response.StatusCode == HttpStatusCode.BadRequest)
             {
-                //TODO: Написать сообщение о неудачном добавлении записи
+                await DisplayAlert("Ошибка", "Не удалось добавить запись", "Попробовать снова");
                 return;
             }
-            //TODO: Написать сообщение что все успешно
+
+            await DisplayAlert("Запись успешно добавлена", "", "Хорошо");
         }
     }
 }

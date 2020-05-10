@@ -16,23 +16,60 @@ using Xamarin.Forms.Xaml;
 
 namespace ShopsAggregator.Views
 {
+    /// <summary>
+    /// Код страницы регистрации пользователя.
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegistrationPage : ContentPage
     {
+        /// <summary>
+        /// Текст сообщения о неверном Email.
+        /// </summary>
         private const String IncorrectEmailMessage = "Email должен иметь вид example@example.com";
+        /// <summary>
+        /// Текст сообщения о неверном Username.
+        /// </summary>
         private const String IncorrectUsernameMessage = "Имя пользователя может содержать только латинские символы или цифры";
-
+        /// <summary>
+        /// Текст сообщения о неверном пароле.
+        /// </summary>
         private const String IncorrectPasswordMessage=
             "Пароль должен содержать не менее 8 символов и состоять из заглавных и строчных латинских букв и цифр";
-
+        /// <summary>
+        /// Текст сообщения о неверном повторном пароле.
+        /// </summary>
         private const String IncorrectPasswordAgainMessage = "Введеные пароли не совпадают";
+        /// <summary>
+        /// Заголовок сообщения о неудачном создании аккаунта.
+        /// </summary>
         private const String BadAccountCreateAlertTitle = "Не удалось создать акканут";
+        /// <summary>
+        /// Текст кнопки сообщения о неудачном создании аккаунта.
+        /// </summary>
         private const String BadAccountCreateAlertCancelText = "Попробовать снова";
+        /// <summary>
+        /// Текст сообщения о неудачном создании аккаунта.
+        /// </summary>
         private const String BadRequestAlertMessage = "Ошибка подключения к серверу";
+        /// <summary>
+        /// Текст кнопки сообщения об удачном создании аккаунта.
+        /// </summary>
         private const String SuccessAccountCreateTitle = "Поздравляю!!";
+        /// <summary>
+        /// Текст сообщения об удачном создании аккаунта.
+        /// </summary>
         private const String SuccessAccountCreateMessage = "Аккаунт успешно создан";
+        /// <summary>
+        /// Заголовок сообщения об удачном создании аккаунта.
+        /// </summary>
         private const String SuccessAccountCreateCancel = "Ура"; 
+        /// <summary>
+        /// Модель регистрации пользователя.
+        /// </summary>
         private RegistrationForm form = new RegistrationForm();
+        /// <summary>
+        /// Конструктор страницы.
+        /// </summary>
         public RegistrationPage()
         {
             InitializeComponent();
@@ -40,11 +77,16 @@ namespace ShopsAggregator.Views
             this.BindingContext = form;
         }
 
-        private void OnRegistrationButtonCLicked(object sender, EventArgs e)
+        /// <summary>
+        /// Проверяет все ли поля заполнены верно и вызывает метод отправки формы на сервер.
+        /// </summary>
+        /// <param name="sender">Издатель события - Button.</param>
+        /// <param name="e">Аргументы события.</param>
+        private async void OnRegistrationButtonCLicked(object sender, EventArgs e)
         {
             if (!App.IsConnected())
             {
-                // TODO: Написать DisplayAlert о том, что нет подключения к интернету
+                await DisplayAlert("Ошибка", "Осутствует подключение к интернету", "Поробовать снова");
                 return;
             }
             if (!IsBoxesCorrect())
@@ -59,14 +101,19 @@ namespace ShopsAggregator.Views
             }
             catch (Exception)
             {
-                DisplayAlert(BadAccountCreateAlertTitle,BadRequestAlertMessage, BadAccountCreateAlertCancelText);
+                await DisplayAlert(BadAccountCreateAlertTitle,BadRequestAlertMessage, BadAccountCreateAlertCancelText);
             }
             if (!result)
                 return;
-            DisplayAlert(SuccessAccountCreateTitle, SuccessAccountCreateMessage, SuccessAccountCreateCancel);
-            Navigation.PopAsync();
+            await DisplayAlert(SuccessAccountCreateTitle, SuccessAccountCreateMessage, SuccessAccountCreateCancel);
+            await Navigation.PopAsync();
         }
 
+        /// <summary>
+        /// Отправляет на сервер запрос создания аккаунта.
+        /// </summary>
+        /// <param name="user">Модель регистрацции пользователя, которая отправляется на сервер.</param>
+        /// <returns>Результат отправки запроса на сервер.</returns>
         private Boolean SendRegistrationPost(RegistrationForm user)
         {
             String json = JsonConvert.SerializeObject(user);
@@ -85,11 +132,20 @@ namespace ShopsAggregator.Views
             return true;
         }
 
+        /// <summary>
+        /// Изменяет цвет CheckBox и его текста при изменении полей ввода данных.
+        /// </summary>
+        /// <param name="sender">Издатель события - Entry.</param>
+        /// <param name="e">Аргументы события.</param>
         private void CheckBoxChanged(object sender, EventArgs e)
         {
             CheckBox.Color = CheckBoxText.TextColor = Color.Default;
         }
 
+        /// <summary>
+        /// Проверяет все ли поля для заполнения заполнены верно.
+        /// </summary>
+        /// <returns>Результат проверки.</returns>
         private Boolean IsBoxesCorrect()
         {
             if (!IsTextboxCorrect(EmailEntry, ValidateEmail))
@@ -129,6 +185,11 @@ namespace ShopsAggregator.Views
             return true;
         }
 
+        /// <summary>
+        /// Встряхивает неверное поле с данными и выводит соответствующее сообщение.
+        /// </summary>
+        /// <param name="view">Невернре поле данных.</param>
+        /// <param name="errorMsg">Сообщени об ошибке.</param>
         private void MessageAboutIncorrectBox(Entry view, String errorMsg)
         {
             App.Shake(view);
@@ -137,6 +198,11 @@ namespace ShopsAggregator.Views
             view.TextChanged += OnEntryTextChanged;
         }
 
+        /// <summary>
+        /// Событие об изменении Entry.
+        /// </summary>
+        /// <param name="sender">Издатель события - Entry.</param>
+        /// <param name="e">Аргументы события.</param>
         private void OnEntryTextChanged(object sender, TextChangedEventArgs e)
         {
             if (sender is Entry entry)
@@ -146,6 +212,12 @@ namespace ShopsAggregator.Views
             }
         }
         
+        /// <summary>
+        /// Проверяет введенные данные.
+        /// </summary>
+        /// <param name="box">Entry для проверки.</param>
+        /// <param name="func">Метод проверки данных.</param>
+        /// <returns>Результат проверки.</returns>
         private Boolean IsTextboxCorrect(Entry box, Func<Char, Boolean> func)
         {
             if (String.IsNullOrWhiteSpace(box.Text))
@@ -154,6 +226,12 @@ namespace ShopsAggregator.Views
             return Array.TrueForAll(symbols, symb => func(symb));
         }
         
+        /// <summary>
+        /// Проверяет введенные данные.
+        /// </summary>
+        /// <param name="box">Entry для проверки.</param>
+        /// <param name="func">Метод проверки данных.</param>
+        /// <returns>Результат проверки.</returns>
         private Boolean IsTextboxCorrect(Entry box, Func<String, Boolean> func)
         {
             if (String.IsNullOrWhiteSpace(box.Text))
@@ -162,6 +240,11 @@ namespace ShopsAggregator.Views
             return func(box.Text);
         }
 
+        /// <summary>
+        /// Проверяет, является ли введеные email верным.
+        /// </summary>
+        /// <param name="email">Строка с email.</param>
+        /// <returns>Результат проверки.</returns>
         private Boolean ValidateEmail(String email)
         {
             if (string.IsNullOrWhiteSpace(email))
@@ -204,6 +287,11 @@ namespace ShopsAggregator.Views
             }
         }
 
+        /// <summary>
+        /// Проверяет является ли введеный пароль допустимым. 
+        /// </summary>
+        /// <param name="input">Введеный пароль.</param>
+        /// <returns>Результат проверки.</returns>
         private Boolean ValidatePassword(String input)
         {
             var hasNumber = new Regex(@"[0-9]+");

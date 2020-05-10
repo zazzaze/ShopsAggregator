@@ -27,8 +27,10 @@
                 <StackLayout x:Name="UserInfoStack">
                     <Label Text="{Binding Username}" FontSize="Large" HorizontalTextAlignment="Center" />
                     <Label Text="{Binding Email}" TextColor="{StaticResource grey}" FontSize="Small" HorizontalTextAlignment="Center"/>
+                    <Editor x:Name="InfoEditor" Text="{Binding Info}" Placeholder="Расскажите покупателям о себе" 
+                            Unfocused="VisualElement_OnUnfocused"/>
                 </StackLayout>
-                <StackLayout HorizontalOptions="Center">
+                <StackLayout HorizontalOptions="FillAndExpand">
                     <Label x:Name="SubscribersCounter" FontSize="Large" HorizontalTextAlignment="Center"/>
                     <Label Text="Подписчики" FontSize="Medium" TextColor="{StaticResource grey}"  HorizontalTextAlignment="Center"/>
                 </StackLayout>
@@ -39,9 +41,13 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout x:Name="StackLayout">
+                            <StackLayout x:Name="StackLayout" Margin="0,0,0,10">
                                 <Image x:Name="PostImage" Source="{Binding ImagePath}"/>
                                 <Label Text="{Binding Info}" Padding="30, 0" />
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Понравилось: " FontSize="Body"/>
+                                    <Label Text="{Binding LikesCount}" FontSize="Body" TextColor="{StaticResource purple}"/>
+                                </StackLayout>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

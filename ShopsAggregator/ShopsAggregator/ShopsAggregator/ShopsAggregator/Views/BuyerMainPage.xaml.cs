@@ -16,13 +16,32 @@ using Xamarin.Forms;
 
 namespace ShopsAggregator.Views
 {
+    /// <summary>
+    /// Код страницы пользователя-покупателя.
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BuyerMainPage : ContentPage
     {
+        /// <summary>
+        /// Ссылка на иконку пользователя.
+        /// </summary>
         private String iconPath;
+        /// <summary>
+        /// Экземпляр типа пользователя-покупателя.
+        /// </summary>
         private Buyer _buyer;
+        /// <summary>
+        /// Заголовок сообщения об ошибке подключения к серверу.
+        /// </summary>
         private const String FailedConnectionToServerAlertTitle = "Ошибка подключения к серверу";
+        /// <summary>
+        /// Список записей, которые понравились пользователю.
+        /// </summary>
         private List<BuyerPostView> likedPosts = new List<BuyerPostView>();
+        /// <summary>
+        /// Конструктор страницы.
+        /// </summary>
+        /// <param name="buyer">Экземпляр типа пользователя-покупателя.</param>
         public BuyerMainPage(Buyer buyer)
         {
             InitializeComponent();
@@ -30,6 +49,9 @@ namespace ShopsAggregator.Views
             this.BindingContext = _buyer;
         }
 
+        /// <summary>
+        /// Устанавливает ширину ListView Posts, получает понравившиеся записи и вызывает базовое поведение метода.
+        /// </summary>
         protected override void OnAppearing()
         {
             Posts.WidthRequest = App.Current.MainPage.Width;
@@ -38,8 +60,16 @@ namespace ShopsAggregator.Views
             base.OnAppearing();
         }
 
+        /// <summary>
+        /// Получает с сервера записи, которые понравились пользователю.
+        /// </summary>
         private async void GetBuyerLikedPosts()
         {
+            if (!App.IsConnected())
+            {
+                await DisplayAlert("Нет подключения к интернету", "Проверьте подключение к интернету", "Попробовать снова");
+                return;
+            }
             RefreshView.IsRefreshing = true;
             var client = new RestClient($"{App.BaseUrl}api/posts/getBuyerLikedPosts?buyerId={_buyer.Id}");
             client.Timeout = -1;
@@ -48,7 +78,7 @@ namespace ShopsAggregator.Views
             IRestResponse response = await client.ExecuteAsync(request);
             if (response.StatusCode == HttpStatusCode.BadRequest)
             {
-                // TODO: написать сообщение о том что не получилось получить записи
+                await DisplayAlert("Ошибка", "Не получилось получить понравившиеся записи", "Попробовать снова");
                 return;
             }
 
@@ -58,7 +88,7 @@ namespace ShopsAggregator.Views
             }
             catch (Exception e)
             {
-                // TODO: написать сообщение о том что не получилось получить записи
+                await DisplayAlert("Ошибка", "Не получилось получить понравившиеся записи", "Попробовать снова");
                 return;
             }
 
@@ -67,6 +97,10 @@ namespace ShopsAggregator.Views
 
         }
         
+        /// <summary>
+        /// Отправляет запрос с обновлением фотографии пользователя.
+        /// </summary>
+        /// <param name="form">Форма с информацией о пользователе и его новой фотграфией.</param>
         private async void SendUpdateUserPut(IconPostForm form)
         {
             String json = JsonConvert.SerializeObject(form);
@@ -78,17 +112,24 @@ namespace ShopsAggregator.Views
             IRestResponse response = await client.ExecuteAsync(request);
             if (response.StatusCode == HttpStatusCode.RequestEntityTooLarge)
             {
-                DisplayAlert(FailedConnectionToServerAlertTitle, response.Content, "Попробовать снова");
+                await DisplayAlert(FailedConnectionToServerAlertTitle, response.Content, "Попробовать снова");
                 return;
             }
 
             if (response.StatusCode == HttpStatusCode.BadRequest)
             {
-                DisplayAlert(FailedConnectionToServerAlertTitle, response.Content, "Попробовать снова");
+                await DisplayAlert(FailedConnectionToServerAlertTitle, response.Content, "Попробовать снова");
                 return;
             }
+
+            _buyer.IconPath = _buyer.Username + "icon.jpeg";
         }
         
+        /// <summary>
+        /// При нажатии пользователя на иконку предоставляет пользователю выбрать фотографию.
+        /// </summary>
+        /// <param name="sender">Издатель события - Frame.</param>
+        /// <param name="e">Аргументы события.</param>
         private async void GetPhoto(object sender, EventArgs e)
         {
             if (CrossMedia.Current.IsPickPhotoSupported)
@@ -106,6 +147,11 @@ namespace ShopsAggregator.Views
             }
         }
         
+        /// <summary>
+        /// Получает байты фотографии, которую выбрал пользователь.
+        /// </summary>
+        /// <param name="path">Путь к файлу с указаной фотографией.</param>
+        /// <param name="form">Модель, в которую записываются байты фотографии.</param>
         private void GetPhotoBytes(String path, IconPostForm form)
         {
             List<Int32> bytes = new List<Int32>();
@@ -118,16 +164,31 @@ namespace ShopsAggregator.Views
             form.IconBytesArr = bytes.ToList();
         }
 
-        private void OnExitToolbarItemTapped(object sender, EventArgs e)
+        /// <summary>
+        /// Обработчик события нажатия на кнопку выхода.
+        /// </summary>
+        /// <param name="sender">Издатель события -  Button.</param>
+        /// <param name="e">Аргументы события.</param>
+        private async void OnExitToolbarItemTapped(object sender, EventArgs e)
         {
-            Navigation.PopToRootAsync();
+            await Navigation.PopToRootAsync();
         }
+        
+        /// <summary>
+        /// Обновляет информацию о пользователе.
+        /// </summary>
+        /// <param name="sender">Издатель события - RefreshView.</param>
+        /// <param name="e">Аргументы события.</param>
         private void RefreshView_OnRefreshing(object sender, EventArgs e)
         {
             this.BindingContext = _buyer;
             GetBuyerLikedPosts();
         }
-        
+        /// <summary>
+        /// Открывает страницу пользователя, который опубликовал запись.
+        /// </summary>
+        /// <param name="sender">Издатель события - FlexLayout.</param>
+        /// <param name="e">Аргументы события.</param>
         private async void OnPostHeaderTapped(object sender, EventArgs e)
         {
             if (sender is FlexLayout flexLayout)
@@ -136,8 +197,18 @@ namespace ShopsAggregator.Views
             }
         }
 
+        /// <summary>
+        /// Отправляет запрос на сервер, чтобы убрать запись из понравившегося.
+        /// </summary>
+        /// <param name="sender">Издатель события - Image.</param>
+        /// <param name="e">Аргументы события.</param>
         private async void SendDislikeImageTapped(object sender, EventArgs e)
         {
+            if (!App.IsConnected())
+            {
+                await DisplayAlert("Нет подключения к интернету", "Проверьте подключение к интернету", "Попробовать снова");
+                return;
+            }
             if (sender is Image image)
             {
                 BuyerPostView bindingPost = (BuyerPostView) (image.ParentView.BindingContext);
@@ -154,6 +225,36 @@ namespace ShopsAggregator.Views
                 var response = await client.ExecuteAsync(request);
                 Posts.ItemsSource = null;
                 Posts.ItemsSource = likedPosts;
+            }
+        }
+
+        /// <summary>
+        /// Отправляет запрос, чтобы изменить информацию о пользователе.
+        /// </summary>
+        /// <param name="sender">Издатель события - Editor.</param>
+        /// <param name="e">Аргументы события.</param>
+        private async void VisualElement_OnUnfocused(object sender, FocusEventArgs e)
+        {
+            if (!App.IsConnected() || String.IsNullOrWhiteSpace(_buyer.Info))
+            {
+                return;
+            }
+            RestClient client = new RestClient($"{App.BaseUrl}api/users/setBuyerInfo?buyerId={_buyer.Id}&info={_buyer.Info}");
+            var request = new RestRequest(Method.PUT);
+            request.AddHeader("Content-Type", "application/text");
+            var response = await client.ExecuteAsync(request);
+        }
+        
+        /// <summary>
+        /// Отменяет нажатие на элемент ListView.
+        /// </summary>
+        /// <param name="sender">Издатель события - ListView.</param>
+        /// <param name="e">Аргументы события.</param>
+        private void OnPostsItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            if (sender is ListView listView)
+            {
+                listView.SelectedItem = null;
             }
         }
     }
