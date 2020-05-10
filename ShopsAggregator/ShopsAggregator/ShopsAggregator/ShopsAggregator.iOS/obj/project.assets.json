@@ -574,7 +574,7 @@
           "RestSharp": "106.10.2-alpha.0.8",
           "Xam.Plugin.Media": "4.4.10-beta",
           "Xamarin.Essentials": "1.5.2",
-          "Xamarin.Forms": "4.5.0.282-pre4",
+          "Xamarin.Forms": "4.6.0.726",
           "Xamarin.HotReload": "1.6.1",
           "sqlite-net-pcl": "1.7.302-beta"
         },
@@ -1099,7 +1099,7 @@
           "RestSharp": "106.10.2-alpha.0.8",
           "Xam.Plugin.Media": "4.4.10-beta",
           "Xamarin.Essentials": "1.5.2",
-          "Xamarin.Forms": "4.5.0.282-pre4",
+          "Xamarin.Forms": "4.6.0.726",
           "Xamarin.HotReload": "1.6.1",
           "sqlite-net-pcl": "1.7.302-beta"
         },
@@ -1624,7 +1624,7 @@
           "RestSharp": "106.10.2-alpha.0.8",
           "Xam.Plugin.Media": "4.4.10-beta",
           "Xamarin.Essentials": "1.5.2",
-          "Xamarin.Forms": "4.5.0.282-pre4",
+          "Xamarin.Forms": "4.6.0.726",
           "Xamarin.HotReload": "1.6.1",
           "sqlite-net-pcl": "1.7.302-beta"
         },
@@ -2149,7 +2149,7 @@
           "RestSharp": "106.10.2-alpha.0.8",
           "Xam.Plugin.Media": "4.4.10-beta",
           "Xamarin.Essentials": "1.5.2",
-          "Xamarin.Forms": "4.5.0.282-pre4",
+          "Xamarin.Forms": "4.6.0.726",
           "Xamarin.HotReload": "1.6.1",
           "sqlite-net-pcl": "1.7.302-beta"
         },
@@ -3583,5 +3583,20 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 4.6.0.726 to 4.5.0.282-pre4. Reference the package directly from the project to select a different version. \n ShopsAggregator.iOS -> ShopsAggregator -> Xamarin.Forms (>= 4.6.0.726) \n ShopsAggregator.iOS -> Xamarin.Forms (>= 4.5.0.282-pre4)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

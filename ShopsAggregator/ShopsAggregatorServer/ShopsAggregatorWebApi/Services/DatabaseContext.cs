@@ -10,23 +10,46 @@ using ShopsAggregatorWebApi.Models;
 
 namespace ShopsAggregatorWebApi.Services
 {
+    /// <summary>
+    /// Сервис работы с базой данных.
+    /// </summary>
     public class DatabaseContext : DbContext
     {
+        /// <summary>
+        /// Путь для сохранения картинок.
+        /// </summary>
         private const String UsersIconsDirPath = "../images";
-        private DbSet<Seller> Sellers { get; set; }
-        private DbSet<Buyer> Buyers { get; set; }
+        /// <summary>
+        /// База данных пользователей-продавцов.
+        /// </summary>
+        private DbSet<Seller> Sellers { get; }
+        /// <summary>
+        /// База данных пользователкей-покупателей.
+        /// </summary>
+        private DbSet<Buyer> Buyers { get; }
         
-        private DbSet<Post> Posts { get; set; }
-
-        private DbSet<Comment> Comments { get; set; }
-
-        private DbSet<Order> Orders { get; set; }
+        /// <summary>
+        /// База данных записей пользователей-продавцов.
+        /// </summary>
+        private DbSet<Post> Posts { get; }
+        /// <summary>
+        /// База данных заказов пользователей-покупателей.
+        /// </summary>
+        private DbSet<Order> Orders { get; }
         
+        /// <summary>
+        /// Конструктор.
+        /// </summary>
+        /// <param name="options">Опции для сервиса.</param>
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
             
         }
 
+        /// <summary>
+        /// Получает всех пользователей, зарегестрированных в системе.
+        /// </summary>
+        /// <returns>Список пользователей</returns>
         public List<User> GetAllUsers()
         {
             List<User> users = Sellers.ToList().ConvertAll(x => (User) x);
@@ -34,6 +57,11 @@ namespace ShopsAggregatorWebApi.Services
             return users;
         }
 
+        /// <summary>
+        /// Создает нового пользователя-покупателя.
+        /// </summary>
+        /// <param name="user">Экземпляр пользователя-покупателя.</param>
+        /// <returns>Созданный пользователь.</returns>
         public User CreateUser(Buyer user)
         {
             if (IsSameSellerCreated(user) || IsSameBuyerCreated(user))
@@ -43,6 +71,11 @@ namespace ShopsAggregatorWebApi.Services
             return user;
         }
 
+        /// <summary>
+        /// Создает нового пользователя-продавца.
+        /// </summary>
+        /// <param name="user">Экземпляр пользователя-продавца.</param>
+        /// <returns>Созданный пользователь.</returns>
         public User CreateUser(Seller user)
         {
             if (IsSameSellerCreated(user) || IsSameBuyerCreated(user))
@@ -52,13 +85,22 @@ namespace ShopsAggregatorWebApi.Services
             return user;
         }
 
+        /// <summary>
+        /// Проверяет создан ли пользователь-продавец с таким же email или username.
+        /// </summary>
+        /// <param name="user">Экземпляр проверяемого пользователя-продавца.</param>
+        /// <returns>Результат проверки.</returns>
         private Boolean IsSameSellerCreated(User user)
         {
             return (from seller in Sellers.ToList() where seller.Username == user.Username 
                                                           || seller.Email == user.Email select seller)
                 .FirstOrDefault() != null;
         }
-
+        /// <summary>
+        /// Проверяет создан ли пользователь-покупатель с таким же email или username.
+        /// </summary>
+        /// <param name="user">Экземпляр проверяемого пользователя-покупатель.</param>
+        /// <returns>Результат проверки.</returns>
         private Boolean IsSameBuyerCreated(User user)
         {
             return (from buyer in Buyers.ToList() where buyer.Username == user.Username 
@@ -66,12 +108,13 @@ namespace ShopsAggregatorWebApi.Services
                 .FirstOrDefault() != null;
         }
 
-        private Boolean IsSameBuyerCreated(Int32 id)
-        {
-            return (from buyer in Buyers.ToList() where buyer.Id == id select buyer).FirstOrDefault() != null;
-        }
-        
-        public Buyer GetBuyer(string login, string password)
+        /// <summary>
+        /// Получает пользователя по логину и паролю.
+        /// </summary>
+        /// <param name="login">Логин.</param>
+        /// <param name="password">Пароль.</param>
+        /// <returns>Полученный пользователь.</returns>
+        public Buyer GetBuyer(String login, String password)
         {
             return (from buyer in Buyers.ToList()
                 where (buyer.Username == login || buyer.Username == login)
@@ -79,11 +122,22 @@ namespace ShopsAggregatorWebApi.Services
                 select buyer).FirstOrDefault();
         }
 
+        /// <summary>
+        /// Получает пользователя-покупателя по его id.
+        /// </summary>
+        /// <param name="id">Id пользователя.</param>
+        /// <returns>Экземпляр типа пользователя-покупателя.</returns>
         private Buyer GetBuyer(Int32 id)
         {
             return (from buyer in Buyers.ToList() where buyer.Id == id select buyer).FirstOrDefault();
         }
 
+        /// <summary>
+        /// Получает пользователя по логину и паролю.
+        /// </summary>
+        /// <param name="login">Логин.</param>
+        /// <param name="password">Пароль.</param>
+        /// <returns>Полученный пользователь.</returns>
         public Seller GetSeller(string login, string password)
         {
             return (from seller in Sellers.ToList()
@@ -92,11 +146,21 @@ namespace ShopsAggregatorWebApi.Services
                 select seller).FirstOrDefault();
         }
 
+        /// <summary>
+        /// Получает пользователя-продавца по его id.
+        /// </summary>
+        /// <param name="id">Id пользователя.</param>
+        /// <returns>Экземпляр типа пользователя-продавца.</returns>
         private Seller GetSeller(Int32 id)
         {
             return (from seller in Sellers.ToList() where seller.Id == id select seller).FirstOrDefault();
         }
 
+        /// <summary>
+        /// Получает пользователя по имени.
+        /// </summary>
+        /// <param name="sellerName">Имя пользователя.</param>
+        /// <returns>Полученный пользователь.</returns>
         public Seller GetSeller(String sellerName)
         {
             Seller currentSeller = (from seller in Sellers.ToList() where seller.Username == sellerName select seller)
@@ -108,6 +172,12 @@ namespace ShopsAggregatorWebApi.Services
             return currentSeller;
         }
 
+        /// <summary>
+        /// Добавляет иконку пользователю-продавцу.
+        /// </summary>
+        /// <param name="icon">Форма с информацией об изображении.</param>
+        /// <param name="sellerId">Id пользователя-продавца.</param>
+        /// <returns>Результат добавления.</returns>
         public Boolean AddIconToSeller(IconPostForm icon, Int32 sellerId)
         {
             Seller toSeller =
@@ -118,7 +188,7 @@ namespace ShopsAggregatorWebApi.Services
             {
                 AddIconToUser(icon, toSeller);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }
@@ -127,6 +197,12 @@ namespace ShopsAggregatorWebApi.Services
             return true;
         }
 
+        /// <summary>
+        /// Добавляет иконку пользователю-покупателю.
+        /// </summary>
+        /// <param name="icon">Форма с информацией об изображении.</param>
+        /// <param name="buyerId">Id пользователя-покупателя.</param>
+        /// <returns>Результат добавления.</returns>
         public Boolean AddIconToBuyer(IconPostForm icon, Int32 buyerId)
         {
             Buyer toBuyer = (from buyer in Buyers.ToList() where buyer.Id == buyerId select buyer).FirstOrDefault();
@@ -136,7 +212,7 @@ namespace ShopsAggregatorWebApi.Services
             {
                 AddIconToUser(icon, toBuyer);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }
@@ -146,6 +222,12 @@ namespace ShopsAggregatorWebApi.Services
             return true;
         }
 
+        /// <summary>
+        /// Добавляет иконку пользователю.
+        /// </summary>
+        /// <param name="icon">Форма с информацией об изображении.</param>
+        /// <param name="toUser">Экземпляр пользователя.</param>
+        /// <returns>Результат добавления.</returns>
         private void AddIconToUser(IconPostForm icon, User toUser)
         {
             if (!Directory.Exists(UsersIconsDirPath))
@@ -161,11 +243,22 @@ namespace ShopsAggregatorWebApi.Services
             }
         }
 
+        /// <summary>
+        /// Ищет пользователя-покупателя, который содержит в username поисковую строку.
+        /// </summary>
+        /// <param name="s">Поисковая строка.</param>
+        /// <returns>Результат поиска.</returns>
         public List<String> SearchSellers(String s)
         {
             return (from seller in Sellers.ToList() where seller.Username.Contains(s) select seller.Username).ToList();
         }
 
+        /// <summary>
+        /// Добваляет подписчика.
+        /// </summary>
+        /// <param name="buyerId">Id пользователя-покупателя.</param>
+        /// <param name="sellerName">Имя пользователя-продавца.</param>
+        /// <returns>Результат добавления.</returns>
         public Boolean AddSubscriber(Int32 buyerId, String sellerName)
         {
             Seller currentSeller = (from seller in Sellers.ToList() where seller.Username == sellerName select seller)
@@ -175,6 +268,12 @@ namespace ShopsAggregatorWebApi.Services
             return AddSubscriber(buyerId, currentSeller.Id);
         }
         
+        /// <summary>
+        /// Добваляет подписчика.
+        /// </summary>
+        /// <param name="buyerId">Id пользователя-покупателя.</param>
+        /// <param name="sellerId">Id пользователя-продавца.</param>
+        /// <returns>Результат добавления.</returns>
         private Boolean AddSubscriber(Int32 buyerId, Int32 sellerId)
         {
             Buyer buyer = GetBuyer(buyerId);
@@ -191,6 +290,12 @@ namespace ShopsAggregatorWebApi.Services
             return true;
         }
 
+        /// <summary>
+        /// Удаляет подписчика.
+        /// </summary>
+        /// <param name="buyerId">Id пользователя-покупателя.</param>
+        /// <param name="sellerName">Имя пользователя-продавца.</param>
+        /// <returns>Результат добавления.</returns>
         public Boolean RemoveSubscriber(Int32 buyerId, String sellerName)
         {
             Seller currentSeller = (from seller in Sellers.ToList() where seller.Username == sellerName select seller)
@@ -200,6 +305,12 @@ namespace ShopsAggregatorWebApi.Services
             return RemoveSubscriber(buyerId, currentSeller.Id);
         }
 
+        /// <summary>
+        /// Удаляет подписчика.
+        /// </summary>
+        /// <param name="buyerId">Id пользователя-покупателя.</param>
+        /// <param name="sellerId">Id пользователя-продавца.</param>
+        /// <returns>Результат добавления.</returns>
         private Boolean RemoveSubscriber(Int32 buyerId, Int32 sellerId)
         {
             Buyer buyer = GetBuyer(buyerId);
@@ -214,6 +325,11 @@ namespace ShopsAggregatorWebApi.Services
             return true;
         }
 
+        /// <summary>
+        /// Создает новую запись и добавляет ее в базу данных.
+        /// </summary>
+        /// <param name="postForm">Форма новой записи.</param>
+        /// <returns>Результат создания записи</returns>
         public Boolean CreatePost(CreatePostForm postForm)
         {
             if (postForm.ImageBytes == null || postForm.ImageBytes.Count == 0 || postForm.CreatorId < 0)
@@ -242,6 +358,11 @@ namespace ShopsAggregatorWebApi.Services
             return true;
         }
 
+        /// <summary>
+        /// Добавляет новую запись всем подписчикам пользователя-продавца.
+        /// </summary>
+        /// <param name="creator">Пользователь-создатель.</param>
+        /// <param name="postId">Id записи.</param>
         private void AddPostForSubscribers(Seller creator, Int32 postId)
         {
             if(creator.Subscribers == null)
@@ -257,18 +378,33 @@ namespace ShopsAggregatorWebApi.Services
             }
         }
 
+        /// <summary>
+        /// Получает экземпляр записи по id.
+        /// </summary>
+        /// <param name="id">Id записи.</param>
+        /// <returns>Экземпляр типа записи.</returns>
         public Post GetPostById(Int32 id)
         {
             return (from post in Posts.ToList() where post.Id == id select post).FirstOrDefault();
         }
         
-        public List<Post> GetPostsByCreatorId(String sellerName)
+        /// <summary>
+        /// Получаем записи пользователя-продавца по имени.
+        /// </summary>
+        /// <param name="sellerName">Имя пользователя-продавца</param>
+        /// <returns>Список записей.</returns>
+        public List<Post> GetPostsByCreatorName(String sellerName)
         {
             Int32 creatorId = (from seller in Sellers.ToList() where seller.Username == sellerName select seller.Id)
                 .FirstOrDefault();
             return (from post in Posts.ToList() where post.CreatorId == creatorId select post).ToList();
         }
 
+        /// <summary>
+        /// Получает новые записи пользователя-покупателя по его id.
+        /// </summary>
+        /// <param name="buyerId">Id пользователя-покупателя.</param>
+        /// <returns>Список новых записей.</returns>
         public List<BuyerPostView> GetBuyerNewPosts(Int32 buyerId)
         {
             Buyer buyer = GetBuyer(buyerId);
@@ -284,6 +420,11 @@ namespace ShopsAggregatorWebApi.Services
             return newPosts;
         }
 
+        /// <summary>
+        /// Добавляет лайк пользователя-покупателя к записи.
+        /// </summary>
+        /// <param name="likerId">Id пользователя-покупателя.</param>
+        /// <param name="postId">Id записи.</param>
         public void AddLikeToPost(Int32 likerId, Int32 postId)
         {
             Post post = GetPostById(postId);
@@ -301,6 +442,11 @@ namespace ShopsAggregatorWebApi.Services
             SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Удаляет лайк пользователя-покупателя к записи.
+        /// </summary>
+        /// <param name="likerId">Id пользователя-покупателя.</param>
+        /// <param name="postId">Id записи.</param>
         public void RemoveLikeFromPost(Int32 likerId, Int32 postId)
         {
             Post post = GetPostById(postId);
@@ -316,6 +462,11 @@ namespace ShopsAggregatorWebApi.Services
             SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Получает записи, понравившиеся пользователю записи.
+        /// </summary>
+        /// <param name="buyerId">Id пользователя.</param>
+        /// <returns>Список записей.</returns>
         public List<BuyerPostView> GetBuyerLikedPosts(Int32 buyerId)
         {
             Buyer buyer = GetBuyer(buyerId);
@@ -334,6 +485,11 @@ namespace ShopsAggregatorWebApi.Services
             return posts;
         }
 
+        /// <summary>
+        /// Создает новый заказ и добавляет его в базу данных.
+        /// </summary>
+        /// <param name="buyerId">Id пользователя-покупателч, который создает заказ.</param>
+        /// <param name="postId">Id записи, по которой создают заказ.</param>
         public void AddOrder(Int32 buyerId, Int32 postId)
         {
             Buyer buyer = GetBuyer(buyerId);
@@ -359,6 +515,11 @@ namespace ShopsAggregatorWebApi.Services
             SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Получает заказы пользователя-покупателя.
+        /// </summary>
+        /// <param name="buyerId">Id пользователя-покупателя.</param>
+        /// <returns>Список заказов.</returns>
         public List<BuyerOrderView> GetBuyerOrders(Int32 buyerId)
         {
             List<Order> orders = (from order in Orders.ToList() where order.BuyerId == buyerId select order).ToList();
@@ -373,6 +534,11 @@ namespace ShopsAggregatorWebApi.Services
             return views;
         }
 
+        /// <summary>
+        /// Получает заказы пользователя-продавца.
+        /// </summary>
+        /// <param name="sellerId">Id пользователя-продавца.</param>
+        /// <returns>Список заказов.</returns>
         public List<SellerOrderView> GetSellerOrders(Int32 sellerId)
         {
             Seller seller = GetSeller(sellerId);
@@ -389,11 +555,20 @@ namespace ShopsAggregatorWebApi.Services
             return views;
         }
 
+        /// <summary>
+        /// Получает заказ по Id. 
+        /// </summary>
+        /// <param name="orderId">Id заказа.</param>
+        /// <returns>Экземпляр типа заказа.</returns>
         private Order GetOrder(Int32 orderId)
         {
             return (from order in Orders.ToList() where order.Id == orderId select order).FirstOrDefault();
         }
         
+        /// <summary>
+        /// Устанавливает одобренный статус заказа.
+        /// </summary>
+        /// <param name="orderId">Id заказа.</param>
         public void SetOrderSuccess(Int32 orderId)
         {
             Order current = GetOrder(orderId);
@@ -404,6 +579,10 @@ namespace ShopsAggregatorWebApi.Services
             SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Устанавливает отклоненный статус заказа.
+        /// </summary>
+        /// <param name="orderId">Id заказа.</param>
         public void SetOrderCanceled(Int32 orderId)
         {
             Order current = GetOrder(orderId);
@@ -414,6 +593,10 @@ namespace ShopsAggregatorWebApi.Services
             SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Удаляет заказ.
+        /// </summary>
+        /// <param name="orderId">Id заказа.</param>
         public void DeleteOrder(Int32 orderId)
         {
             Order current = GetOrder(orderId);
@@ -422,6 +605,11 @@ namespace ShopsAggregatorWebApi.Services
             Orders.Remove(current);
         }
 
+        /// <summary>
+        /// Изменяет информацию о пользователе-покупателе.
+        /// </summary>
+        /// <param name="buyerId">Id пользователя-покупателя.</param>
+        /// <param name="info">Новая информация.</param>
         public void SetBuyerInfo(Int32 buyerId, String info)
         {
             Buyer buyer = GetBuyer(buyerId);
@@ -431,6 +619,11 @@ namespace ShopsAggregatorWebApi.Services
             SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Изменяет информацию о пользователе-продавце.
+        /// </summary>
+        /// <param name="sellerId">Id пользователя-покупателя.</param>
+        /// <param name="info">Новая информация.</param>
         public void SetSellerInfo(Int32 sellerId, String info)
         {
             Seller seller = GetSeller(sellerId);

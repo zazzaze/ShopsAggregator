@@ -15,7 +15,7 @@
           "RestSharp": "106.10.2-alpha.0.8",
           "Xam.Plugin.Media": "4.4.10-beta",
           "Xamarin.Essentials": "1.5.2",
-          "Xamarin.Forms": "4.5.0.282-pre4",
+          "Xamarin.Forms": "4.6.0.726",
           "Xamarin.HotReload": "1.6.1",
           "sqlite-net-pcl": "1.7.302-beta"
         },
@@ -1125,25 +1125,25 @@
           }
         }
       },
-      "Xamarin.Forms/4.5.0.282-pre4": {
+      "Xamarin.Forms/4.6.0.726": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.5.0.86"
+            "fileVersion": "4.6.0.446"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.5.0.86"
+            "fileVersion": "4.6.0.446"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.5.0.86"
+            "fileVersion": "4.6.0.446"
           }
         }
       },
       "Xamarin.HotReload/1.6.1": {
         "dependencies": {
-          "Xamarin.Forms": "4.5.0.282-pre4"
+          "Xamarin.Forms": "4.6.0.726"
         },
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.HotReload.Reloader.dll": {
@@ -1860,12 +1860,12 @@
       "path": "xamarin.essentials/1.5.2",
       "hashPath": "xamarin.essentials.1.5.2.nupkg.sha512"
     },
-    "Xamarin.Forms/4.5.0.282-pre4": {
+    "Xamarin.Forms/4.6.0.726": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-i9K2gRvl9ptqz1v29kz786MMydOkkJ9SSUdIEyfMJjKkWuFFEE7eHlQLyHiEGFbv/nFZcwci3GBWN/eqJkI7QQ==",
-      "path": "xamarin.forms/4.5.0.282-pre4",
-      "hashPath": "xamarin.forms.4.5.0.282-pre4.nupkg.sha512"
+      "sha512": "sha512-NI7iL5NnrQN/gCyoHLlexcDndNin67hFV7ObG8QQU2zbEi15B1SRaAsuiNeXVYAHfXg3/amqryqzGd+3R6lyZQ==",
+      "path": "xamarin.forms/4.6.0.726",
+      "hashPath": "xamarin.forms.4.6.0.726.nupkg.sha512"
     },
     "Xamarin.HotReload/1.6.1": {
       "type": "package",

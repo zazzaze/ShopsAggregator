@@ -38,23 +38,7 @@
           "dependencies": {
             "Xamarin.Android.Support.Design": {
               "target": "Package",
-              "version": "[27.0.2.1, )"
-            },
-            "Xamarin.Android.Support.v4": {
-              "target": "Package",
-              "version": "[27.0.2.1, )"
-            },
-            "Xamarin.Android.Support.v7.AppCompat": {
-              "target": "Package",
-              "version": "[27.0.2.1, )"
-            },
-            "Xamarin.Android.Support.v7.CardView": {
-              "target": "Package",
-              "version": "[27.0.2.1, )"
-            },
-            "Xamarin.Android.Support.v7.MediaRouter": {
-              "target": "Package",
-              "version": "[27.0.2.1, )"
+              "version": "[28.0.0.3, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
@@ -127,7 +111,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.5.0.282-pre4, )"
+              "version": "[4.6.0.726, )"
             },
             "Xamarin.HotReload": {
               "target": "Package",

@@ -12,6 +12,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="0,5" Margin="0,0,0,10">
+                                <Label Text="{Binding OrderId}" IsVisible="False" />
                                 <Label Text="{Binding SellerPost.Postd}" IsVisible="False" />
                                 <FlexLayout JustifyContent="Start" Padding="5" AlignItems="Center">
                                     <FlexLayout.GestureRecognizers>
@@ -33,6 +34,7 @@
                                     <Label Text="Статус заказа: " FontSize="Header" />
                                     <Label Text="{Binding OrderStatus}" FontSize="Header" TextColor="{StaticResource purple}" />
                                 </StackLayout>
+                                <Button Text="Удалить заказ" Clicked="DeleteButtonClickedAsync" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

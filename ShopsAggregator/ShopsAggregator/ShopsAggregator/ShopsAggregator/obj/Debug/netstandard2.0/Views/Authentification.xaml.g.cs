@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ShopsAggregator.Views.Authentification.xaml", "Views/Authentification.xaml", typeof(global::ShopsAggregator.Authentification))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ShopsAggregator.Views.Authentification.xaml", "Views/Authentification.xaml", typeof(global::ShopsAggregator.Views.Authentification))]
 
-namespace ShopsAggregator {
+namespace ShopsAggregator.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views/Authentification.xaml")]
