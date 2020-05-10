@@ -21,16 +21,30 @@ using ShopsAggregatorWebApi.Services;
 
 namespace ShopsAggregatorWebApi
 {
+    /// <summary>
+    /// Класс создания сервиса.
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Конструктор.
+        /// </summary>
+        /// <param name="configuration">Конфигурации сервера.</param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
+        /// <summary>
+        /// Конфигурация сервера.
+        /// </summary>
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        /// Добавляет различные сервисы.
+        /// </summary>
+        /// <param name="services">Сервис для добавления.</param>
         public void ConfigureServices(IServiceCollection services)
         {
             Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
@@ -43,6 +57,11 @@ namespace ShopsAggregatorWebApi
             });
         }
 
+        /// <summary>
+        /// Создает HTTP клиент.
+        /// </summary>
+        /// <param name="app">Создатель клиента.</param>
+        /// <param name="env">Параметры окружения.</param>
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

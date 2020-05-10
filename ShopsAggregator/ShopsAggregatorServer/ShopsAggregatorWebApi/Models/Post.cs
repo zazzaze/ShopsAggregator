@@ -9,27 +9,43 @@ using ShopsAggregatorWebApi.Models;
 
 namespace ShopsAggregatorWebApi.Models
 {
+    /// <summary>
+    /// Тип записи, которую создает пользователь-продавец
+    /// </summary>
     [Table("posts")]
     public class Post
     {
+        /// <summary>
+        /// Путь для сохранения картинок.
+        /// </summary>
         private const String PostsPhotoDirectory = "../images";
+        /// <summary>
+        /// Id записи.
+        /// </summary>
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
         public Int32 Id { get; set; }
+        /// <summary>
+        /// Id создателя записи - пользователя-продавца.
+        /// </summary>
         [Column("creatorid")]
         public Int32 CreatorId { get; set; }
+        /// <summary>
+        /// Информации о записи.
+        /// </summary>
         [Column("info")]
         public String Info { get; set; }
-
         
-        public String ImagePath => Id + "photo.jpeg";
-        
-        [Column("comments")]
-        public List<Int32> Comments { get; set; } = new List<Int32>();
-
+        /// <summary>
+        /// Id пользователей-покупателей, которым понравилась эта запись.
+        /// </summary>
         [Column("likers")]
         public List<Int32> Likers { get; set; } = new List<Int32>();
         
+        /// <summary>
+        /// Ставит полям значения из формы и вызывает метод добавления фотографии.
+        /// </summary>
+        /// <param name="form">Форма создания записи.</param>
         public void CreatePostFromForm(CreatePostForm form)
         {
             this.CreatorId = form.CreatorId;
@@ -37,11 +53,18 @@ namespace ShopsAggregatorWebApi.Models
             AddPostImage(form);
         }
 
+        /// <summary>
+        /// Пустой конструктор.
+        /// </summary>
         public Post()
         {
             
         }
         
+        /// <summary>
+        /// Добавляет фотографию для записи из формы.
+        /// </summary>
+        /// <param name="form">Форма записи.</param>
         private void AddPostImage(CreatePostForm form)
         {
             if (!Directory.Exists(PostsPhotoDirectory))

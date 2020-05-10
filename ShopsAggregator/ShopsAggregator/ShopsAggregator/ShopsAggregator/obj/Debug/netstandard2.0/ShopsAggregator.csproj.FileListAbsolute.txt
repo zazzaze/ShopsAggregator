@@ -14,7 +14,6 @@
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/SearchPage.xaml.g.cs
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/AllPostsPage.xaml.g.cs
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/BuyerMainPage.xaml.g.cs
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/PostPage.xaml.g.cs
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/SellerMainPage.xaml.g.cs
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/CreatePostPage.xaml.g.cs
 /Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/WatchSellerPage.xaml.g.cs

@@ -13,7 +13,7 @@ namespace ShopsAggregator.Models
         /// </summary>
         private String _info;
         /// <summary>
-        /// Id записи
+        /// Id записи.
         /// </summary>
         public Int32 Id { get; set; }
         

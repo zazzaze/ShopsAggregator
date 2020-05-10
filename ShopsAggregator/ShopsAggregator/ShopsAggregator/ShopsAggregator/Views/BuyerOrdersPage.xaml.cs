@@ -117,5 +117,40 @@ namespace ShopsAggregator.Views
                 listView.SelectedItem = null;
             }
         }
+
+        /// <summary>
+        /// Обработчик события удаления заказа.
+        /// </summary>
+        /// <param name="sender">Издатель события - Button.</param>
+        /// <param name="e">Аргументы события.</param>
+        private async void DeleteButtonClickedAsync(object sender, EventArgs e)
+        {
+            if (!App.IsConnected())
+            {
+                await DisplayAlert("Ошибка", "Осутствует подключение к интернету", "Поробовать снова");
+                return;
+            }
+
+            if (sender is Button button)
+            {
+                BuyerOrderView order = (BuyerOrderView) (button.ParentView.BindingContext);
+                if (order == null)
+                    return;
+                RestClient client = new RestClient($"{App.BaseUrl}/api/orders/deleteOrder?orderId={order.OrderId}");
+                var request = new RestRequest(Method.DELETE);
+                request.AddHeader("Content-Type", "application/text");
+                var response = await client.ExecuteAsync(request);
+                if (response.StatusCode == HttpStatusCode.BadRequest)
+                {
+                    await DisplayAlert("Ошибка", "Не удалить заказ", "Поробовать снова");
+                    return;
+                }
+
+                BuyerOrderView orderFromList =
+                    (from orderList in buyerOrders where orderList.OrderId == order.OrderId select orderList)
+                    .FirstOrDefault();
+                buyerOrders.Remove(orderFromList);
+            }
+        }
     }
 }

@@ -3,9 +3,19 @@ using System.Collections.Generic;
 
 namespace ShopsAggregatorWebApi.Models
 {
+    /// <summary>
+    /// Экземпляр типа установки иконки пользователю.
+    /// </summary>
     public class IconPostForm
     {
-        public List<Int32> IconBytesArr { get; set; } = new List<Int32>();
-        public  Int32 ToId { get; set; }
+        /// <summary>
+        /// Байты фотографии, выбранной пользователем.
+        /// </summary>
+        public List<Int32> IconBytesArr { get; set; }
+        
+        /// <summary>
+        /// Id пользователя, который изменяет иконку.
+        /// </summary>
+        public Int32 ToId { get; set; }
     }
 }
