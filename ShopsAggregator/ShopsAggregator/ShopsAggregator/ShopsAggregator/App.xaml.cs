@@ -15,11 +15,22 @@ using Xamarin.Essentials;
 [assembly: ExportFont("SchlangeBold.ttf", Alias = "SchlangeBold")]
 namespace ShopsAggregator
 {
+    /// <summary>
+    /// Основной код приложения.
+    /// </summary>
     public partial class App : Application
     {
+        /// <summary>
+        /// Ссылка сервера на контроллер users.
+        /// </summary>
         public static String ServerUrl = "http://62.113.116.228/api/users/";
+        /// <summary>
+        /// Базовый адрес сервера.
+        /// </summary>
         public static String BaseUrl = "http://62.113.116.228/";
-        public static User mainUser;
+        /// <summary>
+        /// Конструктор. Устанавливает язык приложения и интерфейса.
+        /// </summary>
         public App()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
@@ -30,20 +41,10 @@ namespace ShopsAggregator
             MainPage = navPage;
         }
 
-        protected override void OnStart()
-        {
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
-        }
-        
+        /// <summary>
+        /// Анимирует встряхивание элемента.
+        /// </summary>
+        /// <param name="element">View элемент.</param>
         public static async void Shake(View element)
         {
             UInt32 timer = 50;
@@ -56,15 +57,14 @@ namespace ShopsAggregator
             element.TranslationX = 0;
         }
 
+        /// <summary>
+        /// Проверяет, есть ли у приложения подключение к интернету.
+        /// </summary>
+        /// <returns>Результат проверки.</returns>
         public static Boolean IsConnected()
         {
             var current = Connectivity.NetworkAccess;
             return current != NetworkAccess.None;
-        }
-        
-        public static T Deserialize<T>(String json)
-        {
-            return JsonConvert.DeserializeObject<T>(json);
         }
     }
 }

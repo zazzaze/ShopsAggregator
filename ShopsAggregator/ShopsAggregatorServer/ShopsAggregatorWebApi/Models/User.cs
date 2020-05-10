@@ -23,8 +23,12 @@ namespace ShopsAggregatorWebApi.Models
         [Column("iconpath")] 
         public String IconPath { get; set; } = "standarticon.jpeg";
         
+        [Column("info")]
+        public String Info { get; set; }
 
-
+        [Column("orders")]
+        public List<Int32> Orders { get; set; } = new List<Int32>();
+        
         public User()
         {
 

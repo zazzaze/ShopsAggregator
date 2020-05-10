@@ -24,9 +24,11 @@
                            FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                 </StackLayout>
             </Frame>
-            <StackLayout x:Name="UserInfoStack">
+            <StackLayout x:Name="UserInfoStack" HorizontalOptions="FillAndExpand">
                 <Label Text="{Binding Username}" FontSize="Large" HorizontalTextAlignment="Center" />
                 <Label Text="{Binding Email}" TextColor="{StaticResource grey}" FontSize="Small" HorizontalTextAlignment="Center"/>
+                <Editor x:Name="InfoEditor" Text="{Binding Info}" Placeholder="Введите адрес и другую ифнорацию, чтобы продавец смог связаться с вами" 
+                        Unfocused="VisualElement_OnUnfocused"/>
             </StackLayout>
             <StackLayout HorizontalOptions="Center">
                 <Label x:Name="SubscribedCounter" Text="0" FontSize="Large" HorizontalTextAlignment="Center"/>
@@ -35,7 +37,7 @@
             </StackLayout>
             <Label FontSize="Title" HorizontalTextAlignment="Start">Понравившиеся товары</Label>
             <ListView x:Name="Posts" CachingStrategy="RecycleElementAndDataTemplate" HasUnevenRows="True" 
-                      SeparatorVisibility="None">
+                      SeparatorVisibility="None" ItemTapped="OnPostsItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

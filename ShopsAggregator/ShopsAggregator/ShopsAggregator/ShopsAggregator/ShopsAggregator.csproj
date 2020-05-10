@@ -36,6 +36,10 @@
       <EmbeddedResource Include="images\heart.png" />
       <None Remove="images\dislike.png" />
       <EmbeddedResource Include="images\dislike.png" />
+      <None Remove="images\orders.png" />
+      <EmbeddedResource Include="images\orders.png" />
+      <None Remove="images\plus.png" />
+      <EmbeddedResource Include="images\plus.png" />
     </ItemGroup>
 
     <ItemGroup>

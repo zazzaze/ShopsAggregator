@@ -25,25 +25,28 @@
           <e p="CustomCell.cs" t="Include" />
           <e p="CustomEditor.cs" t="Include" />
         </e>
-        <e p="HelpMethods.cs" t="Include" />
         <e p="ImageResourceExtension.cs" t="Include" />
         <e p="images" t="Include">
           <e p="accounticon.png" t="Include" />
           <e p="dislike.png" t="Include" />
           <e p="gallery.png" t="Include" />
           <e p="heart.png" t="Include" />
+          <e p="orders.png" t="Include" />
+          <e p="plus.png" t="Include" />
           <e p="searchicon.png" t="Include" />
         </e>
         <e p="MainTabbedPage.xaml" t="Include" />
         <e p="MainTabbedPage.xaml.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Buyer.cs" t="Include" />
+          <e p="BuyerOrderView.cs" t="Include" />
           <e p="BuyerPostView.cs" t="Include" />
           <e p="CreatePostForm.cs" t="Include" />
           <e p="IconPostForm.cs" t="Include" />
           <e p="Post.cs" t="Include" />
           <e p="RegistrationForm.cs" t="Include" />
           <e p="Seller.cs" t="Include" />
+          <e p="SellerOrderView.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -56,7 +59,6 @@
                 <e p="AllPostsPage.xaml.g.cs" t="Include" />
                 <e p="Authentification.xaml.g.cs" t="Include" />
                 <e p="BuyerMainPage.xaml.g.cs" t="Include" />
-                <e p="PostPage.xaml.g.cs" t="Include" />
                 <e p="RegistrationPage.xaml.g.cs" t="Include" />
                 <e p="SearchPage.xaml.g.cs" t="Include" />
               </e>
@@ -79,16 +81,18 @@
           <e p="Authentification.xaml.cs" t="Include" />
           <e p="BuyerMainPage.xaml" t="Include" />
           <e p="BuyerMainPage.xaml.cs" t="Include" />
+          <e p="BuyerOrdersPage.xaml" t="Include" />
+          <e p="BuyerOrdersPage.xaml.cs" t="Include" />
           <e p="CreatePostPage.xaml" t="Include" />
           <e p="CreatePostPage.xaml.cs" t="Include" />
-          <e p="PostPage.xaml" t="Include" />
-          <e p="PostPage.xaml.cs" t="Include" />
           <e p="RegistrationPage.xaml" t="Include" />
           <e p="RegistrationPage.xaml.cs" t="Include" />
           <e p="SearchPage.xaml" t="Include" />
           <e p="SearchPage.xaml.cs" t="Include" />
           <e p="SellerMainPage.xaml" t="Include" />
           <e p="SellerMainPage.xaml.cs" t="Include" />
+          <e p="SellerOrdersPage.xaml" t="Include" />
+          <e p="SellerOrdersPage.xaml.cs" t="Include" />
           <e p="WatchSellerPage.xaml" t="Include" />
           <e p="WatchSellerPage.xaml.cs" t="Include" />
         </e>
@@ -118,6 +122,9 @@
             <e p="colors.xml" t="Include" />
             <e p="styles.xml" t="Include" />
           </e>
+        </e>
+        <e p="Services" t="Include">
+          <e p="PhotoPickerService.cs" t="Include" />
         </e>
         <e p="ShopsAggregator.Android.csproj" t="IncludeRecursive" />
       </e>

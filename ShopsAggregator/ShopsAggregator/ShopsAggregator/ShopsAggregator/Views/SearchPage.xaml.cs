@@ -12,27 +12,60 @@ using Xamarin.Forms.Xaml;
 
 namespace ShopsAggregator.Views
 {
+    /// <summary>
+    /// Код страницы поиска пользователей-продавцов.
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SearchPage : ContentPage
     {
+        /// <summary>
+        /// Заголовок сообщения о неудачном запросе к серверу.
+        /// </summary>
         private const String connectionAlertTitle = "Невозможно сделать запрос";
+        /// <summary>
+        /// Текст сообщения об отсутствии интернета.
+        /// </summary>
         private String connectionAlertContent = "Отсутствует подключение к интернету";
+        /// <summary>
+        /// Текст кнопки сообщения.
+        /// </summary>
         private const String alertCancel = "Попробовать снова";
+        /// <summary>
+        /// Заголовок сообщения о неудачном запросе к серверу.
+        /// </summary>
         private const String getResponseAlertTitle = "Ошибка запроса";
+        /// <summary>
+        /// Текст сообщения о неудачном получении данных.
+        /// </summary>
         private const String getResponseAlertContent = "Не удалось получить данныу";
+        /// <summary>
+        /// Список найденных пользователей.
+        /// </summary>
         private List<String> searchedSellers;
+        /// <summary>
+        /// Экземпляр типа пользователя-покупателя.
+        /// </summary>
         private Buyer _buyer;
+        /// <summary>
+        /// Конструктор страницы.
+        /// </summary>
+        /// <param name="buyer">Экземпляр типа пользователя-покупателя.</param>
         public SearchPage(Buyer buyer)
         {
             InitializeComponent();
             _buyer = buyer;
         }
 
-        private void OnSearchButtonPressed(object sender, EventArgs e)
+        /// <summary>
+        /// Обработчик события поиска пользователя по имени.
+        /// </summary>
+        /// <param name="sender">Издатель события - SearchBar.</param>
+        /// <param name="e">Аргументы события.</param>
+        private async void OnSearchButtonPressed(object sender, EventArgs e)
         {
             if (!App.IsConnected())
             {
-                DisplayAlert(connectionAlertTitle, connectionAlertContent, alertCancel);
+                await DisplayAlert(connectionAlertTitle, connectionAlertContent, alertCancel);
                 return;
             }
             if (sender is SearchBar searchBar)
@@ -43,6 +76,10 @@ namespace ShopsAggregator.Views
             }
         }
 
+        /// <summary>
+        /// Вызывает метод с запросом на сервер, получает результат работы сервера и обрабатывает их.
+        /// </summary>
+        /// <param name="searchText">Текст запроса пользователя.</param>
         private async void Search(String searchText)
         {
             String responseContent = String.Empty;
@@ -52,7 +89,7 @@ namespace ShopsAggregator.Views
             }
             catch (Exception)
             {
-                DisplayAlert(getResponseAlertTitle, getResponseAlertContent, alertCancel);
+                await DisplayAlert(getResponseAlertTitle, getResponseAlertContent, alertCancel);
                 return;
             }
 
@@ -63,7 +100,7 @@ namespace ShopsAggregator.Views
             }
             catch (Exception)
             {
-                DisplayAlert(getResponseAlertTitle, getResponseAlertContent, alertCancel);
+                await DisplayAlert(getResponseAlertTitle, getResponseAlertContent, alertCancel);
                 return;
             }
 
@@ -71,6 +108,11 @@ namespace ShopsAggregator.Views
             UsersListView.ItemsSource = sellers;
         }
 
+        /// <summary>
+        /// Отправляет запрос на сервер для поиска пользователя.
+        /// </summary>
+        /// <param name="searchLine">Строка поиска пользователя.</param>
+        /// <returns>Результат запроса.</returns>
         private async Task<String> TryGetSearchResult(String searchLine)
         {
             var client = new RestClient($"{App.BaseUrl}api/search?q={searchLine}");
@@ -80,6 +122,11 @@ namespace ShopsAggregator.Views
             return response.Content;
         }
 
+        /// <summary>
+        /// Обработчик события нажатия на элемент списка найденных пользователей.
+        /// </summary>
+        /// <param name="sender">Издатель события - ListView.</param>
+        /// <param name="e">Аргументы события.</param>
         private async void OnSearchItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (sender is ListView list)
