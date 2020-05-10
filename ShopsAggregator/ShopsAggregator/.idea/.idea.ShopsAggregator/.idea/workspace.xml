@@ -50,6 +50,7 @@
       <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/AuthorizationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/AuthorizationController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/OrdersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/OrdersController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/PostController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/PostController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/SearchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/SearchController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/SubscribeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Controllers/SubscribeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Models/Buyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Models/Buyer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Models/BuyerOrderView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Models/BuyerOrderView.cs" afterDir="false" />
@@ -64,7 +65,9 @@
       <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Models/Seller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Models/Seller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Models/SellerOrderView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Models/SellerOrderView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Services/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Services/DatabaseContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ShopsAggregatorServer/ShopsAggregatorWebApi/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +198,6 @@
         <option value="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Models/IconPostForm.cs" />
         <option value="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Models/RegistrationForm.cs" />
         <option value="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Models/BuyerOrderView.cs" />
-        <option value="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Models/SellerOrderView.cs" />
         <option value="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/AllPostsPage.xaml.cs" />
         <option value="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/Authentification.xaml" />
         <option value="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/BuyerMainPage.xaml.cs" />
@@ -215,6 +217,7 @@
         <option value="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/BuyerOrdersPage.xaml" />
         <option value="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Views/BuyerOrdersPage.xaml.cs" />
         <option value="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Models/Post.cs" />
+        <option value="$PROJECT_DIR$/ShopsAggregator/ShopsAggregator/Models/SellerOrderView.cs" />
       </list>
     </option>
   </component>
@@ -473,7 +476,7 @@
       <workItem from="1588166015259" duration="614000" />
       <workItem from="1588422227185" duration="3121000" />
       <workItem from="1588512350967" duration="10531000" />
-      <workItem from="1588706890719" duration="64022000" />
+      <workItem from="1588706890719" duration="64731000" />
     </task>
     <servers />
   </component>
