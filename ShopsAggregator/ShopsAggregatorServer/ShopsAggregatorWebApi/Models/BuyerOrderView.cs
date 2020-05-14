@@ -29,7 +29,7 @@ namespace ShopsAggregatorWebApi.Models
         public Boolean IsCanceled { get; set; }
 
         /// <summary>
-        /// Пустой конструкток.
+        /// Пустой конструктор.
         /// </summary>
         public BuyerOrderView()
         {

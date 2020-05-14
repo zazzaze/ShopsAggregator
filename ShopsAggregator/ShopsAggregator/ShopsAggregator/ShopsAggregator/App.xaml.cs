@@ -3,6 +3,7 @@ using System.Globalization;
 using System.IO;
 using System.Threading;
 using Newtonsoft.Json;
+using Plugin.Media;
 using ShopsAggregator.Models;
 using ShopsAggregator.Services;
 using ShopsAggregator.Views;
@@ -12,11 +13,10 @@ using Xamarin.Essentials;
 
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-[assembly: ExportFont("SchlangeBold.ttf", Alias = "SchlangeBold")]
 namespace ShopsAggregator
 {
     /// <summary>
-    /// Основной код приложения.
+    /// Основная информация о приложении хранится в этом классе.
     /// </summary>
     public partial class App : Application
     {
@@ -36,7 +36,6 @@ namespace ShopsAggregator
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
             Thread.CurrentThread.CurrentUICulture = CultureInfo.CurrentCulture;
             InitializeComponent();
-            
             var navPage = new NavigationPage(new Authentification());
             MainPage = navPage;
         }

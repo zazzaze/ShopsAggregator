@@ -84,4 +84,29 @@ Global
 		{D26D4402-92C2-4B86-8FA1-C80B6AC41F35}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{D26D4402-92C2-4B86-8FA1-C80B6AC41F35}.Release|iPhoneSimulator.Deploy.0 = Release|iPhoneSimulator
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = application/xaml
+		$0.XmlFormattingPolicy = $3
+		$3.inheritsSet = null
+		$3.scope = application/xaml
+		$0.TextStylePolicy = $4
+		$4.inheritsSet = null
+		$4.scope = application/xml
+		$0.XmlFormattingPolicy = $5
+		$5.scope = application/xml
+		$0.TextStylePolicy = $6
+		$6.inheritsSet = null
+		$6.scope = application/android+xml
+		$0.XmlFormattingPolicy = $7
+		$7.inheritsSet = null
+		$7.scope = application/android+xml
+		$0.StandardHeader = $8
+		$0.VersionControlPolicy = $9
+		version = 1.0
+	EndGlobalSection
 EndGlobal

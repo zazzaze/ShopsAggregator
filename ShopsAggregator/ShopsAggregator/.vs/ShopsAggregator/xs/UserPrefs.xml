@@ -1,17 +1,53 @@
-﻿<Properties StartupConfiguration="{D26D4402-92C2-4B86-8FA1-C80B6AC41F35}|Default">
-  <MonoDevelop.Ide.ItemProperties.ShopsAggregator.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.781CC9C0-8F61-49E7-AFCC-00AD733D902B" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ShopsAggregator/ShopsAggregator.iOS/Info.plist">
+﻿<Properties StartupConfiguration="{4282FE26-7D0C-4E87-BD67-B9043A3F82FE}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ShopsAggregator/ShopsAggregator/Views/CreatePostPage.xaml.cs">
     <Files>
-      <File FileName="ShopsAggregator/ShopsAggregator.iOS/Info.plist" />
+      <File FileName="ShopsAggregator/ShopsAggregator.Android/MainActivity.cs" Line="57" Column="2" />
+      <File FileName="ShopsAggregator/ShopsAggregator.iOS/ApDelegate.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/obj/Debug/netstandard2.0/Views/BuyerMainPage.xaml.g.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Views/WatchSellerPage.xaml.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Models/Buyer.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Models/User.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Models/Seller.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Models/BuyerOrderView.cs" Line="32" Column="13" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Models/BuyerPostView.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Models/CreatePostForm.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Models/IconPostForm.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Models/Post.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Models/RegistrationForm.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Models/SellerOrderView.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Views/AllPostsPage.xaml.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Views/Authentification.xaml.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Views/BuyerMainPage.xaml.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Views/BuyerOrdersPage.xaml.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Views/CreatePostPage.xaml.cs" Line="79" Column="44" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Views/RegistrationPage.xaml.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Views/SearchPage.xaml.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Views/SellerOrdersPage.xaml.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/App.xaml.cs" Line="69" Column="2" />
+      <File FileName="ShopsAggregator/ShopsAggregator/ImageResourceExtension.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator/MainTabbedPage.xaml.cs" />
+      <File FileName="ShopsAggregator/ShopsAggregator.Android/Resources/Resource.Designer.cs" Line="1" Column="1" />
+      <File FileName="ShopsAggregator/ShopsAggregator.Android/Resources/AboutResources.txt" Line="1" Column="1" />
+      <File FileName="ShopsAggregator/ShopsAggregator/Views/SellerMainPage.xaml.cs" Line="167" Column="9" />
+      <File FileName="ShopsAggregator/ShopsAggregator.Android/Properties/AssemblyInfo.cs" Line="32" Column="17" />
+      <File FileName="ShopsAggregator/ShopsAggregator.Android/Properties/AndroidManifest.xml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ShopsAggregator" expanded="True">
-            <Node name="ShopsAggregator.iOS" expanded="True">
-              <Node name="Resources" expanded="True">
-                <Node name="OswaldFont.ttf" selected="True" />
+            <Node name="ShopsAggregator" expanded="True">
+              <Node name="Views" expanded="True">
+                <Node name="CreatePostPage.xaml" expanded="True">
+                  <Node name="CreatePostPage.xaml.cs" selected="True" />
+                </Node>
+                <Node name="SellerMainPage.xaml" expanded="True" />
               </Node>
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+            <Node name="ShopsAggregator.Android" expanded="True">
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -19,7 +55,8 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.ItemProperties.ShopsAggregator.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

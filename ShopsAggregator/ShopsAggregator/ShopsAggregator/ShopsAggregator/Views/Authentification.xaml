@@ -22,10 +22,6 @@
                 <Button Text="Зарегистрироваться" Clicked="OnRegistrationButtonClick"/>
                 <Label x:Name="StatusOfSignIn" FontSize="Small" TextColor="Red" HorizontalTextAlignment="Center" Text="заглушка" IsVisible="False"/>
             </FlexLayout>
-            <StackLayout Margin="0,50,0,0">
-                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource grey}"/>
-                <Button Text="Условия и пользовательское соглашение" Margin="0,5"/>
-            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

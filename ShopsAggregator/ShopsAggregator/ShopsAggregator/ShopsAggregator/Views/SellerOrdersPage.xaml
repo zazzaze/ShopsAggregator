@@ -18,7 +18,7 @@
                                     <Label Text="{Binding CurrentPost.Info}" Padding="20,3"/>
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" Margin="0,0,0,10" Padding="20,5">
-                                    <Label Text="Заказчик:" FontSize="Header"/>
+                                    <Label Text="Заказчик:" FontSize="{OnPlatform Android=Body, iOS=Header}"/>
                                     <StackLayout>
                                         <StackLayout Orientation="Horizontal">
                                             <Label Text="Имя пользователя: " TextColor="{StaticResource purple}" FontSize="Body"/>
@@ -35,8 +35,8 @@
                                     </StackLayout>
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" Padding="20,5">
-                                    <Label Text="Статус заказа: " FontSize="Header" />
-                                    <Label Text="{Binding OrderStatus}" FontSize="Header" TextColor="{StaticResource purple}" />
+                                    <Label Text="Статус заказа: " FontSize="{OnPlatform Android=Body, iOS=Header}" />
+                                    <Label Text="{Binding OrderStatus}" FontSize="{OnPlatform Android=Body, iOS=Header}" TextColor="{StaticResource purple}" />
                                 </StackLayout>
                                 <FlexLayout JustifyContent="SpaceAround">
                                     <Button BackgroundColor="{StaticResource successColor}" TextColor="{StaticResource cloudWhite}" 

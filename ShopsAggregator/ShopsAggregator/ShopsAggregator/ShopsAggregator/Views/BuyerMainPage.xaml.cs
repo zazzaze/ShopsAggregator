@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using RestSharp;
-using ShopsAggregator.Services;
 using ShopsAggregator.Models;
-using Xamarin.Forms.Xaml;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace ShopsAggregator.Views
 {
@@ -78,7 +75,7 @@ namespace ShopsAggregator.Views
             IRestResponse response = await client.ExecuteAsync(request);
             if (response.StatusCode == HttpStatusCode.BadRequest)
             {
-                await DisplayAlert("Ошибка", "Не получилось получить понравившиеся записи", "Попробовать снова");
+                await DisplayAlert("Ошибка", "Не получилось удалось понравившиеся записи", "Попробовать снова");
                 return;
             }
 
@@ -88,7 +85,7 @@ namespace ShopsAggregator.Views
             }
             catch (Exception e)
             {
-                await DisplayAlert("Ошибка", "Не получилось получить понравившиеся записи", "Попробовать снова");
+                await DisplayAlert("Ошибка", "Не получилось удалось понравившиеся записи", "Попробовать снова");
                 return;
             }
 
@@ -132,18 +129,26 @@ namespace ShopsAggregator.Views
         /// <param name="e">Аргументы события.</param>
         private async void GetPhoto(object sender, EventArgs e)
         {
-            if (CrossMedia.Current.IsPickPhotoSupported)
+            try
             {
-                MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-                iconPath = photo.Path;
-                Icon.Source = ImageSource.FromFile(iconPath);
-                IconPostForm form = new IconPostForm(_buyer.Id);
-                GetPhotoBytes(iconPath, form);
-                if (!App.IsConnected())
+                CrossMedia.Current.Initialize();
+                if (CrossMedia.Current.IsPickPhotoSupported)
                 {
-                    return;
+                    MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+                    iconPath = photo.Path;
+                    Icon.Source = ImageSource.FromFile(iconPath);
+                    IconPostForm form = new IconPostForm(_buyer.Id);
+                    GetPhotoBytes(iconPath, form);
+                    if (!App.IsConnected())
+                    {
+                        return;
+                    }
+                    SendUpdateUserPut(form);
                 }
-                SendUpdateUserPut(form);
+            }
+            catch(Exception)
+            {
+                await DisplayAlert("Ошибка", "Не удалось обновить фотографию", "Поробовать снова");
             }
         }
         
@@ -155,7 +160,7 @@ namespace ShopsAggregator.Views
         private void GetPhotoBytes(String path, IconPostForm form)
         {
             List<Int32> bytes = new List<Int32>();
-            using (FileStream fs = new FileStream(path, FileMode.Open))
+            using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
             {
                 while(fs.Position != fs.Length)
                     bytes.Add(fs.ReadByte());

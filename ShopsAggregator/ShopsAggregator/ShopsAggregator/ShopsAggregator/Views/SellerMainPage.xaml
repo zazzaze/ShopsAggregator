@@ -27,7 +27,7 @@
                 <StackLayout x:Name="UserInfoStack">
                     <Label Text="{Binding Username}" FontSize="Large" HorizontalTextAlignment="Center" />
                     <Label Text="{Binding Email}" TextColor="{StaticResource grey}" FontSize="Small" HorizontalTextAlignment="Center"/>
-                    <Editor x:Name="InfoEditor" Text="{Binding Info}" Placeholder="Расскажите покупателям о себе" 
+                    <Editor x:Name="InfoEditor" Text="{Binding Info}" Placeholder="{Binding }" 
                             Unfocused="VisualElement_OnUnfocused"/>
                 </StackLayout>
                 <StackLayout HorizontalOptions="FillAndExpand">
@@ -43,7 +43,8 @@
                         <ViewCell>
                             <StackLayout x:Name="StackLayout" Margin="0,0,0,10">
                                 <Image x:Name="PostImage" Source="{Binding ImagePath}"/>
-                                <Label Text="{Binding Info}" Padding="30, 0" />
+                                <Editor x:Name="InfoEditor" Text="{Binding Info}" Placeholder="Расскажите покупателям о себе" 
+                                        Unfocused="VisualElement_OnUnfocused"/>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Понравилось: " FontSize="Body"/>
                                     <Label Text="{Binding LikesCount}" FontSize="Body" TextColor="{StaticResource purple}"/>

@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 using RestSharp;
 using ShopsAggregator.Models;
 using ShopsAggregator.Services;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -48,29 +47,45 @@ namespace ShopsAggregator.Views
         /// <param name="e">Аргументы события.</param>
         private async void OnGetPostPhotoClicked(object sender, EventArgs e)
         {
-            Stream stream = await DependencyService.Get<IPhotoPickerService>().GetImageStreamAsync();
-            if (stream != null)
+            try
             {
-                await DisplayAlert("Подождите", "Фотография обрабатывается", "Жду");
-                GetImageBytesFromStream(stream);
-                PostImage.Source = ImageSource.FromStream(() => stream);
-                GetPostPhoto.Text = "Изменить фотографию";
+                String imagePath = String.Empty;
+                await CrossMedia.Current.Initialize();
+                if (CrossMedia.Current.IsPickPhotoSupported)
+                {
+                    MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+                    imagePath = photo.Path;
+                    PostImage.Source = ImageSource.FromFile(imagePath);
+                    GetImageBytesFromPath(imagePath, form);
+                    if (!App.IsConnected())
+                    {
+                        return;
+                    }
+
+                    GetPostPhoto.Text = "Изменить фотографию";
+                }
+            }
+            catch (Exception)
+            {
+                await DisplayAlert("Ошибка", "Что-то пошло не так", "Попробовать снова");
             }
         }
 
         /// <summary>
         /// Получает байты изображения, выбранного пользователем. 
         /// </summary>
-        /// <param name="stream">Поток выбранной фотографии.</param>
-        private void GetImageBytesFromStream(Stream stream)
+        /// <param name="path">Путь к фотографии.</param>
+        /// <param name="form">Форма создания записи.</param>
+        private void GetImageBytesFromPath(String path, CreatePostForm form)
         {
-            form.ImageBytes = new List<Int32>();
-            while (stream.Position != stream.Length)
+            List<Int32> bytes = new List<Int32>();
+            using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
             {
-                form.ImageBytes.Add(stream.ReadByte());
+                while(fs.Position != fs.Length)
+                    bytes.Add(fs.ReadByte());
             }
 
-            stream.Seek(0, SeekOrigin.Begin);
+            form.ImageBytes= bytes.ToList();
         }
         
         /// <summary>
@@ -112,5 +127,6 @@ namespace ShopsAggregator.Views
 
             await DisplayAlert("Запись успешно добавлена", "", "Хорошо");
         }
+        
     }
 }

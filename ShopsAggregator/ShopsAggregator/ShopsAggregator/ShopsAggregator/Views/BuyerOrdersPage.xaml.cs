@@ -2,12 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RestSharp;
 using ShopsAggregator.Models;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -136,13 +133,13 @@ namespace ShopsAggregator.Views
                 BuyerOrderView order = (BuyerOrderView) (button.ParentView.BindingContext);
                 if (order == null)
                     return;
-                RestClient client = new RestClient($"{App.BaseUrl}/api/orders/deleteOrder?orderId={order.OrderId}");
+                RestClient client = new RestClient($"{App.BaseUrl}api/orders/deleteOrder?orderId={order.OrderId}");
                 var request = new RestRequest(Method.DELETE);
                 request.AddHeader("Content-Type", "application/text");
                 var response = await client.ExecuteAsync(request);
                 if (response.StatusCode == HttpStatusCode.BadRequest)
                 {
-                    await DisplayAlert("Ошибка", "Не удалить заказ", "Поробовать снова");
+                    await DisplayAlert("Ошибка", "Не удалось удалить заказ", "Поробовать снова");
                     return;
                 }
 
