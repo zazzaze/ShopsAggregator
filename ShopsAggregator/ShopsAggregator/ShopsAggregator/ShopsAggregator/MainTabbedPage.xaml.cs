@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ShopsAggregator.Models;
 using ShopsAggregator.Views;
 using Xamarin.Forms;
@@ -45,7 +40,7 @@ namespace ShopsAggregator
         /// <summary>
         /// Добавляет страницы если пользователем является пользователь-продавец.
         /// </summary>
-        /// <param name="buyer">Экземпляр типа пользователя-продавца.</param>
+        /// <param name="seller">Экземпляр типа пользователя-продавца.</param>
         public MainTabbedPage(Seller seller) : this()
         {
             var sellerMainPage = new SellerMainPage(seller);

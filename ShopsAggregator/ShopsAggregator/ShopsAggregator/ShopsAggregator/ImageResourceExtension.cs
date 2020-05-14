@@ -13,10 +13,10 @@ namespace ShopsAggregator
         /// <summary>
         /// Путь к файлу с изображением.
         /// </summary>
-        public string Source { get; set; }
+        public String Source { get; set; }
 
         /// <summary>
-        /// Получает значени из view.
+        /// Получает значени из view и возращает изображение.
         /// </summary>
         /// <param name="serviceProvider">Механизм извлечения данных.</param>
         /// <returns>Расположение изображения.</returns>

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ShopsAggregatorWebApi.Models
 {
     /// <summary>
-    /// Экземпляр типа заказ.
+    /// Модель типа заказ.
     /// </summary>
     [Table("orders")]
     public class Order

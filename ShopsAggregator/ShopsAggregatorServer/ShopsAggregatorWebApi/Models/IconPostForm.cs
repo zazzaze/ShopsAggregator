@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace ShopsAggregatorWebApi.Models
 {
     /// <summary>
-    /// Экземпляр типа установки иконки пользователю.
+    /// Модель типа установки иконки пользователю.
     /// </summary>
     public class IconPostForm
     {

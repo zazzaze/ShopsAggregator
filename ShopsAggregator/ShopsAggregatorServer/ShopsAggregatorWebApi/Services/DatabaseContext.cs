@@ -2,10 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
 using ShopsAggregatorWebApi.Models;
 
 namespace ShopsAggregatorWebApi.Services
@@ -22,20 +19,20 @@ namespace ShopsAggregatorWebApi.Services
         /// <summary>
         /// База данных пользователей-продавцов.
         /// </summary>
-        private DbSet<Seller> Sellers { get; }
+        private DbSet<Seller> Sellers { get; set; }
         /// <summary>
         /// База данных пользователкей-покупателей.
         /// </summary>
-        private DbSet<Buyer> Buyers { get; }
+        private DbSet<Buyer> Buyers { get; set; }
         
         /// <summary>
         /// База данных записей пользователей-продавцов.
         /// </summary>
-        private DbSet<Post> Posts { get; }
+        private DbSet<Post> Posts { get; set; }
         /// <summary>
         /// База данных заказов пользователей-покупателей.
         /// </summary>
-        private DbSet<Order> Orders { get; }
+        private DbSet<Order> Orders { get; set; }
         
         /// <summary>
         /// Конструктор.
@@ -463,7 +460,7 @@ namespace ShopsAggregatorWebApi.Services
         }
 
         /// <summary>
-        /// Получает записи, понравившиеся пользователю записи.
+        /// Получает записи, понравившиеся пользователю-покупателю.
         /// </summary>
         /// <param name="buyerId">Id пользователя.</param>
         /// <returns>Список записей.</returns>
@@ -603,6 +600,7 @@ namespace ShopsAggregatorWebApi.Services
             if (current == null)
                 return;
             Orders.Remove(current);
+            SaveChangesAsync();
         }
 
         /// <summary>

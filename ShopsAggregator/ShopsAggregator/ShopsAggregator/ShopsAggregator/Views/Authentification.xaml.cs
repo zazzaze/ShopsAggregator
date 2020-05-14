@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Net;
-using System.Runtime.InteropServices;
-using System.Security;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using RestSharp;
 using ShopsAggregator.Models;
-using ShopsAggregator.Views;
 using Xamarin.Forms;
-using Xamarin.Essentials;
 
 namespace ShopsAggregator.Views
 {

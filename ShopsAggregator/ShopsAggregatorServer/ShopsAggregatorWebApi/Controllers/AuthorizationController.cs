@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using ShopsAggregatorWebApi.Services;
 using ShopsAggregatorWebApi.Models;
+using ShopsAggregatorWebApi.Services;
 
 namespace ShopsAggregatorWebApi.Controllers
 {
@@ -105,7 +105,7 @@ namespace ShopsAggregatorWebApi.Controllers
         }
 
         /// <summary>
-        /// Обновляют информацию о пользователе-покупателе.
+        /// Обновляет информацию о пользователе-покупателе.
         /// </summary>
         /// <param name="buyerId">Id пользователя-покупателя.</param>
         /// <param name="info">Новая информация о пользователе.</param>

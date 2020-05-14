@@ -1,4 +1,0 @@
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.Android/obj/Debug/MonoAndroid,Version=v9.0.AssemblyAttributes.cs
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.Android/obj/Debug/build.props
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.Android/obj/Debug/adb.props
-/Users/egor/Desktop/Учеба/Курсач/ShopsAggregator/ShopsAggregator/ShopsAggregator/ShopsAggregator.Android/obj/Debug/ShopsAggregator.Android.csprojAssemblyReference.cache

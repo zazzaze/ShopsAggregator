@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RestSharp;
@@ -49,7 +48,7 @@ namespace ShopsAggregator.Views
         }
 
         /// <summary>
-        /// Устанавливает кнопки статус подписки.
+        /// Устанавливает кнопке статус подписки.
         /// </summary>
         private void SetSubscribeButton()
         {

@@ -8,7 +8,7 @@ namespace ShopsAggregator.Models
     public class User
     {
         /// <summary>
-        /// Стандартная иконка пользователя.
+        /// Поле значения иконки пользователя.
         /// </summary>
         private String _iconPath = "standarticon.jpeg";
         /// <summary>

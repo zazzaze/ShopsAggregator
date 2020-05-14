@@ -1,8 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RestSharp;
@@ -37,7 +34,7 @@ namespace ShopsAggregator.Views
         /// <summary>
         /// Текст сообщения о неудачном получении данных.
         /// </summary>
-        private const String getResponseAlertContent = "Не удалось получить данныу";
+        private const String getResponseAlertContent = "Не удалось получить данные";
         /// <summary>
         /// Список найденных пользователей.
         /// </summary>

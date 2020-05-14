@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using ShopsAggregatorWebApi.Models;
 using ShopsAggregatorWebApi.Services;
 
 namespace ShopsAggregatorWebApi.Controllers

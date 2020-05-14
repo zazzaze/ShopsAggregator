@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ShopsAggregatorWebApi.Models;
 using ShopsAggregatorWebApi.Services;
@@ -8,7 +7,7 @@ using ShopsAggregatorWebApi.Services;
 namespace ShopsAggregatorWebApi.Controllers
 {
     /// <summary>
-    /// Контроллер взаимодействия с записями.
+    /// Контроллер взаимодействия с поиском.
     /// </summary>
     [Route("api/search")]
     public class SearchController : Controller

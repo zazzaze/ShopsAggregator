@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
@@ -149,9 +147,12 @@ namespace ShopsAggregator.Views
         private async void GetPhoto(object sender, EventArgs e)
         { 
             String iconPath = String.Empty;
-            if (CrossMedia.Current.IsPickPhotoSupported)
+            await CrossMedia.Current.Initialize();
+            if (CrossMedia.Current.IsPickPhotoSupported && CrossMedia.IsSupported)
             {
                 MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+                if (photo == null)
+                    return;
                 iconPath = photo.Path;
                 Icon.Source = ImageSource.FromFile(iconPath);
                 IconPostForm form = new IconPostForm(_seller.Id);
@@ -172,7 +173,7 @@ namespace ShopsAggregator.Views
         private void GetPhotoBytes(String path, IconPostForm form)
         {
             List<Int32> bytes = new List<Int32>();
-            using (FileStream fs = new FileStream(path, FileMode.Open))
+            using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
             {
                 while(fs.Position != fs.Length)
                     bytes.Add(fs.ReadByte());

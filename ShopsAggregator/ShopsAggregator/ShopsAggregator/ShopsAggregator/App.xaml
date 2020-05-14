@@ -11,18 +11,6 @@
             <Color x:Key="errorColor">#e74c3c</Color>
             <Color x:Key="successColor">#2ecc71</Color>
             <x:String x:Key="appName">ShopYou</x:String>
-            <!-- <OnPlatform x:TypeArguments="x:String" x:Key="OswaldFont"> -->
-            <!--     <On Platform="iOS" Value="OswaldFont"/> -->
-            <!--     <On Platform="Android" Value="/Assets/OswaldFont.ttf#OswaldFont"/> -->
-            <!-- </OnPlatform> -->
-            <!-- <OnPlatform x:TypeArguments="x:String" x:Key="SchlangeNormalFont"> -->
-            <!--     <On Platform="iOS" Value="SchlangeNormal"/> -->
-            <!--     <On Platform="Android" Value="/Assets/SchlangeNormal.ttf#SchlangeNormal"/> -->
-            <!-- </OnPlatform> -->
-            <!-- <OnPlatform x:TypeArguments="x:String" x:Key="SchlangeBoldFont"> -->
-            <!--     <On Platform="iOS" Value="SchlangeBold"/> -->
-            <!--     <On Platform="Android" Value="/Assets/SchlangeBold.ttf#SchlangeBold"/> -->
-            <!-- </OnPlatform> -->
             <Style x:Key="buttonStyle" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{StaticResource purple}"/>
                 <Setter Property="TextColor" Value="{StaticResource buttonTextColor}"></Setter>
