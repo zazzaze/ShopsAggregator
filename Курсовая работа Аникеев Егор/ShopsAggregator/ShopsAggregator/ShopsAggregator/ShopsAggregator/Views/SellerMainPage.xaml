@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopsAggregator.Views.SellerMainPage"
+             Title="Аккаунт">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Выйти" Clicked="OnExitToolbarItemTapped" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <RefreshView x:Name="RefreshView">
+        <ScrollView x:Name="ScrollView">
+        <StackLayout Margin="0,10,0,0">
+            <StackLayout x:Name="InfoStack" Padding="50,0">
+                <Frame CornerRadius="100" IsClippedToBounds="True" HorizontalOptions="Center" BackgroundColor="Gray" 
+                       WidthRequest="200" HeightRequest="200" VerticalOptions="Start" Padding="0" HasShadow="True" Margin="0,20">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GetPhoto"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image x:Name="Icon" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"
+                               Source="{Binding IconPath}"/>
+                        <Label x:Name="ImagePickerText" Text="Нажмите чтобы выбрать фотографию" TextColor="{StaticResource cloudWhite}" 
+                               FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+                <StackLayout x:Name="UserInfoStack">
+                    <Label Text="{Binding Username}" FontSize="Large" HorizontalTextAlignment="Center" />
+                    <Label Text="{Binding Email}" TextColor="{StaticResource grey}" FontSize="Small" HorizontalTextAlignment="Center"/>
+                    <Editor x:Name="InfoEditor" Text="{Binding Info}" Placeholder="{Binding }" 
+                            Unfocused="VisualElement_OnUnfocused"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label x:Name="SubscribersCounter" FontSize="Large" HorizontalTextAlignment="Center"/>
+                    <Label Text="Подписчики" FontSize="Medium" TextColor="{StaticResource grey}"  HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </StackLayout>
+            <Label FontSize="Title" HorizontalTextAlignment="Center" Padding="0,15">Мои товары</Label>
+            <ListView x:Name="Posts" CachingStrategy="RecycleElementAndDataTemplate" HasUnevenRows="True" 
+                      ItemSelected="Posts_OnItemSelected" SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout x:Name="StackLayout" Margin="0,0,0,10">
+                                <Image x:Name="PostImage" Source="{Binding ImagePath}"/>
+                                <Editor x:Name="InfoEditor" Text="{Binding Info}" Placeholder="Расскажите покупателям о себе" 
+                                        Unfocused="VisualElement_OnUnfocused"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Понравилось: " FontSize="Body"/>
+                                    <Label Text="{Binding LikesCount}" FontSize="Body" TextColor="{StaticResource purple}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

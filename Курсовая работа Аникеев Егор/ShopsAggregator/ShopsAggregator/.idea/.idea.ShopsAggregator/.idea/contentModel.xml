@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.arch.lifecycle.runtime/1.1.1.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.arch.lifecycle.viewmodel/1.1.1.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.animated.vector.drawable/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.compat/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.coordinaterlayout/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.design/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.media.compat/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.transition/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.v7.appcompat/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.v7.recyclerview/28.0.0.3/proguard/monoandroid90/proguard.txt" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xamarin.android.support.versionedparcelable/28.0.0.3/proguard/monoandroid90" t="Include">
+      <e p="proguard.txt" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/xamarin.forms/4.6.0.726/buildTransitive/MonoAndroid10" t="Include">
+      <e p="proguard.cfg" t="Include" />
+    </e>
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="ShopsAggregator/ShopsAggregator" t="IncludeRecursive">
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CustomControls" t="Include">
+          <e p="CustomCell.cs" t="Include" />
+          <e p="CustomEditor.cs" t="Include" />
+        </e>
+        <e p="ImageResourceExtension.cs" t="Include" />
+        <e p="images" t="Include">
+          <e p="accounticon.png" t="Include" />
+          <e p="dislike.png" t="Include" />
+          <e p="gallery.png" t="Include" />
+          <e p="heart.png" t="Include" />
+          <e p="orders.png" t="Include" />
+          <e p="plus.png" t="Include" />
+          <e p="searchicon.png" t="Include" />
+        </e>
+        <e p="MainTabbedPage.xaml" t="Include" />
+        <e p="MainTabbedPage.xaml.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="Buyer.cs" t="Include" />
+          <e p="BuyerOrderView.cs" t="Include" />
+          <e p="BuyerPostView.cs" t="Include" />
+          <e p="CreatePostForm.cs" t="Include" />
+          <e p="IconPostForm.cs" t="Include" />
+          <e p="Post.cs" t="Include" />
+          <e p="RegistrationForm.cs" t="Include" />
+          <e p="Seller.cs" t="Include" />
+          <e p="SellerOrderView.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="App.xaml.g.cs" t="Include" />
+              <e p="MainTabbedPage.xaml.g.cs" t="Include" />
+              <e p="ShopsAggregator.AssemblyInfo.cs" t="Include" />
+              <e p="Views" t="Include">
+                <e p="AllPostsPage.xaml.g.cs" t="Include" />
+                <e p="Authentification.xaml.g.cs" t="Include" />
+                <e p="BuyerMainPage.xaml.g.cs" t="Include" />
+                <e p="BuyerOrdersPage.xaml.g.cs" t="Include" />
+                <e p="CreatePostPage.xaml.g.cs" t="Include" />
+                <e p="RegistrationPage.xaml.g.cs" t="Include" />
+                <e p="SearchPage.xaml.g.cs" t="Include" />
+                <e p="SellerMainPage.xaml.g.cs" t="Include" />
+                <e p="SellerOrdersPage.xaml.g.cs" t="Include" />
+                <e p="WatchSellerPage.xaml.g.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="SchlangeBold.ttf" t="Include" />
+          </e>
+        </e>
+        <e p="Services" t="Include">
+          <e p="IPhotoPickerService.cs" t="Include" />
+        </e>
+        <e p="ShopsAggregator.csproj" t="IncludeRecursive" />
+        <e p="Views" t="Include">
+          <e p="AllPostsPage.xaml" t="Include" />
+          <e p="AllPostsPage.xaml.cs" t="Include" />
+          <e p="Authentification.xaml" t="Include" />
+          <e p="Authentification.xaml.cs" t="Include" />
+          <e p="BuyerMainPage.xaml" t="Include" />
+          <e p="BuyerMainPage.xaml.cs" t="Include" />
+          <e p="BuyerOrdersPage.xaml" t="Include" />
+          <e p="BuyerOrdersPage.xaml.cs" t="Include" />
+          <e p="CreatePostPage.xaml" t="Include" />
+          <e p="CreatePostPage.xaml.cs" t="Include" />
+          <e p="RegistrationPage.xaml" t="Include" />
+          <e p="RegistrationPage.xaml.cs" t="Include" />
+          <e p="SearchPage.xaml" t="Include" />
+          <e p="SearchPage.xaml.cs" t="Include" />
+          <e p="SellerMainPage.xaml" t="Include" />
+          <e p="SellerMainPage.xaml.cs" t="Include" />
+          <e p="SellerOrdersPage.xaml" t="Include" />
+          <e p="SellerOrdersPage.xaml.cs" t="Include" />
+          <e p="WatchSellerPage.xaml" t="Include" />
+          <e p="WatchSellerPage.xaml.cs" t="Include" />
+        </e>
+      </e>
+      <e p="ShopsAggregator/ShopsAggregator.Android" t="IncludeRecursive">
+        <e p="Assets" t="Include">
+          <e p="AboutAssets.txt" t="Include" />
+          <e p="OswaldFont.ttf" t="Include" />
+          <e p="SchlangeBold.otf" t="Include" />
+          <e p="SchlangeNormal.otf" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="MainActivity.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AndroidManifest.xml" t="Include" />
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="AboutResources.txt" t="Include" />
+          <e p="layout" t="Include">
+            <e p="Tabbar.axml" t="Include" />
+            <e p="Toolbar.axml" t="Include" />
+          </e>
+          <e p="Resource.Designer.cs" t="Include" />
+          <e p="values" t="Include">
+            <e p="colors.xml" t="Include" />
+            <e p="styles.xml" t="Include" />
+          </e>
+        </e>
+        <e p="Services" t="Include">
+          <e p="PhotoPickerService.cs" t="Include" />
+        </e>
+        <e p="ShopsAggregator.Android.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="ShopsAggregator/ShopsAggregator.iOS" t="IncludeRecursive">
+        <e p="ApDelegate.cs" t="Include" />
+        <e p="Assets.xcassets" t="Include">
+          <e p="AppIcon.appiconset" t="Include">
+            <e p="Contents.json" t="Include" />
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CustomControls" t="Include">
+          <e p="CustomEditorRenderer.cs" t="Include" />
+        </e>
+        <e p="Entitlements.plist" t="Include" />
+        <e p="Info.plist" t="Include" />
+        <e p="Main.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="accounticon.png" t="Include" />
+          <e p="LaunchScreen.storyboard" t="Include" />
+          <e p="OswaldFont.ttf" t="Include" />
+          <e p="SchlangeBold.ttf" t="Include" />
+          <e p="SchlangeNormal.ttf" t="Include" />
+          <e p="searchicon.png" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="PhotoPickerService.cs" t="Include" />
+        </e>
+        <e p="ShopsAggregator.iOS.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="ShopsAggregator.sln" t="IncludeFlat" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_ShopsAggregator.1820557030.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Developer/Xamarin/android-sdk-macosx/platforms/android-28/data/res" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+  </component>
+</project>

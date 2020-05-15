@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopsAggregator.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="purple">#9b59b6</Color>
+            <Color x:Key="grey">#95a5a6</Color>
+            <Color x:Key="cloudWhite">#ecf0f1</Color>
+            <Color x:Key="buttonTextColor">#ecf0f1</Color>
+            <Color x:Key="errorColor">#e74c3c</Color>
+            <Color x:Key="successColor">#2ecc71</Color>
+            <x:String x:Key="appName">ShopYou</x:String>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource purple}"/>
+                <Setter Property="TextColor" Value="{StaticResource buttonTextColor}"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

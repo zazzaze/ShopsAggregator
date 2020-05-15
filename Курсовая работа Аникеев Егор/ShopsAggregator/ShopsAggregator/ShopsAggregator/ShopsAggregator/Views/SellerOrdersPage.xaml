@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopsAggregator.Views.SellerOrdersPage"
+             Title="Заказы пользователей">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="Orders" SeparatorVisibility="None" IsPullToRefreshEnabled="True" Refreshing="OnOrdersUpdate" 
+                      HasUnevenRows="True" ItemTapped="OnOrdersItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="0,5" Margin="0,0,0,10">
+                                <Label Text="{Binding OrderId}" IsVisible="False" />
+                                <StackLayout Margin="0,0,0,10">
+                                    <Image x:Name="PostImage" Source="{Binding CurrentPost.ImagePath}"/>
+                                    <Label Text="{Binding CurrentPost.Info}" Padding="20,3"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="0,0,0,10" Padding="20,5">
+                                    <Label Text="Заказчик:" FontSize="{OnPlatform Android=Body, iOS=Header}"/>
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Имя пользователя: " TextColor="{StaticResource purple}" FontSize="Body"/>
+                                            <Label Text="{Binding OrderBuyer.Username}" FontSize="Body" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Email: " TextColor="{StaticResource purple}" FontSize="Body"/>
+                                            <Label Text="{Binding OrderBuyer.Email}" FontSize="Body" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Информация о пользователе: " TextColor="{StaticResource purple}" FontSize="Body"/>
+                                            <Label Text="{Binding OrderBuyer.Info}" FontSize="Body" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Padding="20,5">
+                                    <Label Text="Статус заказа: " FontSize="{OnPlatform Android=Body, iOS=Header}" />
+                                    <Label Text="{Binding OrderStatus}" FontSize="{OnPlatform Android=Body, iOS=Header}" TextColor="{StaticResource purple}" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceAround">
+                                    <Button BackgroundColor="{StaticResource successColor}" TextColor="{StaticResource cloudWhite}" 
+                                            Text="Подтвердить заказ" Padding="10,0" Clicked="SetOrderSuccess"/>
+                                    <Button BackgroundColor="{StaticResource errorColor}" Text="Отклонить заказ" 
+                                            TextColor="{StaticResource cloudWhite}" Padding="10,0" Clicked="SetOrderCanceledStatus"/>
+                                </FlexLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

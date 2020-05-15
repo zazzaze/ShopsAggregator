@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopsAggregator.Views.AllPostsPage"
+             xmlns:local="clr-namespace:ShopsAggregator;assembly=ShopsAggregator"
+             Title="Товары">
+    <ContentPage.Content>
+        <StackLayout Margin="0,20,0,0">
+            <ListView x:Name="Posts" HasUnevenRows="True" ItemTapped="Posts_OnItemTapped" SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="0,5" Margin="0,0,0,10">
+                                <Label Text="{Binding PostId}" IsVisible="False" />
+                                <FlexLayout JustifyContent="Start" Padding="5" AlignItems="Center">
+                                    <FlexLayout.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                            Tapped="OnPostHeaderTapped"/>
+                                    </FlexLayout.GestureRecognizers>
+                                    <Frame CornerRadius="15" IsClippedToBounds="True" HorizontalOptions="Center" BackgroundColor="Gray" 
+                                           WidthRequest="30" HeightRequest="30" VerticalOptions="Start" Padding="0" HasShadow="False">
+                                        <Image x:Name="SellerIcon" Source="{Binding SellerIconPath}" VerticalOptions="FillAndExpand"
+                                               HorizontalOptions="FillAndExpand" />
+                                    </Frame>
+                                    <Label Text="{Binding Username}" Padding="10,0"/>
+                                </FlexLayout>
+                                <StackLayout >
+                                    <Image x:Name="PostImage" Source="{Binding IconPath}"/>
+                                    <FlexLayout JustifyContent="SpaceBetween" Padding="20,0" HeightRequest="50" AlignItems="Center">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image Source="{local:ImageResource ShopsAggregator.images.heart.png}" 
+                                                   IsVisible="{Binding IsUserDontLikePost}">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                        Tapped="OnLikeImageTapped"
+                                                        NumberOfTapsRequired="1" />
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                            <Image Source="{local:ImageResource ShopsAggregator.images.dislike.png}" 
+                                                   IsVisible="{Binding IsUserLikePost}">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                        Tapped="OnDislikeImageTapped"
+                                                        NumberOfTapsRequired="1" />
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                        </StackLayout>
+                                        <StackLayout>
+                                            <Button x:Name="DeliverButton" Text="+" Margin="0" Padding="0" FontSize="30" 
+                                                    HeightRequest="30" Clicked="DeliverButton_OnClicked"/>
+                                            <Button Text="Заказать" FontSize="13" Padding="0" Margin="0" HeightRequest="13" 
+                                                    Clicked="DeliverButton_OnClicked"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="{Binding Info}" Padding="20,3"/>
+                                </StackLayout>
+                            </StackLayout>    
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

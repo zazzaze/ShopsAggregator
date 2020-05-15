@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="ShopsAggregatorServer.sln" t="IncludeFlat" />
+      <e p="ShopsAggregatorWebApi" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="AuthorizationController.cs" t="Include" />
+          <e p="OrdersController.cs" t="Include" />
+          <e p="PostController.cs" t="Include" />
+          <e p="SearchController.cs" t="Include" />
+          <e p="SubscribeController.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Buyer.cs" t="Include" />
+          <e p="BuyerOrderView.cs" t="Include" />
+          <e p="BuyerPostView.cs" t="Include" />
+          <e p="CreatePostForm.cs" t="Include" />
+          <e p="IconPostForm.cs" t="Include" />
+          <e p="Order.cs" t="Include" />
+          <e p="Post.cs" t="Include" />
+          <e p="RegistrationForm.cs" t="Include" />
+          <e p="Seller.cs" t="Include" />
+          <e p="SellerOrderView.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="ShopsAggregatorWebApi.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="DatabaseContext.cs" t="Include" />
+        </e>
+        <e p="ShopsAggregatorWebApi.csproj" t="IncludeRecursive" />
+        <e p="Startup.cs" t="Include" />
+      </e>
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_ShopsAggregatorServer.975733996.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+  </component>
+</project>
