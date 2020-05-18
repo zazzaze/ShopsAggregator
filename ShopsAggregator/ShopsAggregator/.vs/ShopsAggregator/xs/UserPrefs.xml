@@ -1,6 +1,10 @@
 ﻿<Properties StartupConfiguration="{4282FE26-7D0C-4E87-BD67-B9043A3F82FE}|Default">
 <<<<<<< HEAD
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench>
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="ShopsAggregator/ShopsAggregator/Views/CreatePostPage.xaml.cs">
+>>>>>>> 617dea14fdaca3a58171dd52cd4bd97cbc4dbe55
 =======
   <MonoDevelop.Ide.Workbench ActiveDocument="ShopsAggregator/ShopsAggregator/Views/CreatePostPage.xaml.cs">
 >>>>>>> 617dea14fdaca3a58171dd52cd4bd97cbc4dbe55
@@ -13,7 +17,11 @@
       <File FileName="ShopsAggregator/ShopsAggregator/Models/User.cs" />
       <File FileName="ShopsAggregator/ShopsAggregator/Models/Seller.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <File FileName="ShopsAggregator/ShopsAggregator/Models/BuyerOrderView.cs" />
+=======
+      <File FileName="ShopsAggregator/ShopsAggregator/Models/BuyerOrderView.cs" Line="32" Column="13" />
+>>>>>>> 617dea14fdaca3a58171dd52cd4bd97cbc4dbe55
 =======
       <File FileName="ShopsAggregator/ShopsAggregator/Models/BuyerOrderView.cs" Line="32" Column="13" />
 >>>>>>> 617dea14fdaca3a58171dd52cd4bd97cbc4dbe55
@@ -32,6 +40,7 @@
       <File FileName="ShopsAggregator/ShopsAggregator/Views/SearchPage.xaml.cs" />
       <File FileName="ShopsAggregator/ShopsAggregator/Views/SellerOrdersPage.xaml.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <File FileName="ShopsAggregator/ShopsAggregator/App.xaml.cs" />
       <File FileName="ShopsAggregator/ShopsAggregator/ImageResourceExtension.cs" />
       <File FileName="ShopsAggregator/ShopsAggregator/MainTabbedPage.xaml.cs" />
@@ -42,6 +51,8 @@
       <File FileName="ShopsAggregator/ShopsAggregator.Android/Properties/AndroidManifest.xml" />
     </Files>
 =======
+=======
+>>>>>>> 617dea14fdaca3a58171dd52cd4bd97cbc4dbe55
       <File FileName="ShopsAggregator/ShopsAggregator/App.xaml.cs" Line="69" Column="2" />
       <File FileName="ShopsAggregator/ShopsAggregator/ImageResourceExtension.cs" />
       <File FileName="ShopsAggregator/ShopsAggregator/MainTabbedPage.xaml.cs" />
